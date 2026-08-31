@@ -134,7 +134,7 @@ log "Building production image…"
 run docker build \
   --platform "$DOCKER_PLATFORM" \
   --label "org.opencontainers.image.revision=$GIT_SHA" \
-  --label "org.opencontainers.image.source=https://github.com/powerm1nt/cutedraw" \
+  --label "org.opencontainers.image.source=https://github.com/hisuiki/cutedraw" \
   -f Dockerfile \
   -t "$IMAGE" \
   .

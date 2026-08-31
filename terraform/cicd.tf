@@ -47,6 +47,14 @@ resource "google_service_account_iam_member" "github_impersonation" {
   member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.name}/attribute.repository/${var.github_repository}"
 }
 
+# gcloud and Docker credential helpers may mint an access token explicitly after
+# the OIDC exchange. Keep this grant scoped to the repository principal.
+resource "google_service_account_iam_member" "github_token_creator" {
+  service_account_id = google_service_account.deployer.name
+  role               = "roles/iam.serviceAccountTokenCreator"
+  member             = "principalSet://iam.googleapis.com/${google_iam_workload_identity_pool.github.name}/attribute.repository/${var.github_repository}"
+}
+
 resource "google_artifact_registry_repository_iam_member" "deployer_push" {
   repository = google_artifact_registry_repository.containers.name
   location   = google_artifact_registry_repository.containers.location
