@@ -57,8 +57,8 @@ After the first apply, configure the GitHub repository from Terraform outputs:
 
 | GitHub setting | Terraform value |
 | --- | --- |
-| Secret `GCP_WORKLOAD_IDENTITY_PROVIDER` | `terraform -chdir=terraform output -raw workload_identity_provider` |
-| Secret `GCP_DEPLOY_SERVICE_ACCOUNT` | `terraform -chdir=terraform output -raw deployer_service_account` |
+| Secret or variable `GCP_WORKLOAD_IDENTITY_PROVIDER` | `terraform -chdir=terraform output -raw workload_identity_provider` |
+| Secret or variable `GCP_DEPLOY_SERVICE_ACCOUNT` | `terraform -chdir=terraform output -raw deployer_service_account` |
 | Variable `GCP_PROJECT_ID` | `cutedraw` (or your override) |
 | Variable `GCP_REGION` | `northamerica-northeast1` |
 | Variable `GCP_WEB_SERVICE` | `terraform -chdir=terraform output -raw cloud_run_service` |
