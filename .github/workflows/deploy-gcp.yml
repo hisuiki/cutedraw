@@ -3,7 +3,7 @@ name: Deploy Cutedraw to Cloud Run
 on:
   push:
     branches:
-      - cutedraw
+      - main
     paths-ignore:
       - "terraform/**"
   workflow_dispatch:
