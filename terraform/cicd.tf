@@ -84,3 +84,52 @@ resource "google_project_iam_member" "deployer_cdn_invalidate" {
   role    = google_project_iam_custom_role.cdn_invalidator.id
   member  = "serviceAccount:${google_service_account.deployer.email}"
 }
+
+locals {
+  github_repository_name = element(split("/", var.github_repository), 1)
+}
+
+# Keep the repository's deployment configuration in sync with the resources above.
+# The GitHub provider reads GITHUB_TOKEN when var.github_token is left unset.
+resource "github_actions_secret" "workload_identity_provider" {
+  repository  = local.github_repository_name
+  secret_name = "GCP_WORKLOAD_IDENTITY_PROVIDER"
+  value       = google_iam_workload_identity_pool_provider.github.name
+}
+
+resource "github_actions_secret" "deployer_service_account" {
+  repository  = local.github_repository_name
+  secret_name = "GCP_DEPLOY_SERVICE_ACCOUNT"
+  value       = google_service_account.deployer.email
+}
+
+resource "github_actions_variable" "project_id" {
+  repository    = local.github_repository_name
+  variable_name = "GCP_PROJECT_ID"
+  value         = var.project_id
+}
+
+resource "github_actions_variable" "region" {
+  repository    = local.github_repository_name
+  variable_name = "GCP_REGION"
+  value         = var.region
+}
+
+resource "github_actions_variable" "web_service" {
+  repository    = local.github_repository_name
+  variable_name = "GCP_WEB_SERVICE"
+  value         = google_cloud_run_v2_service.web.name
+}
+
+resource "github_actions_variable" "url_map" {
+  repository    = local.github_repository_name
+  variable_name = "GCP_URL_MAP"
+  value         = google_compute_url_map.web.name
+}
+
+resource "github_actions_repository_permissions" "this" {
+  repository           = local.github_repository_name
+  enabled              = true
+  allowed_actions      = "all"
+  sha_pinning_required = false
+}

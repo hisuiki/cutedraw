@@ -61,5 +61,12 @@ variable "certificate_manager_active" {
 variable "github_repository" {
   description = "Exact owner/name of the GitHub repository allowed to deploy through Workload Identity Federation."
   type        = string
-  default     = "powerm1nt/cutedraw"
+  default     = "hisuiki/cutedraw"
+}
+
+variable "github_token" {
+  description = "GitHub fine-grained or classic token with repository administration, Actions variables, and Actions secrets permissions. Prefer the GITHUB_TOKEN environment variable instead of storing this in a tfvars file."
+  type        = string
+  sensitive   = true
+  default     = null
 }

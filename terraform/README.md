@@ -53,18 +53,20 @@ The static global address is Terraform-managed, so the MCP records only need cha
 
 ## First deployment
 
-After the first apply, configure the GitHub repository from Terraform outputs:
+Before applying, provide a GitHub token with repository administration and Actions secrets/variables permissions through `GITHUB_TOKEN` (or `var.github_token`). Terraform then configures the repository automatically. The token is used only by the GitHub provider and is never written in this repository.
 
-| GitHub setting | Terraform value |
+After the first apply, the GitHub repository contains the deployment configuration:
+
+| GitHub setting | Managed value |
 | --- | --- |
-| Secret or variable `GCP_WORKLOAD_IDENTITY_PROVIDER` | `terraform -chdir=terraform output -raw workload_identity_provider` |
-| Secret or variable `GCP_DEPLOY_SERVICE_ACCOUNT` | `terraform -chdir=terraform output -raw deployer_service_account` |
-| Variable `GCP_PROJECT_ID` | `cutedraw` (or your override) |
-| Variable `GCP_REGION` | `northamerica-northeast1` |
-| Variable `GCP_WEB_SERVICE` | `terraform -chdir=terraform output -raw cloud_run_service` |
-| Variable `GCP_URL_MAP` | `terraform -chdir=terraform output -raw url_map` |
+| Secret `GCP_WORKLOAD_IDENTITY_PROVIDER` | Terraform WIF provider name |
+| Secret `GCP_DEPLOY_SERVICE_ACCOUNT` | Terraform deployer service-account email |
+| Variable `GCP_PROJECT_ID` | `var.project_id` |
+| Variable `GCP_REGION` | `var.region` |
+| Variable `GCP_WEB_SERVICE` | Cloud Run service name |
+| Variable `GCP_URL_MAP` | Load-balancer URL map name |
 
-Push to the `cutedraw` branch or run the deployment workflow manually. The workflow builds one `linux/amd64` image, pushes it to Artifact Registry, resolves it to an immutable digest, deploys that digest to Cloud Run, and invalidates Cloud CDN.
+Push to the `main` branch or run the deployment workflow manually. The workflow builds one `linux/amd64` image, pushes it to Artifact Registry, resolves it to an immutable digest, deploys that digest to Cloud Run, and invalidates Cloud CDN.
 
 For a local deployment with the same implementation:
 
