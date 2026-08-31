@@ -232,7 +232,6 @@
     "save": "احفظ للملف الحالي",
     "saveAs": "حفظ كـ",
     "load": "فتح",
-    "getShareableLink": "احصل على رابط المشاركة",
     "close": "إغلاق",
     "selectLanguage": "اختر اللغة",
     "scrollBackToContent": "الرجوع إلى المحتوى",
@@ -258,29 +257,22 @@
     "clear": "مسح",
     "remove": "إزالة",
     "embed": "تبديل الإدراج",
-    "publishLibrary": "أعد التسمية أو أُنشر",
     "submit": "إرسال",
     "confirm": "تأكيد",
     "embeddableInteractionButton": "اضغط للتفاعل"
   },
   "alerts": {
     "clearReset": "هذا سيُزيل كامل اللوحة. هل أنت متأكد؟",
-    "couldNotCreateShareableLink": "تعذر إنشاء رابط المشاركة.",
-    "couldNotCreateShareableLinkTooBig": "تعذر إنشاء رابط قابل للمشاركة: المشهد كبير جدًا",
     "couldNotLoadInvalidFile": "تعذر التحميل، الملف غير صالح",
-    "importBackendFailed": "فشل الاستيراد من الخادم.",
     "cannotExportEmptyCanvas": "لا يمكن تصدير لوحة فارغة.",
     "couldNotCopyToClipboard": "تعذر النسخ إلى الحافظة.",
     "decryptFailed": "تعذر فك تشفير البيانات.",
-    "uploadedSecurly": "تم تأمين التحميل بتشفير النهاية إلى النهاية، مما يعني أن خادم Excalidraw والأطراف الثالثة لا يمكنها قراءة المحتوى.",
-    "loadSceneOverridePrompt": "تحميل الرسم الخارجي سيحل محل المحتوى الموجود لديك. هل ترغب في المتابعة؟",
     "collabStopOverridePrompt": "إيقاف الجلسة سيؤدي إلى الكتابة فوق رسومك السابقة المخزنة داخليًا. هل أنت متأكد؟\n\n(إذا كنت ترغب في الاحتفاظ برسمك المخزن داخليًا، أغلق علامة تبويب المتصفح بدلاً من ذلك.)",
     "errorAddingToLibrary": "تعذر إضافة العنصر إلى المكتبة",
     "errorRemovingFromLibrary": "تعذر إزالة العنصر من المكتبة",
     "confirmAddLibrary": "هذا سيضيف {{numShapes}} شكل إلى مكتبتك. هل أنت متأكد؟",
     "imageDoesNotContainScene": "يبدو أن هذه الصورة لا تحتوي على أي بيانات مشهد. هل قمت بتمكين تضمين المشهد أثناء التصدير؟",
     "cannotRestoreFromImage": "تعذر استعادة المشهد من ملف الصورة",
-    "invalidSceneUrl": "تعذر استيراد المشهد من عنوان URL المتوفر. إما أنها مشوهة، أو لا تحتوي على بيانات Excalidraw JSON صالحة.",
     "resetLibrary": "هذا سيؤدي إلى مسح مكتبتك. هل أنت متأكد؟",
     "removeItemsFromsLibrary": "حذف {{count}} عنصر (عناصر) من المكتبة؟",
     "invalidEncryptionKey": "مفتاح التشفير يجب أن يكون من 22 حرفًا. التعاون المباشر معطل.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "تعذر الاتصال بخادم التعاون. الرجاء إعادة تحميل الصفحة والمحاولة مرة أخرى.",
     "importLibraryError": "تعذر تحميل المكتبة",
     "saveLibraryError": "تعذر حفظ المكتبة. الرجاء حفظ المكتبة الخاصة بك في ملف محلي للتأكد من أنك لا تفقد التغييرات.",
-    "collabSaveFailed": "تعذر الحفظ في قاعدة البيانات. إذا استمرت المشاكل، يُفضل حفظ ملفك محليًا كي لا تفقد عملك.",
-    "collabSaveFailed_sizeExceeded": "تعذر الحفظ في قاعدة البيانات، يبدو أن القماش كبير للغاية، يُفضل حفظ الملف محليًا كي لا تفقد عملك.",
     "imageToolNotSupported": "تم تعطيل الصور.",
     "brave_measure_text_error": {
       "line1": "يبدو أنك تستخدم متصفح Brave مع إعداد <bold>حظر صارم لتتبع البصمة</bold>.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "نشر مكتبتك",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "حرصنا على عدم إضافة معلومات المشهد في بلاغ الخطأ. في حال كون مشهدك لا يحمل أي معلومات خاصة، نرجو المتابعة على <button>نظام تتبع الأخطاء</button>. نرجو إضافة المعلومات أدناه بنسخها ولصقها في محتوى البلاغ على GitHub.",
     "sceneContent": "محتوى المشهد:"
   },
-  "shareDialog": {
-    "or": "أو"
-  },
   "roomDialog": {
     "desc_intro": "ادعُ الأشخاص للتعاون في الرسم الخاص بك.",
     "desc_privacy": "لا تقلق، الجلسة مشفرة من النهاية إلى النهاية وخصوصية تمامًا. حتى خادمنا لا يستطيع رؤية ما ترسمه.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "حفظ الملف على الجهاز",
     "disk_details": "تصدير بيانات المشهد إلى ملف يمكنك الاستيراد منه لاحقًا.",
-    "disk_button": "حفظ إلى ملف",
-    "link_title": "رابط قابل للمشاركة",
-    "link_details": "تصدير الملف للمشاهدة فقط.",
-    "link_button": "تصدير كرابط",
-    "excalidrawplus_description": "حفظ المشهد إلى مساحة العمل +Excalidraw الخاصة بك.",
-    "excalidrawplus_button": "تصدير",
-    "excalidrawplus_exportError": "تعذر التص несп في الوقت الحالي إلى +Excalidraw..."
+    "disk_button": "حفظ إلى ملف"
   },
   "helpDialog": {
     "blog": "اقرأ مدونتنا",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "مسح اللوحة"
-  },
-  "publishDialog": {
-    "title": "نشر المكتبة",
-    "itemName": "اسم العنصر",
-    "authorName": "اسم المؤلف",
-    "githubUsername": "اسم المستخدم في GitHub",
-    "twitterUsername": "اسم المستخدم في تويتر",
-    "libraryName": "اسم المكتبة",
-    "libraryDesc": "وصف المكتبة",
-    "website": "الموقع",
-    "placeholder": {
-      "authorName": "اسمك أو اسم المستخدم",
-      "libraryName": "اسم مكتبتك",
-      "libraryDesc": "وصف مكتبتك لمساعدة الناس على فهم استخدامها",
-      "githubHandle": "معرف GitHub (اختياري)، حتى تتمكن من تحرير المكتبة عند إرسالها للمراجعة",
-      "twitterHandle": "اسم مستخدم تويتر (اختياري)، حتى نعرف من الذي سيتم الإشارة إليه عند الترويج عبر تويتر",
-      "website": "رابط إلى موقعك الشخصي أو مكان آخر (اختياري)"
-    },
-    "errors": {
-      "required": "مطلوب",
-      "website": "أدخل عنوان URL صالح"
-    },
-    "noteDescription": "تقديم مكتبتك لتضمينها في مستودع المكتبة العامة <link></link> ليستخدمها الآخرون في رسوماتهم.",
-    "noteGuidelines": "تحتاج المكتبة إلى الموافقة أولاً. يرجى قراءة <link>المعايير</link> قبل تقديمها. ستحتاج إلى حساب GitHub للتواصل وإجراء التغييرات عند الطلب، ولكنه ليس مطلوبًا بشكل صارم.",
-    "noteLicense": "تقديمك يعني موافقتك على نشر المكتبة المقدمة تحت <link>ترخيص MIT</link>، مما يعني أن لأي شخص الحق في استخدامها دون قيود.",
-    "noteItems": "يجب أن يكون لكل عنصر مكتبة اسم خاص به ليكون قابلًا للتصفية. سيتم تضمين عناصر المكتبة التالية:",
-    "atleastOneLibItem": "يرجى تحديد عنصر مكتبة واحد على الأقل للبدء",
-    "republishWarning": "ملاحظة: بعض العناصر المحددة معينة على أنها نُشرت أو قُدمت من قبل. يجب عليك فقط إعادة إرسال العناصر عند تحديث مكتبة موجودة أو إرسالها."
-  },
-  "publishSuccessDialog": {
-    "title": "تم إرسال المكتبة",
-    "content": "شكرًا لك {{authorName}}. لقد تم إرسال مكتبتك للمراجعة. يمكنك تتبع الحالة"
   },
   "confirmDialog": {
     "resetLibrary": "إعادة ضبط المكتبة",
@@ -595,7 +543,6 @@
       "center_heading": "رسوماتك محفوظة في تخزين متصفحك.",
       "center_heading_line2": "يُمكن محُ تخزين المتصفح بشكل غير متوقع.",
       "center_heading_line3": "احفظ عملك في ملف بانتظام لتجنب فقدانه.",
-      "center_heading_plus": "هل تريد الانتقال إلى Excalidraw+ بدلاً من ذلك؟",
       "menuHint": "التصدير، التفضيلات، اللغات..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "حفظ الملف على الجهاز",
         "button": "حفظ الملف على الجهاز",
         "description": "تصدير بيانات المشهد إلى ملف يمكنك الاستيراد منه لاحقًا."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "تصدير إلى Excalidraw+",
-        "description": "حفظ المشهد إلى مساحة العمل +Excalidraw الخاصة بك."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "تحميل من ملف",
         "button": "تحميل من ملف",
         "description": "سيتم التحميل من الملف <bold>استبدال المحتوى الموجود</bold>.<br></br>يمكنك النسخ الاحتياطي لرسمك أولاً باستخدام أحد الخيارات أدناه."
-      },
-      "shareableLink": {
-        "title": "تحميل من رابط",
-        "button": "استبدال محتواي",
-        "description": "سيتسبب تحميل رسمة خارجية <bold>باستبدال محتواك الموجود حاليًا</bold>.<br></br>بإمكانك إجراء النسخ الاحتياطي لرسمتك الحالية باستخدام أحد الخيارات أدناه."
       }
     }
   },
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": "بحث سريع"

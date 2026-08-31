@@ -232,7 +232,6 @@
     "save": "현재 파일에 저장",
     "saveAs": "다른 이름으로 저장",
     "load": "열기",
-    "getShareableLink": "공유 가능한 링크 생성",
     "close": "닫기",
     "selectLanguage": "언어 선택",
     "scrollBackToContent": "콘텐츠 영역으로 스크롤하기",
@@ -258,29 +257,22 @@
     "clear": "지우기",
     "remove": "삭제",
     "embed": "임베딩 토글",
-    "publishLibrary": "이름 변경 또는 게시",
     "submit": "제출",
     "confirm": "확인",
     "embeddableInteractionButton": "클릭하여 상호작용"
   },
   "alerts": {
     "clearReset": "모든 작업 내용이 초기화됩니다. 계속하시겠습니까?",
-    "couldNotCreateShareableLink": "공유 가능한 링크를 생성할 수 없습니다.",
-    "couldNotCreateShareableLinkTooBig": "공유 가능한 링크를 생성할 수 없습니다: 화면이 너무 큽니다.",
     "couldNotLoadInvalidFile": "유효하지 않은 파일입니다.",
-    "importBackendFailed": "서버로부터 불러 오지 못했습니다.",
     "cannotExportEmptyCanvas": "빈 캔버스를 내보낼 수 없습니다.",
     "couldNotCopyToClipboard": "클립보드로 복사하지 못했습니다.",
     "decryptFailed": "데이터를 복호화하지 못했습니다.",
-    "uploadedSecurly": "업로드는 종단 간 암호화로 보호되므로 Excalidraw 서버 및 타사가 콘텐츠를 읽을 수 없습니다.",
-    "loadSceneOverridePrompt": "외부 파일을 불러 오면 기존 콘텐츠가 대체됩니다. 계속 진행할까요?",
     "collabStopOverridePrompt": "협업 세션을 종료하면 로컬 저장소에 있는 그림이 협업 세션의 그림으로 대체됩니다. 진행하겠습니까?\n\n(로컬 저장소에 있는 그림을 유지하려면 현재 브라우저 탭을 닫아주세요.)",
     "errorAddingToLibrary": "아이템을 라이브러리에 추가 할수 없습니다",
     "errorRemovingFromLibrary": "라이브러리에서 아이템을 삭제할수 없습니다",
     "confirmAddLibrary": "{{numShapes}}개의 모양이 라이브러리에 추가됩니다. 계속하시겠어요?",
     "imageDoesNotContainScene": "이 이미지는 화면 데이터를 포함하고 있지 않은 것 같습니다. 내보낼 때 화면을 첨부하도록 설정하셨나요?",
     "cannotRestoreFromImage": "이미지 파일에서 화면을 복구할 수 없었습니다",
-    "invalidSceneUrl": "제공된 URL에서 화면을 가져오는데 실패했습니다. 주소가 잘못되거나, 유효한 Excalidraw JSON 데이터를 포함하고 있지 않은 것일 수 있습니다.",
     "resetLibrary": "당신의 라이브러리를 초기화 합니다. 계속하시겠습니까?",
     "removeItemsFromsLibrary": "{{count}}개의 아이템을 라이브러리에서 삭제하시겠습니까?",
     "invalidEncryptionKey": "암호화 키는 반드시 22글자여야 합니다. 실시간 협업이 비활성화됩니다.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "협업 서버에 접속하는데 실패했습니다. 페이지를 새로고침하고 다시 시도해보세요.",
     "importLibraryError": "라이브러리를 불러오지 못했습니다.",
     "saveLibraryError": "라이브러리를 저장공간에 저장하지 못했습니다. 변경 사항들을 잃지 않으려면 라이브러리를 로컬 저장소에 저장하여 주세요.",
-    "collabSaveFailed": "데이터베이스에 저장하지 못했습니다. 문제가 계속 된다면, 작업 내용을 잃지 않도록 로컬 저장소에 저장해 주세요.",
-    "collabSaveFailed_sizeExceeded": "데이터베이스에 저장하지 못했습니다. 캔버스가 너무 큰 거 같습니다. 문제가 계속 된다면, 작업 내용을 잃지 않도록 로컬 저장소에 저장해 주세요.",
     "imageToolNotSupported": "이미지가 비활성화되어 있습니다.",
     "brave_measure_text_error": {
       "line1": "귀하께서는 <bold>강력한 지문 차단 설정</bold>이 활성화된 Brave browser를 사용하고 계신 것 같습니다.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "더블 클릭하거나 {{shortcut}} 키를 눌러 점을 편집하세요",
     "lineEditor_pointSelected": "{{shortcut_1}} 키로 점을(점들을) 제거하고, {{shortcut_2}} 키로 복제하거나 드래그로 이동하세요",
     "lineEditor_nothingSelected": "편집할 점을 선택하세요 (여러 개 선택하려면 {{shortcut_1}} 키를 누르세요). 또는 {{shortcut_2}} 키를 누른 채 클릭해 새 점을 추가하세요",
-    "publishLibrary": "당신만의 라이브러리를 게시하기",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "저희는 화면 정보를 오류에 포함하지 않도록 매우 주의하고 있습니다. 혹시 화면에 민감한 내용이 없다면 이곳에 업로드를 고려해주세요.<button>버그 트래커</button> 아래 정보를 GitHub 이슈에 복사 및 붙여넣기해 주세요.",
     "sceneContent": "화면 내용:"
   },
-  "shareDialog": {
-    "or": "또는"
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "디스크에 저장",
     "disk_details": "나중에 다시 불러올 수 있도록 화면 데이터를 내보냅니다.",
-    "disk_button": "파일로 저장",
-    "link_title": "공유 가능한 링크 생성",
-    "link_details": "읽기 전용 링크로 내보냅니다.",
-    "link_button": "링크로 내보내기",
-    "excalidrawplus_description": "화면을 당신의 Excalidraw+ 작업 공간으로 저장합니다.",
-    "excalidrawplus_button": "내보내기",
-    "excalidrawplus_exportError": "지금은 Excalidraw+로 내보낼 수 없습니다..."
+    "disk_button": "파일로 저장"
   },
   "helpDialog": {
     "blog": "블로그 읽어보기",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "캔버스 지우기"
-  },
-  "publishDialog": {
-    "title": "라이브러리 게시하기",
-    "itemName": "아이템 이름",
-    "authorName": "저자명",
-    "githubUsername": "깃허브 사용자이름",
-    "twitterUsername": "트위터 사용자이름",
-    "libraryName": "라이브러리 이름",
-    "libraryDesc": "라이브러리 설명",
-    "website": "웹사이트",
-    "placeholder": {
-      "authorName": "이름 또는 사용자명",
-      "libraryName": "당신의 라이브러리 이름",
-      "libraryDesc": "사람들에게 라이브러리의 용도를 알기 쉽게 설명해주세요",
-      "githubHandle": "GitHub 사용자명 (선택), 제출한 뒤에도 심사를 위해서 라이브러리를 수정할 때 사용됩니다",
-      "twitterHandle": "Twitter 사용자명 (선택), Twitter를 통해서 홍보할 때 제작자를 밝히기 위해 사용됩니다",
-      "website": "개인 웹사이트나 다른 어딘가의 링크 (선택)"
-    },
-    "errors": {
-      "required": "필수사항",
-      "website": "유효한 URL을 입력하세요"
-    },
-    "noteDescription": "당신의 라이브러리를 제출하여 <link>공개 라이브러리 저장소</link>에서 다른 사람들의 그림에 사용할 수 있도록 하세요.",
-    "noteGuidelines": "라이브러리는 먼저 수동으로 승인되어야 합니다. 제출하기 전에 <link>가이드라인</link>을 먼저 읽어보세요. 의견을 공유하거나 변경사항을 만들기 위해선 GitHub 계정이 필요하지만, 반드시 필요하진 않습니다.",
-    "noteLicense": "제출함으로써, 당신은 라이브러리가 <link>MIT 라이선스 </link>하에 배포됨을, 즉 아무나 제약 없이 사용할 수 있음에 동의합니다.",
-    "noteItems": "각각의 라이브러리는 분류할 수 있도록 고유한 이름을 가져야 합니다. 다음의 라이브러리 항목이 포함됩니다:",
-    "atleastOneLibItem": "최소한 하나의 라이브러리를 선택해주세요",
-    "republishWarning": "참고: 선택된 항목의 일부는 이미 제출/게시되었습니다. 기존의 라이브러리나 제출물을 업데이트하는 경우에만 제출하세요."
-  },
-  "publishSuccessDialog": {
-    "title": "라이브러리 제출됨",
-    "content": "{{authorName}}님 감사합니다. 당신의 라이브러리가 심사를 위해 제출되었습니다. 진행 상황을<link>여기에서 확인하실 수 있습니다.</link>"
   },
   "confirmDialog": {
     "resetLibrary": "라이브러리 리셋",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "대신 Excalidraw+로 이동하시겠습니까?",
       "menuHint": "내보내기, 설정, 언어, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "디스크에 저장",
         "button": "디스크에 저장",
         "description": "나중에 다시 불러올 수 있도록 화면 데이터를 내보냅니다."
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "Excalidraw+로 내보내기",
-        "description": "화면을 당신의 Excalidraw+ 작업 공간으로 저장합니다."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "파일에서 불러오기",
         "button": "파일에서 불러오기",
         "description": "파일을 불러오면 <bold>현재 작성된 데이터를 덮어쓰게 됩니다</bold>.<br></br>다음 옵션 중 하나를 선택하여 작업물을 백업해 둘 수 있습니다."
-      },
-      "shareableLink": {
-        "title": "주소에서 불러오기",
-        "button": "컨텐츠를 덮어쓰기",
-        "description": "외부 작업물을 불러오면 <bold>현재 작성된 데이터를 덮어쓰게 됩니다</bold>.<br></br>다음 옵션 중 하나를 선택하여 작업물을 백업해 둘 수 있습니다."
       }
     }
   },
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

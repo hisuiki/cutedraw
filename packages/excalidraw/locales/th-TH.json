@@ -232,7 +232,6 @@
     "save": "บันทึกเป็นไฟล์ปัจจุบัน",
     "saveAs": "บันทึกเป็น",
     "load": "เปิด",
-    "getShareableLink": "สร้างลิงค์ที่แชร์ได้",
     "close": "ปิด",
     "selectLanguage": "เลือกภาษา",
     "scrollBackToContent": "เลื่อนกลับไปด้านบน",
@@ -258,29 +257,22 @@
     "clear": "เคลียร์",
     "remove": "ลบ",
     "embed": "สลับการฝัง",
-    "publishLibrary": "",
     "submit": "ตกลง",
     "confirm": "ยืนยัน",
     "embeddableInteractionButton": "คลิกเพื่อปฏิสัมพันธ์"
   },
   "alerts": {
     "clearReset": "",
-    "couldNotCreateShareableLink": "ไม่สามารถสร้างลิงค์ได้",
-    "couldNotCreateShareableLinkTooBig": "",
     "couldNotLoadInvalidFile": "ไม่สามารถโหลดไฟล์ที่ผิดพลาดได้",
-    "importBackendFailed": "เกิดข้อผิดพลาดจากการนำเข้าจากระบบหลังบ้าน",
     "cannotExportEmptyCanvas": "ไม่สามารถนำออกจากผืนผ้าใบที่ว่างเปล่าได้",
     "couldNotCopyToClipboard": "ไม่สามารถคัดลอกไปยังคลิปบอร์ดได้",
     "decryptFailed": "ไม่สามารถถอดรหัสข้อมูลได้",
-    "uploadedSecurly": "การอัพโหลดได้ถูกเข้ารหัสแบบ end-to-end หมายความว่าเซิร์ฟเวอร์ของ Excalidraw และบุคคลอื่นไม่สามารถอ่านข้อมูลได้",
-    "loadSceneOverridePrompt": "",
     "collabStopOverridePrompt": "",
     "errorAddingToLibrary": "ไม่สามารถเพิ่มรายการเข้าไปในคลังได้",
     "errorRemovingFromLibrary": "ไม่สามารถลบรายการนี้ออกจากคลังได้",
     "confirmAddLibrary": "",
     "imageDoesNotContainScene": "",
     "cannotRestoreFromImage": "",
-    "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
     "invalidEncryptionKey": "",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "ไม่สามารถเชื่อต่อกับ collab เซิร์ฟเวอร์ได้ โปรดลองโหลดหน้านี้ใหม่และลองอีกครั้ง",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "",
     "sceneContent": ""
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "บันทึกไปยังดิสก์",
     "disk_details": "",
-    "disk_button": "บันทึกเป็นไฟล์",
-    "link_title": "ลิงก์ที่สามารถแชร์ได้",
-    "link_details": "",
-    "link_button": "ส่งออกไปยังไฟล์",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "ส่งออก",
-    "excalidrawplus_exportError": "ไม่สามารถส่งออกไปที่ Excalidraw+ ได้ในขณะนี้"
+    "disk_button": "บันทึกเป็นไฟล์"
   },
   "helpDialog": {
     "blog": "อ่านบล็อกของพวกเรา",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "ล้างผืนผ้าใบ"
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "ชื่อสิ่งของ",
-    "authorName": "ชื่อเจ้าของ",
-    "githubUsername": "ชื่อผู้ใช้ GitHub",
-    "twitterUsername": "ชื่อผู้ใช้ Twitter",
-    "libraryName": "ชื่อไลบรารี่",
-    "libraryDesc": "",
-    "website": "เว็บไซต์",
-    "placeholder": {
-      "authorName": "",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "จำเป็น",
-      "website": "ป้อน URL ที่ถูกต้อง"
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "รีเซ็ตคลัง",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,22 +575,12 @@
         "title": "บันทึกไปยังดิสก์",
         "button": "บันทึกไปยังดิสก์",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "นำออกไปยัง Excalidraw+",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
         "title": "โหลดจากไฟล์",
         "button": "โหลดจากไฟล์",
-        "description": ""
-      },
-      "shareableLink": {
-        "title": "",
-        "button": "แทนที่เนื้อหาของฉัน",
         "description": ""
       }
     }
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": "อัปเกรดบัญชีเป็นแบบ Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "ค้นหาด่วน"

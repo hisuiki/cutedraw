@@ -95,7 +95,7 @@ const MenuContent = ({
         onCloseAutoFocus={(event: Event) => event.preventDefault()}
       >
         {/* the zIndex ensures this menu has higher stacking order,
-    see https://github.com/excalidraw/excalidraw/pull/1445 */}
+    see https://github.com/hisuiki/cutedraw/pull/1445 */}
         {editorInterface.formFactor === "phone" ? (
           <Stack.Col className="dropdown-menu-container">{children}</Stack.Col>
         ) : (

@@ -27,9 +27,6 @@
   },
   "dependencies": {
     "@excalidraw/random-username": "1.0.0",
-    "@firebase/app": "0.11.1",
-    "@firebase/firestore": "4.7.8",
-    "@firebase/storage": "0.13.6",
     "i18next-browser-languagedetector": "6.1.4",
     "idb-keyval": "6.0.3",
     "jotai": "2.11.0",

@@ -232,7 +232,6 @@
     "save": "Guardar no ficheiro atual",
     "saveAs": "Guardar como",
     "load": "Abrir",
-    "getShareableLink": "Obter uma hiperligação de partilha",
     "close": "Fechar",
     "selectLanguage": "Selecionar idioma",
     "scrollBackToContent": "Voltar ao conteúdo",
@@ -258,29 +257,22 @@
     "clear": "Limpar",
     "remove": "Remover",
     "embed": "Alternar incorporação",
-    "publishLibrary": "Renomear ou publicar",
     "submit": "Enviar",
     "confirm": "Confirmar",
     "embeddableInteractionButton": "Clique para interagir"
   },
   "alerts": {
     "clearReset": "Isto irá limpar toda a área de desenho. Tem a certeza?",
-    "couldNotCreateShareableLink": "Não foi possível criar uma hiperligação partilhável.",
-    "couldNotCreateShareableLinkTooBig": "Não foi possível criar uma hiperligação partilhável: a cena é muito grande",
     "couldNotLoadInvalidFile": "Não foi possível carregar o ficheiro inválido",
-    "importBackendFailed": "A importação do servidor falhou.",
     "cannotExportEmptyCanvas": "Não é possível exportar uma área de desenho vazia.",
     "couldNotCopyToClipboard": "Não foi possível copiar para a área de transferência.",
     "decryptFailed": "Não foi possível desencriptar os dados.",
-    "uploadedSecurly": "O envio foi protegido com encriptação de ponta a ponta, o que significa que o servidor do Excalidraw e terceiros não podem ler o conteúdo.",
-    "loadSceneOverridePrompt": "Se carregar um desenho externo substituirá o conteúdo existente. Quer continuar?",
     "collabStopOverridePrompt": "Ao interromper a sessão irá substituir o último desenho guardado. Tem a certeza?\n\n(Caso queira manter o último desenho, simplesmente feche a janela do navegador.)",
     "errorAddingToLibrary": "Não foi possível adicionar o item à biblioteca",
     "errorRemovingFromLibrary": "Não foi possível remover o item da biblioteca",
     "confirmAddLibrary": "Isto irá adicionar {{numShapes}} forma(s) à sua biblioteca. Tem a certeza?",
     "imageDoesNotContainScene": "Esta imagem parece não conter dados de cenas. Ativou a incorporação da cena durante a exportação?",
     "cannotRestoreFromImage": "Não foi possível restaurar a cena deste ficheiro de imagem",
-    "invalidSceneUrl": "Não foi possível importar a cena a partir do URL fornecido. Ou está mal formado ou não contém dados JSON do Excalidraw válidos.",
     "resetLibrary": "Isto irá limpar a sua biblioteca. Tem a certeza?",
     "removeItemsFromsLibrary": "Apagar {{count}} item(ns) da biblioteca?",
     "invalidEncryptionKey": "A chave de encriptação deve ter 22 caracteres. A colaboração ao vivo está desativada.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Não foi possível fazer a ligação ao servidor colaborativo. Por favor volte a carregar a página e tente novamente.",
     "importLibraryError": "Não foi possível carregar a biblioteca",
     "saveLibraryError": "Não foi possível guardar a biblioteca no armazenamento. Guarde a sua biblioteca num ficheiro local para garantir que não perde as alterações.",
-    "collabSaveFailed": "Não foi possível guardar na base de dados de backend. Se os problemas persistirem, guarde o ficheiro localmente para garantir que não perde o seu trabalho.",
-    "collabSaveFailed_sizeExceeded": "Não foi possível guardar na base de dados de backend, parece que a a área de desenho é muito grande. Deve guardar o ficheiro localmente para garantir que não perde o seu trabalho.",
     "imageToolNotSupported": "As imagens estão desativadas.",
     "brave_measure_text_error": {
       "line1": "Parece que está a utilizar o navegador Brave com a configuração <bold>Bloquear impressões digitais (fingerprinting) no modo restrito/agressivo</bold> ativada.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Clique duas vezes ou prima {{shortcut}} para editar os pontos",
     "lineEditor_pointSelected": "Prima {{shortcut_1}} para remover o(s) ponto(s),\n{{shortcut_2}} para duplicar ou arraste para mover",
     "lineEditor_nothingSelected": "Selecione um ponto para editar (pressione {{shortcut_1}} para selecionar vários),\nou pressione {{shortcut_2}} e clique para acrescentar novos pontos",
-    "publishLibrary": "Publique a sua própria biblioteca",
     "bindTextToElement": "{{shortcut}} para adicionar texto",
     "createFlowchart": "{{shortcut}} para criar um fluxograma",
     "deepBoxSelect": "Pressione {{shortcut}} para efetuar uma seleção profunda e para impedir o arraste",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Tivemos muito cuidado para não incluir as informações da sua cena no erro. Se a sua cena não for privada, considere fazer o acompanhamento no nosso <button>rastreador de problemas</button>. Inclua as informações abaixo copiando e colando no problema do GitHub.",
     "sceneContent": "Conteúdo da cena:"
   },
-  "shareDialog": {
-    "or": "Ou"
-  },
   "roomDialog": {
     "desc_intro": "Convide pessoas para colaborar no seu desenho.",
     "desc_privacy": "Não se preocupe, a sessão é encriptada e totalmente privada. Nem mesmo o nosso servidor pode ver o que está a desenhar.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Guardar no disco",
     "disk_details": "Exportar os dados da cena para um ficheiro do qual poderá importar mais tarde.",
-    "disk_button": "Guardar num ficheiro",
-    "link_title": "Hiperligação partilhável",
-    "link_details": "Exportar como uma hiperligação de apenas leitura.",
-    "link_button": "Exportar para hiperligação",
-    "excalidrawplus_description": "Guardar a cena no seu espaço de trabalho do Excalidraw+.",
-    "excalidrawplus_button": "Exportar",
-    "excalidrawplus_exportError": "Não foi possível exportar para o Excalidraw+ neste momento..."
+    "disk_button": "Guardar num ficheiro"
   },
   "helpDialog": {
     "blog": "Leia o nosso blogue",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Apagar área de desenho"
-  },
-  "publishDialog": {
-    "title": "Publicar biblioteca",
-    "itemName": "Nome do item",
-    "authorName": "Nome do autor",
-    "githubUsername": "Nome de utilizador no GitHub",
-    "twitterUsername": "Nome de utilizador no Twitter",
-    "libraryName": "Nome da biblioteca",
-    "libraryDesc": "Descrição da biblioteca",
-    "website": "Página web",
-    "placeholder": {
-      "authorName": "Introduza o seu nome ou nome de utilizador",
-      "libraryName": "Nome da sua biblioteca",
-      "libraryDesc": "Descrição da sua biblioteca para ajudar as pessoas a compreenderem a sua utilização",
-      "githubHandle": "Identificador do GitHub (handle opcional), para que possa editar a biblioteca depois desta ser enviada para revisão",
-      "twitterHandle": "Nome de utilizador no Twitter (opcional), para que saibamos a quem atribuir os créditos quando promovermos através do Twitter",
-      "website": "Hiperligação para o seu sítio web pessoal ou outro (opcional)"
-    },
-    "errors": {
-      "required": "Obrigatório",
-      "website": "Introduza um URL válido"
-    },
-    "noteDescription": "Envie a sua biblioteca para ser incluída no <link>repositório de bibliotecas públicas</link> para que outras pessoas a possam utilizar nos seus desenhos.",
-    "noteGuidelines": "A biblioteca precisa de ser aprovada manualmente primeiro. Por favor, leia as <link>orientações</link> antes de enviar. Precisará de uma conta GitHub para comunicar e fazer alterações, se solicitado, mas não é estritamente necessário.",
-    "noteLicense": "Ao submeter, concorda que a biblioteca será publicada ao abrigo da <link>Licença MIT</link>, o que, resumidamente, significa que qualquer pessoa pode utilizá-la sem restrições.",
-    "noteItems": "Cada item de biblioteca deve ter o seu próprio nome para que possa ser filtrado. Serão incluídos os seguintes itens de biblioteca:",
-    "atleastOneLibItem": "Por favor selecione pelo menos um item da biblioteca para começar",
-    "republishWarning": "Nota: alguns dos itens selecionados estão marcados como já publicados / submetidos. Só deve voltar a submeter itens quando atualizar uma biblioteca ou submissão existente."
-  },
-  "publishSuccessDialog": {
-    "title": "Biblioteca enviada",
-    "content": "Obrigado {{authorName}}. A sua biblioteca foi enviada para análise. Pode acompanhar o estado dela <link>aqui</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Repor a biblioteca",
@@ -595,7 +543,6 @@
       "center_heading": "Os seus desenhos estão guardados no armazenamento do seu navegador.",
       "center_heading_line2": "O armazenamento do navegador pode ser apagado inesperadamente.",
       "center_heading_line3": "Para não perder os seus desenhos, guarde-os num ficheiro.",
-      "center_heading_plus": "Queria antes ir para o Excalidraw+?",
       "menuHint": "Exportar, preferências, idiomas..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Guardar no disco",
         "button": "Guardar no disco",
         "description": "Exportar os dados da cena para um ficheiro do qual poderá importar mais tarde."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportar para Excalidraw+",
-        "description": "Guardar a cena no seu espaço de trabalho do Excalidraw+."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Carregar a partir de ficheiro",
         "button": "Carregar a partir de ficheiro",
         "description": "Carregar a partir de um ficheiro irá <bold>substituir o conteúdo existente</bold>.<br></br>Pode fazer primeiro uma cópia de segurança do seu desenho utilizando uma das opções abaixo."
-      },
-      "shareableLink": {
-        "title": "Carregar da hiperligação",
-        "button": "Substituir o meu conteúdo",
-        "description": "Carregar um desenho externo irá <bold>substituir o conteúdo existente</bold>.<br></br>Pode fazer primeiro uma cópia de segurança do seu desenho utilizando uma das opções abaixo."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Erro de sintaxe Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Atingiu o seu limite de IA no plano gratuito. Experimente o Excalidraw+ para mais ou volte amanhã.",
+      "messageLimit": "",
       "generalRateLimit": "Acalme-se, está a ir muito rápido! Espere se faz favor um momento antes de tentar novamente.",
       "messageLimitInputPlaceholder": "Atingiu o seu limite de mensagens"
-    },
-    "upsellBtnLabel": "Efetuar “upgrade” para o plano Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Pesquisa rápida"

@@ -232,7 +232,6 @@
     "save": "Opslaan naar huidige bestand",
     "saveAs": "Opslaan als",
     "load": "Open",
-    "getShareableLink": "Maak een deelbare link",
     "close": "Sluiten",
     "selectLanguage": "Taal selecteren",
     "scrollBackToContent": "Scroll terug naar inhoud",
@@ -258,29 +257,22 @@
     "clear": "Wissen",
     "remove": "Verwijderen",
     "embed": "Embedden in-/uitschakelen",
-    "publishLibrary": "Hernoemen of publiceren",
     "submit": "Versturen",
     "confirm": "Bevestigen",
     "embeddableInteractionButton": "Klik voor interactie"
   },
   "alerts": {
     "clearReset": "Dit zal het hele canvas verwijderen. Weet je het zeker?",
-    "couldNotCreateShareableLink": "Kon geen deelbare link aanmaken.",
-    "couldNotCreateShareableLinkTooBig": "Kan geen deelbare link aanmaken: de scène is te groot",
     "couldNotLoadInvalidFile": "Kan ongeldig bestand niet laden",
-    "importBackendFailed": "Importeren vanuit backend mislukt.",
     "cannotExportEmptyCanvas": "Kan geen leeg canvas exporteren.",
     "couldNotCopyToClipboard": "Kon niet naar klembord kopiëren.",
     "decryptFailed": "Kan gegevens niet decoderen.",
-    "uploadedSecurly": "De upload is beveiligd met end-to-end encryptie, wat betekent dat de Excalidraw server en derden de inhoud niet kunnen lezen.",
-    "loadSceneOverridePrompt": "Het inladen van een externe tekening zal je bestaande inhoud vervangen. Wil je verdergaan?",
     "collabStopOverridePrompt": "Wanneer de sessie wordt gestopt, overschrijft u de eerdere, lokaal opgeslagen tekening. Weet je het zeker?\n\n(Als je de lokale tekening wilt behouden, sluit je in plaats daarvan het browsertabblad)",
     "errorAddingToLibrary": "Kan item niet toevoegen aan de bibliotheek",
     "errorRemovingFromLibrary": "Kan item niet uit de bibliotheek verwijderen",
     "confirmAddLibrary": "Dit zal {{numShapes}} vorm(en) toevoegen aan je bibliotheek. Weet je het zeker?",
     "imageDoesNotContainScene": "Deze afbeelding lijkt geen scène gegevens te bevatten. Heb je scène embedding tijdens het exporteren ingeschakeld?",
     "cannotRestoreFromImage": "Scène kan niet worden hersteld vanuit dit afbeeldingsbestand",
-    "invalidSceneUrl": "Kan scène niet importeren vanuit de opgegeven URL. Het is onjuist of bevat geen geldige Excalidraw JSON-gegevens.",
     "resetLibrary": "Dit zal je bibliotheek wissen. Weet je het zeker?",
     "removeItemsFromsLibrary": "Verwijder {{count}} item(s) uit bibliotheek?",
     "invalidEncryptionKey": "Encryptiesleutel moet 22 tekens zijn. Live samenwerking is uitgeschakeld.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Kan geen verbinding maken met de collab server. Herlaad de pagina en probeer het opnieuw.",
     "importLibraryError": "Kon bibliotheek niet laden",
     "saveLibraryError": "Kan bibliotheek niet opslaan in opslag. Sla uw bibliotheek op lokaal bestand om ervoor te zorgen dat u geen wijzigingen verliest.",
-    "collabSaveFailed": "Kan niet opslaan in de backend database. Als de problemen blijven bestaan, moet u het bestand lokaal opslaan om ervoor te zorgen dat u uw werk niet verliest.",
-    "collabSaveFailed_sizeExceeded": "Kan de backend database niet opslaan, het canvas lijkt te groot te zijn. U moet het bestand lokaal opslaan om ervoor te zorgen dat u uw werk niet verliest.",
     "imageToolNotSupported": "Afbeeldingen zijn uitgeschakeld.",
     "brave_measure_text_error": {
       "line1": "Het lijkt erop dat je de Brave browser gebruikt met de instelling <bold>Agressief vingerafdrukken blokkeren</bold> ingeschakeld.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Dubbelklik of druk op {{shortcut}} om punten te bewerken",
     "lineEditor_pointSelected": "Druk op {{shortcut_1}} om punt(en) te verwijderen,\n{{shortcut_2}} om te dupliceren, of sleep om te verplaatsen",
     "lineEditor_nothingSelected": "Selecteer een punt om te bewerken (houd {{shortcut_1}} ingedrukt om meerdere te selecteren),\nof houd {{shortcut_2}} ingedrukt en klik om nieuwe punten toe te voegen",
-    "publishLibrary": "Publiceer je eigen bibliotheek",
     "bindTextToElement": "{{shortcut}} om tekst toe te voegen",
     "createFlowchart": "{{shortcut}} voor het maken van een flowchart",
     "deepBoxSelect": "Houd {{shortcut}} ingedrukt om diep te selecteren, en om slepen te voorkomen",
@@ -410,9 +399,6 @@
     "openIssueMessage": "We waren voorzichtig om je scène-informatie niet in de fout toe te voegen. Als je scène niet privé is, overweeg dan alstublieft het opvolgen op onze <button>bugtracker.</button> Kopieer de informatie hieronder naar de GitHub issue.",
     "sceneContent": "Scène-inhoud:"
   },
-  "shareDialog": {
-    "or": "Of"
-  },
   "roomDialog": {
     "desc_intro": "Nodig mensen uit om samen te werken aan je tekening.",
     "desc_privacy": "Geen zorgen, de sessie is end-to-end versleuteld en volledig privé. Niet eens onze server kan zien wat je tekent.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Opslaan op schijf",
     "disk_details": "De scènegegevens exporteren naar een bestand waaruit u later kunt importeren.",
-    "disk_button": "Opslaan naar bestand",
-    "link_title": "Deelbare link",
-    "link_details": "Exporteren als een alleen-lezen link.",
-    "link_button": "Exporteer naar link",
-    "excalidrawplus_description": "Sla de scène op in je Excalidraw+ werkruimte.",
-    "excalidrawplus_button": "Exporteer",
-    "excalidrawplus_exportError": "Kan op dit moment niet exporteren naar Excalidraw+..."
+    "disk_button": "Opslaan naar bestand"
   },
   "helpDialog": {
     "blog": "Lees onze blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Wis canvas"
-  },
-  "publishDialog": {
-    "title": "Publiceer bibliotheek",
-    "itemName": "Itemnaam",
-    "authorName": "Naam auteur",
-    "githubUsername": "GitHub gebruikersnaam",
-    "twitterUsername": "Twitter gebruikersnaam",
-    "libraryName": "Naam bibliotheek",
-    "libraryDesc": "Beschrijving van de bibliotheek",
-    "website": "Website",
-    "placeholder": {
-      "authorName": "Je naam of gebruikersnaam",
-      "libraryName": "Naam van je bibliotheek",
-      "libraryDesc": "Beschrijving van je bibliotheek om mensen te helpen het gebruik ervan te begrijpen",
-      "githubHandle": "GitHub-gebruikersnaam (optioneel), zodat je de bibliotheek kunt bewerken zodra deze ter beoordeling is ingediend",
-      "twitterHandle": "Twitter-gebruikersnaam (optioneel), zodat we weten wie we moeten vermelden bij promotie op Twitter",
-      "website": "Link naar je persoonlijke website of elders (optioneel)"
-    },
-    "errors": {
-      "required": "Vereist",
-      "website": "Vul een geldige URL in"
-    },
-    "noteDescription": "<link>openbare repository</link>",
-    "noteGuidelines": "<link>richtlijnen</link>",
-    "noteLicense": "<link>MIT-licentie, </link>",
-    "noteItems": "Elk bibliotheekitem moet een eigen naam hebben zodat het gefilterd kan worden. De volgende bibliotheekitems worden geïncludeerd:",
-    "atleastOneLibItem": "Selecteer op zijn minst één bibliotheekitem om te starten",
-    "republishWarning": "Opmerking: sommige van de geselecteerde items zijn al gepubliceerd/ingediend. Je moet items alleen opnieuw indienen bij het bijwerken van een bestaande bibliotheek of inzending."
-  },
-  "publishSuccessDialog": {
-    "title": "Bibliotheek ingediend",
-    "content": "Dank je {{authorName}}. Jouw bibliotheek is ingediend voor beoordeling. Je kunt de status <link>hier bijhouden</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Reset bibliotheek",
@@ -595,7 +543,6 @@
       "center_heading": "Je tekeningen worden bewaard in de opslag van je browser.",
       "center_heading_line2": "Browser opslag kan onverwacht gewist worden.",
       "center_heading_line3": "Sla je werk regelmatig op in een bestand om te voorkomen dat je het kwijtraakt.",
-      "center_heading_plus": "Wil je in plaats daarvan naar Excalidraw+ gaan?",
       "menuHint": "Exporteren, voorkeuren en meer, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Opslaan op schijf",
         "button": "Opslaan op schijf",
         "description": "Exporteer de scènegegevens als bestand die je later weer kunt importeren."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exporteer naar Excalidraw+",
-        "description": "Sla de scène op in je Excalidraw+ werkruimte."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Laad vanuit bestand",
         "button": "Laad vanuit bestand",
         "description": "Het laden van een bestand zal <bold>je bestaande inhoud vervangen</bold>.<br></br>Je kunt eerst een back-up van je tekening maken via een van de onderstaande opties."
-      },
-      "shareableLink": {
-        "title": "Laad vanuit link",
-        "button": "Vervang mijn inhoud",
-        "description": "Het laden van externe tekening zal <bold>je bestaande inhoud vervangen</bold>.<br></br>Je kunt eerst een back-up van je tekening maken via een van de onderstaande opties."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Mermaid syntax fout"
     },
     "rateLimit": {
-      "messageLimit": "Je hebt je AI limiet bereikt op het gratis abonnement. Probeer Excalidraw+ uit voor meer of kom morgen terug.",
+      "messageLimit": "",
       "generalRateLimit": "Ho ho, rustig aan, je gaat te snel voor ons! Wacht even voor je het opnieuw probeert.",
       "messageLimitInputPlaceholder": "Je hebt je berichtenlimiet bereikt"
-    },
-    "upsellBtnLabel": "Upgrade naar Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Snel Zoeken"

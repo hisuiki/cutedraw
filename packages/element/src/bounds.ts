@@ -1533,7 +1533,7 @@ export const elementsOverlappingBBox = <T extends ExcalidrawElement>({
     elementsInSelection.forEach((element) => {
       // note: currently we only support top-level group handling since
       // we don't support box selecting while editing the group/subgroup
-      // see https://github.com/excalidraw/excalidraw/pull/11234#issuecomment-4387654451
+      // see https://github.com/hisuiki/cutedraw/pull/11234#issuecomment-4387654451
       const groupId = element.groupIds.at(-1);
 
       const group = groupId ? groups[groupId] : null;

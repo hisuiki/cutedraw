@@ -232,7 +232,6 @@
     "save": "Ámeldegi faylǵa saqlaw",
     "saveAs": "Retinde saqlaw",
     "load": "Ashıw",
-    "getShareableLink": "",
     "close": "Jabıw",
     "selectLanguage": "Tildi tańlaw",
     "scrollBackToContent": "",
@@ -258,29 +257,22 @@
     "clear": "Tazalaw",
     "remove": "Óshiriw",
     "embed": "",
-    "publishLibrary": "",
     "submit": "Jiberiw",
     "confirm": "Tastıyıqlaw",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "",
-    "couldNotCreateShareableLink": "",
-    "couldNotCreateShareableLinkTooBig": "",
     "couldNotLoadInvalidFile": "",
-    "importBackendFailed": "",
     "cannotExportEmptyCanvas": "",
     "couldNotCopyToClipboard": "Almasıw buferine kóshirip alıw ámelge aspadı.",
     "decryptFailed": "",
-    "uploadedSecurly": "",
-    "loadSceneOverridePrompt": "",
     "collabStopOverridePrompt": "",
     "errorAddingToLibrary": "",
     "errorRemovingFromLibrary": "",
     "confirmAddLibrary": "",
     "imageDoesNotContainScene": "",
     "cannotRestoreFromImage": "",
-    "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
     "invalidEncryptionKey": "",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "",
     "importLibraryError": "Kitapxananı júklew ámelge aspadı",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "",
     "sceneContent": ""
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Diskke saqlaw",
     "disk_details": "",
-    "disk_button": "Faylǵa saqlaw",
-    "link_title": "",
-    "link_details": "",
-    "link_button": "Siltemege eksportlaw",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "Eksportlaw",
-    "excalidrawplus_exportError": ""
+    "disk_button": "Faylǵa saqlaw"
   },
   "helpDialog": {
     "blog": "Biziń blogtı oqıń",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": ""
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "",
-    "authorName": "Avtor atı",
-    "githubUsername": "GitHub paydalanıwshı atı",
-    "twitterUsername": "Twitter paydalanıwshı atı",
-    "libraryName": "Kitapxana ataması",
-    "libraryDesc": "",
-    "website": "Veb-sayt",
-    "placeholder": {
-      "authorName": "Atıńız yamasa paydalanıwshı atı",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "",
-      "website": ""
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "Kitapxananı qayta ornatıw",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": "Eksportlaw, sazlawlar, tiller, ..."
     },
     "defaults": {
@@ -628,22 +575,12 @@
         "title": "Diskke saqlaw",
         "button": "Diskke saqlaw",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
         "title": "Fayldan júklew",
         "button": "Fayldan júklew",
-        "description": ""
-      },
-      "shareableLink": {
-        "title": "Siltemeden júklew",
-        "button": "",
         "description": ""
       }
     }
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

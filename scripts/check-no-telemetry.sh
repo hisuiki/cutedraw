@@ -19,7 +19,7 @@ if git grep -n -i -E "$patterns" -- \
   exit 1
 fi
 
-if git grep -n -i -E 'sentry|posthog|amplitude|plausible|mixpanel|statsig|datadog|newrelic|matomo|firebase/analytics' -- \
+if git grep -n -i -E 'sentry|posthog|amplitude|plausible|mixpanel|statsig|datadog|newrelic|matomo' -- \
   'package.json' \
   '*/package.json'; then
   echo "Telemetry dependencies remain in package manifests." >&2

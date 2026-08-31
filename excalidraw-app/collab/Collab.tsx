@@ -6,7 +6,7 @@ import {
   reconcileElements,
 } from "@excalidraw/excalidraw";
 import { ErrorDialog } from "@excalidraw/excalidraw/components/ErrorDialog";
-import { APP_NAME, cloneJSON, EVENT, toBrandedType } from "@excalidraw/common";
+import { APP_NAME, EVENT, toBrandedType } from "@excalidraw/common";
 import {
   IDLE_THRESHOLD,
   ACTIVE_THRESHOLD,
@@ -14,17 +14,12 @@ import {
   assertNever,
   isDevEnv,
   isTestEnv,
-  preventUnload,
   resolvablePromise,
   throttleRAF,
 } from "@excalidraw/common";
 import { decryptData } from "@excalidraw/excalidraw/data/encryption";
 import { getVisibleSceneBounds } from "@excalidraw/element";
-import { newElementWith } from "@excalidraw/element";
-import { isImageElement, isInitializedImageElement } from "@excalidraw/element";
-import { AbortError } from "@excalidraw/excalidraw/errors";
 import { t } from "@excalidraw/excalidraw/i18n";
-import { withBatchedUpdates } from "@excalidraw/excalidraw/reactUtils";
 
 import throttle from "lodash.throttle";
 import { PureComponent } from "react";
@@ -36,14 +31,8 @@ import type {
   RemoteExcalidrawElement,
 } from "@excalidraw/excalidraw/data/reconcile";
 import type { ImportedDataState } from "@excalidraw/excalidraw/data/types";
+import type { OrderedExcalidrawElement } from "@excalidraw/element/types";
 import type {
-  ExcalidrawElement,
-  FileId,
-  InitializedExcalidrawImageElement,
-  OrderedExcalidrawElement,
-} from "@excalidraw/element/types";
-import type {
-  BinaryFileData,
   ExcalidrawImperativeAPI,
   SocketId,
   Collaborator,
@@ -55,46 +44,22 @@ import type { Mutable, ValueOf } from "@excalidraw/common/utility-types";
 import { appJotaiStore, atom } from "../app-jotai";
 import {
   CURSOR_SYNC_TIMEOUT,
-  FILE_UPLOAD_MAX_BYTES,
-  FIREBASE_STORAGE_PREFIXES,
   INITIAL_SCENE_UPDATE_TIMEOUT,
-  LOAD_IMAGES_TIMEOUT,
   WS_SUBTYPES,
   SYNC_FULL_SCENE_INTERVAL_MS,
   WS_EVENTS,
 } from "../app_constants";
-import {
-  generateCollaborationLinkData,
-  getCollaborationLink,
-  getSyncableElements,
-} from "../data";
-import {
-  encodeFilesForUpload,
-  FileManager,
-  updateStaleImageStatuses,
-} from "../data/FileManager";
-import { FileStatusStore } from "../data/fileStatusStore";
+import { generateCollaborationLinkData, getCollaborationLink } from "../data";
 import { LocalData } from "../data/LocalData";
-import {
-  isSavedToFirebase,
-  loadFilesFromFirebase,
-  loadFromFirebase,
-  saveFilesToFirebase,
-  saveToFirebase,
-} from "../data/firebase";
 import {
   importUsernameFromLocalStorage,
   saveUsernameToLocalStorage,
 } from "../data/localStorage";
 import { resetBrowserStateVersions } from "../data/tabSync";
 
-import { collabErrorIndicatorAtom } from "./CollabError";
 import Portal from "./Portal";
 
-import type {
-  SocketUpdateDataSource,
-  SyncableExcalidrawElement,
-} from "../data";
+import type { SocketUpdateDataSource } from "../data";
 
 export const collabAPIAtom = atom<CollabAPI | null>(null);
 export const isCollaboratingAtom = atom(false);
@@ -102,8 +67,6 @@ export const isOfflineAtom = atom(false);
 
 interface CollabState {
   errorMessage: string | null;
-  /** errors related to saving */
-  dialogNotifiedErrors: Record<string, boolean>;
   username: string;
   activeRoomLink: string | null;
 }
@@ -120,7 +83,6 @@ export interface CollabAPI {
   startCollaboration: CollabInstance["startCollaboration"];
   stopCollaboration: CollabInstance["stopCollaboration"];
   syncElements: CollabInstance["syncElements"];
-  fetchImageFilesFromFirebase: CollabInstance["fetchImageFilesFromFirebase"];
   setUsername: CollabInstance["setUsername"];
   getUsername: CollabInstance["getUsername"];
   getActiveRoomLink: CollabInstance["getActiveRoomLink"];
@@ -134,7 +96,6 @@ interface CollabProps {
 
 class Collab extends PureComponent<CollabProps, CollabState> {
   portal: Portal;
-  fileManager: FileManager;
   excalidrawAPI: CollabProps["excalidrawAPI"];
   activeIntervalId: number | null;
   idleTimeoutId: number | null;
@@ -149,60 +110,10 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     super(props);
     this.state = {
       errorMessage: null,
-      dialogNotifiedErrors: {},
       username: importUsernameFromLocalStorage() || "",
       activeRoomLink: null,
     };
     this.portal = new Portal(this);
-    this.fileManager = new FileManager({
-      onFileStatusChange: FileStatusStore.updateStatuses.bind(FileStatusStore),
-      getFiles: async (fileIds) => {
-        const { roomId, roomKey } = this.portal;
-        if (!roomId || !roomKey) {
-          throw new AbortError();
-        }
-
-        return loadFilesFromFirebase(`files/rooms/${roomId}`, roomKey, fileIds);
-      },
-      saveFiles: async ({ addedFiles }) => {
-        const { roomId, roomKey } = this.portal;
-        if (!roomId || !roomKey) {
-          throw new AbortError();
-        }
-
-        const { savedFiles, erroredFiles } = await saveFilesToFirebase({
-          prefix: `${FIREBASE_STORAGE_PREFIXES.collabFiles}/${roomId}`,
-          files: await encodeFilesForUpload({
-            files: addedFiles,
-            encryptionKey: roomKey,
-            maxBytes: FILE_UPLOAD_MAX_BYTES,
-          }),
-        });
-
-        return {
-          savedFiles: savedFiles.reduce(
-            (acc: Map<FileId, BinaryFileData>, id) => {
-              const fileData = addedFiles.get(id);
-              if (fileData) {
-                acc.set(id, fileData);
-              }
-              return acc;
-            },
-            new Map(),
-          ),
-          erroredFiles: erroredFiles.reduce(
-            (acc: Map<FileId, BinaryFileData>, id) => {
-              const fileData = addedFiles.get(id);
-              if (fileData) {
-                acc.set(id, fileData);
-              }
-              return acc;
-            },
-            new Map(),
-          ),
-        };
-      },
-    });
     this.excalidrawAPI = props.excalidrawAPI;
     this.activeIntervalId = null;
     this.idleTimeoutId = null;
@@ -211,7 +122,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
   private onUmmount: (() => void) | null = null;
 
   componentDidMount() {
-    window.addEventListener(EVENT.BEFORE_UNLOAD, this.beforeUnload);
     window.addEventListener("online", this.onOfflineStatusToggle);
     window.addEventListener("offline", this.onOfflineStatusToggle);
     window.addEventListener(EVENT.UNLOAD, this.onUnload);
@@ -239,7 +149,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       onPointerUpdate: this.onPointerUpdate,
       startCollaboration: this.startCollaboration,
       syncElements: this.syncElements,
-      fetchImageFilesFromFirebase: this.fetchImageFilesFromFirebase,
       stopCollaboration: this.stopCollaboration,
       setUsername: this.setUsername,
       getUsername: this.getUsername,
@@ -268,7 +177,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
   componentWillUnmount() {
     window.removeEventListener("online", this.onOfflineStatusToggle);
     window.removeEventListener("offline", this.onOfflineStatusToggle);
-    window.removeEventListener(EVENT.BEFORE_UNLOAD, this.beforeUnload);
     window.removeEventListener(EVENT.UNLOAD, this.onUnload);
     window.removeEventListener(EVENT.POINTER_MOVE, this.onPointerMove);
     window.removeEventListener(
@@ -296,83 +204,8 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     this.destroySocketClient({ isUnload: true });
   };
 
-  private beforeUnload = withBatchedUpdates((event: BeforeUnloadEvent) => {
-    const syncableElements = getSyncableElements(
-      this.getSceneElementsIncludingDeleted(),
-    );
-
-    if (
-      this.isCollaborating() &&
-      (this.fileManager.shouldPreventUnload(syncableElements) ||
-        !isSavedToFirebase(this.portal, syncableElements))
-    ) {
-      // this won't run in time if user decides to leave the site, but
-      //  the purpose is to run in immediately after user decides to stay
-      this.saveCollabRoomToFirebase(syncableElements);
-
-      if (import.meta.env.VITE_APP_DISABLE_PREVENT_UNLOAD !== "true") {
-        preventUnload(event);
-      } else {
-        console.warn(
-          "preventing unload disabled (VITE_APP_DISABLE_PREVENT_UNLOAD)",
-        );
-      }
-    }
-  });
-
-  saveCollabRoomToFirebase = async (
-    syncableElements: readonly SyncableExcalidrawElement[],
-  ) => {
-    syncableElements = cloneJSON(syncableElements);
-    try {
-      const storedElements = await saveToFirebase(
-        this.portal,
-        syncableElements,
-        this.excalidrawAPI.getAppState(),
-      );
-
-      this.resetErrorIndicator();
-
-      if (this.isCollaborating() && storedElements) {
-        this.handleRemoteSceneUpdate(this._reconcileElements(storedElements));
-      }
-    } catch (error: any) {
-      const errorMessage = /is longer than.*?bytes/.test(error.message)
-        ? t("errors.collabSaveFailed_sizeExceeded")
-        : t("errors.collabSaveFailed");
-
-      if (
-        !this.state.dialogNotifiedErrors[errorMessage] ||
-        !this.isCollaborating()
-      ) {
-        this.setErrorDialog(errorMessage);
-        this.setState({
-          dialogNotifiedErrors: {
-            ...this.state.dialogNotifiedErrors,
-            [errorMessage]: true,
-          },
-        });
-      }
-
-      if (this.isCollaborating()) {
-        this.setErrorIndicator(errorMessage);
-      }
-
-      console.error(error);
-    }
-  };
-
   stopCollaboration = (keepRemoteState = true) => {
     this.queueBroadcastAllElements.cancel();
-    this.queueSaveToFirebase.cancel();
-    this.loadImageFiles.cancel();
-    this.resetErrorIndicator(true);
-
-    this.saveCollabRoomToFirebase(
-      getSyncableElements(
-        this.excalidrawAPI.getSceneElementsIncludingDeleted(),
-      ),
-    );
 
     if (this.portal.socket && this.fallbackInitializationHandler) {
       this.portal.socket.off(
@@ -393,27 +226,18 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       this.destroySocketClient();
 
       LocalData.fileStorage.reset();
-
-      const elements = this.excalidrawAPI
-        .getSceneElementsIncludingDeleted()
-        .map((element) => {
-          if (isImageElement(element) && element.status === "saved") {
-            return newElementWith(element, { status: "pending" });
-          }
-          return element;
-        });
-
-      this.excalidrawAPI.updateScene({
-        elements,
-        captureUpdate: CaptureUpdateAction.NEVER,
-      });
+      LocalData.save(
+        this.excalidrawAPI.getSceneElementsIncludingDeleted(),
+        this.excalidrawAPI.getAppState(),
+        this.excalidrawAPI.getFiles(),
+        () => {},
+      );
     }
   };
 
   private destroySocketClient = (opts?: { isUnload: boolean }) => {
     this.lastBroadcastedOrReceivedSceneVersion = -1;
     this.portal.close();
-    this.fileManager.reset();
     this.followedBy = new Set();
     if (!opts?.isUnload) {
       this.setIsCollaborating(false);
@@ -425,34 +249,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       });
       LocalData.resumeSave("collaboration");
     }
-  };
-
-  private fetchImageFilesFromFirebase = async (opts: {
-    elements: readonly ExcalidrawElement[];
-    /**
-     * Indicates whether to fetch files that are errored or pending and older
-     * than 10 seconds.
-     *
-     * Use this as a mechanism to fetch files which may be ok but for some
-     * reason their status was not updated correctly.
-     */
-    forceFetchFiles?: boolean;
-  }) => {
-    const unfetchedImages = opts.elements
-      .filter((element) => {
-        return (
-          isInitializedImageElement(element) &&
-          !this.fileManager.isFileTracked(element.fileId) &&
-          !element.isDeleted &&
-          (opts.forceFetchFiles
-            ? element.status !== "pending" ||
-              Date.now() - element.updated > 10000
-            : element.status === "saved")
-        );
-      })
-      .map((element) => (element as InitializedExcalidrawImageElement).fileId);
-
-    return await this.fileManager.getFiles(unfetchedImages);
   };
 
   private decryptPayload = async (
@@ -549,22 +345,12 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       // when joining existing room, don't merge it with current scene data
       this.excalidrawAPI.resetScene();
     } else {
-      const elements = this.excalidrawAPI.getSceneElements().map((element) => {
-        if (isImageElement(element) && element.status === "saved") {
-          return newElementWith(element, { status: "pending" });
-        }
-        return element;
-      });
-      // remove deleted elements from elements array to ensure we don't
-      // expose potentially sensitive user data in case user manually deletes
-      // existing elements (or clears scene), which would otherwise be persisted
-      // to database even if deleted before creating the room.
+      // Do not expose deleted elements when turning the current local drawing
+      // into a collaboration session.
       this.excalidrawAPI.updateScene({
-        elements,
+        elements: this.excalidrawAPI.getSceneElements(),
         captureUpdate: CaptureUpdateAction.NEVER,
       });
-
-      this.saveCollabRoomToFirebase(getSyncableElements(elements));
     }
 
     // fallback in case you're not alone in the room but still don't receive
@@ -594,13 +380,16 @@ class Collab extends PureComponent<CollabProps, CollabState> {
           case WS_SUBTYPES.INIT: {
             if (!this.portal.socketInitialized) {
               this.initializeRoom({ fetchScene: false });
+              if (decryptedData.payload.files?.length) {
+                this.excalidrawAPI.addFiles(decryptedData.payload.files);
+              }
               const remoteElements = toBrandedType<
                 readonly RemoteExcalidrawElement[]
               >(decryptedData.payload.elements);
               const reconciledElements =
                 this._reconcileElements(remoteElements);
               this.handleRemoteSceneUpdate(reconciledElements);
-              // noop if already resolved via init from firebase
+              // noop if already resolved because this is the first client
               scenePromise.resolve({
                 elements: reconciledElements,
                 scrollToContent: true,
@@ -609,6 +398,9 @@ class Collab extends PureComponent<CollabProps, CollabState> {
             break;
           }
           case WS_SUBTYPES.UPDATE:
+            if (decryptedData.payload.files?.length) {
+              this.excalidrawAPI.addFiles(decryptedData.payload.files);
+            }
             this.handleRemoteSceneUpdate(
               this._reconcileElements(
                 toBrandedType<readonly RemoteExcalidrawElement[]>(
@@ -729,32 +521,8 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     }
     if (fetchScene && roomLinkData && this.portal.socket) {
       this.excalidrawAPI.resetScene();
-
-      try {
-        const elements = await loadFromFirebase(
-          roomLinkData.roomId,
-          roomLinkData.roomKey,
-          this.portal.socket,
-        );
-        if (elements) {
-          this.setLastBroadcastedOrReceivedSceneVersion(
-            getSceneVersion(elements),
-          );
-
-          return {
-            elements,
-            scrollToContent: true,
-          };
-        }
-      } catch (error: any) {
-        // log the error and move on. other peers will sync us the scene.
-        console.error(error);
-      } finally {
-        this.portal.socketInitialized = true;
-      }
-    } else {
-      this.portal.socketInitialized = true;
     }
+    this.portal.socketInitialized = true;
     return null;
   };
 
@@ -792,21 +560,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     return reconciledElements;
   };
 
-  private loadImageFiles = throttle(async () => {
-    const { loadedFiles, erroredFiles } =
-      await this.fetchImageFilesFromFirebase({
-        elements: this.excalidrawAPI.getSceneElementsIncludingDeleted(),
-      });
-
-    this.excalidrawAPI.addFiles(loadedFiles);
-
-    updateStaleImageStatuses({
-      excalidrawAPI: this.excalidrawAPI,
-      erroredFiles,
-      elements: this.excalidrawAPI.getSceneElementsIncludingDeleted(),
-    });
-  }, LOAD_IMAGES_TIMEOUT);
-
   private handleRemoteSceneUpdate = (
     elements: ReconciledExcalidrawElement[],
   ) => {
@@ -814,8 +567,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
       elements,
       captureUpdate: CaptureUpdateAction.NEVER,
     });
-
-    this.loadImageFiles();
   };
 
   private onPointerMove = () => {
@@ -970,7 +721,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
 
   syncElements = (elements: readonly OrderedExcalidrawElement[]) => {
     this.broadcastElements(elements);
-    this.queueSaveToFirebase();
   };
 
   queueBroadcastAllElements = throttle(() => {
@@ -986,20 +736,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
     );
     this.setLastBroadcastedOrReceivedSceneVersion(newVersion);
   }, SYNC_FULL_SCENE_INTERVAL_MS);
-
-  queueSaveToFirebase = throttle(
-    () => {
-      if (this.portal.socketInitialized) {
-        this.saveCollabRoomToFirebase(
-          getSyncableElements(
-            this.excalidrawAPI.getSceneElementsIncludingDeleted(),
-          ),
-        );
-      }
-    },
-    SYNC_FULL_SCENE_INTERVAL_MS,
-    { leading: false },
-  );
 
   setUserToFollow = (userToFollow: UserToFollow | null) => {
     const prev = appJotaiStore.get(userToFollowAtom) ?? null;
@@ -1042,22 +778,6 @@ class Collab extends PureComponent<CollabProps, CollabState> {
   };
 
   getActiveRoomLink = () => this.state.activeRoomLink;
-
-  setErrorIndicator = (errorMessage: string | null) => {
-    appJotaiStore.set(collabErrorIndicatorAtom, {
-      message: errorMessage,
-      nonce: Date.now(),
-    });
-  };
-
-  resetErrorIndicator = (resetDialogNotifiedErrors = false) => {
-    appJotaiStore.set(collabErrorIndicatorAtom, { message: null, nonce: 0 });
-    if (resetDialogNotifiedErrors) {
-      this.setState({
-        dialogNotifiedErrors: {},
-      });
-    }
-  };
 
   setErrorDialog = (errorMessage: string | null) => {
     this.setState({

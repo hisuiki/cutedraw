@@ -4,7 +4,7 @@ This prop can be used to customise UI of Excalidraw. Currently we support custom
 
 <pre>
   &#123;
-  <br /> canvasActions?: <a href="https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/types.ts#L372">
+  <br /> canvasActions?: <a href="https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/types.ts#L372">
     CanvasActions
   </a>, <br /> dockedSidebarBreakpoint?: number, <br /> welcomeScreen?: boolean <br />
 
@@ -50,12 +50,11 @@ If `UIOptions.canvasActions.export` is `false` the export button will not be ren
 | Prop | Type | Default | Description |
 | --- | --- | --- | --- |
 | `saveFileToDisk` | `boolean` | `true` | Indicates whether `save file to disk` button should be shown |
-| `onExportToBackend` | `object` | \_ | This callback is triggered when the shareable-link button is clicked in the export dialog. The link button will only be shown if this callback is passed. |
 | `renderCustomUI` | `object` | \_ | This callback should be supplied if you want to render custom UI in the export dialog. |
 
 ## dockedSidebarBreakpoint
 
-This prop indicates at what point should we break to a docked, permanent sidebar. If not passed it defaults to [`MQ_RIGHT_SIDEBAR_MAX_WIDTH_PORTRAIT`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/constants.ts#L161).  
+This prop indicates at what point should we break to a docked, permanent sidebar. If not passed it defaults to [`MQ_RIGHT_SIDEBAR_MAX_WIDTH_PORTRAIT`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/constants.ts#L161).
 If the _width_ of the _excalidraw_ container exceeds _dockedSidebarBreakpoint_, the sidebar will be `dockable` and the button to `dock` the sidebar will be shown  
 If user choses to `dock` the sidebar, it will push the right part of the UI towards the left, making space for the sidebar as shown below.
 

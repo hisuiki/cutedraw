@@ -232,7 +232,6 @@
     "save": "Lưu vào tập tin hiện tại",
     "saveAs": "Lưu thành",
     "load": "Mở",
-    "getShareableLink": "Tạo liên kết để chia sẻ",
     "close": "Đóng",
     "selectLanguage": "Chọn ngôn ngữ",
     "scrollBackToContent": "Cuộn về nội dung chính",
@@ -258,29 +257,22 @@
     "clear": "Làm sạch",
     "remove": "Xóa",
     "embed": "Bật/tắt chế độ nhúng",
-    "publishLibrary": "",
     "submit": "Gửi",
     "confirm": "Xác nhận",
     "embeddableInteractionButton": "Nhấn để tương tác"
   },
   "alerts": {
     "clearReset": "Điều này sẽ dọn hết canvas. Bạn có chắc không?",
-    "couldNotCreateShareableLink": "Không thể tạo đường dẫn chia sẻ.",
-    "couldNotCreateShareableLinkTooBig": "Không thể tạo đường dẫn chia sẻ: bản vẽ quá lớn",
     "couldNotLoadInvalidFile": "Không thể load tập tin không hợp lệ",
-    "importBackendFailed": "Nhập dữ liệu từ máy chủ thất bại.",
     "cannotExportEmptyCanvas": "Không thể xuất canvas trống.",
     "couldNotCopyToClipboard": "Không thể sao chép vào bộ nhớ tạm.",
     "decryptFailed": "Không thể giải mã dữ liệu.",
-    "uploadedSecurly": "Việc tải lên đã được bảo mật với mã hóa đầu cuối, có nghĩa là máy chủ Excalidraw và bên thứ ba không thể đọc nội dung.",
-    "loadSceneOverridePrompt": "Mở bản vẽ bên ngoài sẽ thay thế nội dung hiện tại của bạn. Bạn có muốn tiếp tục không?",
     "collabStopOverridePrompt": "Dừng phiên sẽ ghi đè lên bản vẽ được lưu trữ cục bộ trước đó của bạn. Bạn có chắc không?\n\n(Nếu bạn muốn giữ bản vẽ cục bộ của mình, chỉ cần đóng tab trình duyệt.)",
     "errorAddingToLibrary": "Không thể thêm món vào thư viện",
     "errorRemovingFromLibrary": "Không thể xoá món khỏi thư viện",
     "confirmAddLibrary": "Hình {{numShapes}} sẽ được thêm vào thư viện. Bạn chắc chứ?",
     "imageDoesNotContainScene": "Hình ảnh này dường như không chứa bất kỳ dữ liệu cảnh nào. Bạn đã bật tính năng nhúng cảnh khi xuất chưa?",
     "cannotRestoreFromImage": "Không thể khôi phục bản vẽ từ tệp hình ảnh này.",
-    "invalidSceneUrl": "Không thể nhập nội dung từ URL đã cung cấp. Đó có thể là do URL không đúng cú pháp hoặc không chứa dữ liệu JSON hợp lệ với Excalidraw.",
     "resetLibrary": "Hành động này sẽ xóa toàn bộ thư viện của bạn. Bạn chắc chắn chứ?",
     "removeItemsFromsLibrary": "Xoá {{count}} món từ thư viện?",
     "invalidEncryptionKey": "Khóa mã hóa phải có 22 ký tự. Hợp tác trực tiếp bị vô hiệu hóa.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Không thể kết nối với máy chủ hợp tác. Hãy tải lại trang và thử lại.",
     "importLibraryError": "Không thể tải thư viện",
     "saveLibraryError": "Không thể lưu thư viện vào bộ nhớ. Hãy lưu thành tệp trên máy để đảm bảo bạn không mất các thay đổi.",
-    "collabSaveFailed": "Không thể lưu vào cơ sở dữ liệu. Nếu vấn đề tiếp tục xảy ra, bạn nên lưu tệp vào máy để đảm bảo bạn không bị mất công việc.",
-    "collabSaveFailed_sizeExceeded": "Không thể lưu vào cơ sở dữ liệu, canvas có vẻ quá lớn. Bạn nên lưu tệp cục bộ để đảm bảo bạn không bị mất công việc.",
     "imageToolNotSupported": "Hình ảnh đã được vô hiệu hóa.",
     "brave_measure_text_error": {
       "line1": "Dường như bạn đang sử dụng trình duyệt Brave với cài đặt <bold>Aggressively Block Fingerprinting</bold> được bật.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Chia sẻ thư viện của bạn",
     "bindTextToElement": "Nhấn {{shortcut}} để thêm văn bản",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "",
     "sceneContent": "Nội dung bản vẽ:"
   },
-  "shareDialog": {
-    "or": "Hoặc"
-  },
   "roomDialog": {
     "desc_intro": "Mời mọi người cùng cộng tác trong bản vẽ của bạn.",
     "desc_privacy": "Đừng lo, phiên hoạt động đã được mã hóa đầu cuối, và hoàn toàn riêng tư. Ngay cả máy chủ của chúng tôi cũng không thể thấy những gì bạn vẽ.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Lưu về máy",
     "disk_details": "",
-    "disk_button": "Lưu vào tệp tin",
-    "link_title": "Liên kết có thể chia sẻ",
-    "link_details": "Tạo liên kết chỉ xem",
-    "link_button": "Tạo liên kết",
-    "excalidrawplus_description": "Lưu bản vẽ vào không gian làm việc Excalidraw+ của bạn.",
-    "excalidrawplus_button": "Xuất",
-    "excalidrawplus_exportError": "Hiện tại không thể xuất sang Excalidraw+..."
+    "disk_button": "Lưu vào tệp tin"
   },
   "helpDialog": {
     "blog": "Đọc blog của chúng tôi",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Dọn canvas"
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "Tên món",
-    "authorName": "Tên tác giả",
-    "githubUsername": "Tên tài khoản Github",
-    "twitterUsername": "Tên tài khoản Twitter",
-    "libraryName": "Tên thư viện",
-    "libraryDesc": "Mô tả thư viện",
-    "website": "Website",
-    "placeholder": {
-      "authorName": "Tên của bạn hoặc tên tài khoản",
-      "libraryName": "Tên thư viện của bạn",
-      "libraryDesc": "Mô tả thư viện của bạn để mọi người có thể hiểu được cách dùng của nó",
-      "githubHandle": "",
-      "twitterHandle": "Tên Twitter (không bắt buộc) để chúng tôi ghi nhận bạn khi chia sẻ trên Twitter.",
-      "website": "Đường dẫn tới trang web cá nhân của bạn hoặc tới đâu đó (tùy chọn)"
-    },
-    "errors": {
-      "required": "Bắt buộc",
-      "website": "Nhập đường dẫn hợp lệ"
-    },
-    "noteDescription": "Chia sẻ thư viện của bạn vào <link>kho thư viện công khai</link> để mọi người có thể dùng trong bản vẽ của họ.",
-    "noteGuidelines": "Thư viện cần được phê duyệt thủ công trước. Vui lòng đọc <link>hướng dẫn</link> trước khi gửi. Bạn sẽ cần tài khoản GitHub để trao đổi và chỉnh sửa khi được yêu cầu, nhưng điều này không bắt buộc.",
-    "noteLicense": "Bằng việc gửi, bạn đồng ý rằng thư viện sẽ được phát hành theo <link>Giấy phép MIT</link>, nghĩa là bất kỳ ai cũng có thể sử dụng mà không bị hạn chế.",
-    "noteItems": "Từng món trong thư viện phải có tên riêng để có thể lọc. Các món thư viện sau đây sẽ thêm:",
-    "atleastOneLibItem": "Vui lòng chọn ít nhất một món thư viện để bắt đầu",
-    "republishWarning": "Lưu ý: một số món đã chọn được đánh dấu là đã xuất bản/đã gửi. Bạn chỉ nên gửi lại các món khi cập nhật thư viện hiện có hoặc gửi."
-  },
-  "publishSuccessDialog": {
-    "title": "Thư viện đã được gửi",
-    "content": "Cảm ơn {{authorName}}! Thư viện của bạn đã được gửi để duyệt. Bạn có thể xem tiến trình <link>tại đây</link>."
   },
   "confirmDialog": {
     "resetLibrary": "Cài lại thư viện",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

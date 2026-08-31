@@ -922,7 +922,6 @@ export interface ExcalidrawProps {
   zenModeEnabled?: boolean;
   gridModeEnabled?: boolean;
   objectsSnapModeEnabled?: boolean;
-  libraryReturnUrl?: string;
   theme?: Theme;
   // @TODO come with better API before v0.18.0
   name?: string;
@@ -1025,11 +1024,6 @@ export type SceneData = {
 
 export type ExportOpts = {
   saveFileToDisk?: boolean;
-  onExportToBackend?: (
-    exportedElements: readonly NonDeletedExcalidrawElement[],
-    appState: UIAppState,
-    files: BinaryFiles,
-  ) => void;
   renderCustomUI?: (
     exportedElements: readonly NonDeletedExcalidrawElement[],
     appState: UIAppState,

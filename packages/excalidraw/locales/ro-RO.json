@@ -232,7 +232,6 @@
     "save": "Salvare în fișierul curent",
     "saveAs": "Salvare ca",
     "load": "Deschidere",
-    "getShareableLink": "Obține URL partajabil",
     "close": "Închidere",
     "selectLanguage": "Selectare limbă",
     "scrollBackToContent": "Derulare înapoi la conținut",
@@ -258,29 +257,22 @@
     "clear": "Ștergere",
     "remove": "Eliminare",
     "embed": "Comutare încorporare",
-    "publishLibrary": "Redenumire sau publicare",
     "submit": "Trimitere",
     "confirm": "Confirmare",
     "embeddableInteractionButton": "Clic pentru interacționare"
   },
   "alerts": {
     "clearReset": "Această opțiune va șterge întreaga pânză. Confirmi?",
-    "couldNotCreateShareableLink": "Nu s-a putut crea un URL partajabil.",
-    "couldNotCreateShareableLinkTooBig": "Nu s-a putut crea un URL partajabil: scena este prea mare",
     "couldNotLoadInvalidFile": "Fișierul invalid nu a putut fi încărcat",
-    "importBackendFailed": "Importarea de la nivel de server a eșuat.",
     "cannotExportEmptyCanvas": "Nu se poate exporta pânza goală.",
     "couldNotCopyToClipboard": "Nu s-a putut copia în memoria temporară.",
     "decryptFailed": "Datele nu au putut fi decriptate.",
-    "uploadedSecurly": "Încărcarea a fost securizată prin criptare integrală, însemnând că serverul Excalidraw și terții nu pot citi conținutul.",
-    "loadSceneOverridePrompt": "Încărcarea desenului extern va înlocui conținutul existent. Dorești să continui?",
     "collabStopOverridePrompt": "Oprirea sesiunii va suprascrie desenul anterior stocat local. Confirmi alegerea?\n\n(Dacă vrei să păstrezi desenul local, pur și simplu închide fila navigatorului în schimb.)",
     "errorAddingToLibrary": "Elementul nu a putut fi adăugat în bibliotecă",
     "errorRemovingFromLibrary": "Elementul nu a putut fi eliminat din bibliotecă",
     "confirmAddLibrary": "Această acțiune va adăuga {{numShapes}} formă(e) la biblioteca ta. Confirmi?",
     "imageDoesNotContainScene": "Această imagine nu pare să conțină date de scenă. Ai activat încorporarea scenei în timpul exportului?",
     "cannotRestoreFromImage": "Scena nu a putut fi restaurată din acest fișier de imagine",
-    "invalidSceneUrl": "Scena nu a putut fi importată din URL-ul furnizat. Este fie incorect formată, fie nu conține date JSON Excalidraw valide.",
     "resetLibrary": "Această opțiune va elimina conținutul din bibliotecă. Confirmi?",
     "removeItemsFromsLibrary": "Ștergi {{count}} element(e) din bibliotecă?",
     "invalidEncryptionKey": "Cheia de criptare trebuie să aibă 22 de caractere. Colaborarea în direct este dezactivată.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Nu a putut fi realizată conexiunea la serverul de colaborare. Reîncarcă pagina și încearcă din nou.",
     "importLibraryError": "Biblioteca nu a putut fi încărcată",
     "saveLibraryError": "Nu s-a putut salva biblioteca în spațiul de stocare. Salvează-ți biblioteca într-un fișier local pentru a te asigura că nu pierzi modificările.",
-    "collabSaveFailed": "Nu s-a putut salva în baza de date la nivel de server. Dacă problemele persistă, ar trebui să salvezi fișierul la nivel local pentru a te asigura că nu îți pierzi munca.",
-    "collabSaveFailed_sizeExceeded": "Nu s-a putut salva în baza de date la nivel de server, întrucât se pare că pânza este prea mare. Ar trebui să salvezi fișierul la nivel local pentru a te asigura că nu îți pierzi munca.",
     "imageToolNotSupported": "Imaginile sunt dezactivate.",
     "brave_measure_text_error": {
       "line1": "Se pare că folosești navigatorul Brave cu opțiunea <bold>strictă pentru blocarea amprentării</bold>.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Dă dublu clic sau apasă {{shortcut}} pentru a edita punctele",
     "lineEditor_pointSelected": "Apasă {{shortcut_1}} pentru a elimina punctele,\n{{shortcut_2}} pentru a duplica sau glisează pentru a muta",
     "lineEditor_nothingSelected": "Selectează un punct pentru a-l edita (ține apăsat {{shortcut_1}} pentru a selecta mai multe),\nsau ține apăsat {{shortcut_2}} și dă clic pentru a adăuga puncte noi",
-    "publishLibrary": "Publică propria bibliotecă",
     "bindTextToElement": "{{shortcut}} pentru a adăuga text",
     "createFlowchart": "{{shortcut}} pentru a crea o schemă logică",
     "deepBoxSelect": "Ține apăsat {{shortcut}} pentru a efectua selectarea de adâncime și pentru a preveni glisarea",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Am luat măsuri de precauție pentru a nu include informații despre scenă în eroare. Dacă scena nu este privată, oferă-ne mai multe informații în <button>monitorul nostru pentru erori</button>. Include informațiile de mai jos copiindu-le și lipindu-le în tichetul cu problemă de pe GitHub.",
     "sceneContent": "Conținutul scenei:"
   },
-  "shareDialog": {
-    "or": "Sau"
-  },
   "roomDialog": {
     "desc_intro": "Invită persoane să colaboreze la desenul tău.",
     "desc_privacy": "Nu-ți face griji, sesiunea este criptată integral și complet privată. Nici măcar serverul nostru nu poate vedea ce desenezi.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Salvare pe disc",
     "disk_details": "Exportă datele scenei pe un fișier din care poți importa mai târziu.",
-    "disk_button": "Salvare în fișier",
-    "link_title": "URL partajabil",
-    "link_details": "Exportă ca URL doar în citire.",
-    "link_button": "Exportare în URL",
-    "excalidrawplus_description": "Salvează scena în spațiul de lucru Excalidraw+.",
-    "excalidrawplus_button": "Exportare",
-    "excalidrawplus_exportError": "Excalidraw+ nu a putut fi exportat în acest moment..."
+    "disk_button": "Salvare în fișier"
   },
   "helpDialog": {
     "blog": "Citește blogul nostru",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Ștergere pânză"
-  },
-  "publishDialog": {
-    "title": "Publicare bibliotecă",
-    "itemName": "Denumirea elementului",
-    "authorName": "Numele autorului",
-    "githubUsername": "Numele de utilizator GitHub",
-    "twitterUsername": "Numele de utilizator Twitter",
-    "libraryName": "Denumirea bibliotecii",
-    "libraryDesc": "Descrierea bibliotecii",
-    "website": "Pagină de internet",
-    "placeholder": {
-      "authorName": "Numele sau numele tău de utilizator",
-      "libraryName": "Numele bibliotecii tale",
-      "libraryDesc": "Descrierea bibliotecii tale pentru a ajuta oamenii să înțeleagă utilizarea acesteia",
-      "githubHandle": "Numele de utilizator GitHub (opțional), pentru a putea edita biblioteca odată ce este trimisă spre revizuire",
-      "twitterHandle": "Numele de utilizator Twitter (opțional), pentru a indica sursa la promovarea pe Twitter",
-      "website": "Trimitere către pagina ta personală de internet sau altundeva (opțional)"
-    },
-    "errors": {
-      "required": "Obligatoriu",
-      "website": "Introdu un URL valid"
-    },
-    "noteDescription": "Trimite-ți biblioteca pentru a fi inclusă în <link>depozitul de biblioteci publice</link> în vederea utilizării de către alte persoane în desenele lor.",
-    "noteGuidelines": "Biblioteca trebuie aprobată manual mai întâi. Citește <link>orientările</link> înainte de trimitere. Vei avea nevoie de un cont GitHub pentru a comunica și efectua modificări, dacă este cazul, însă nu este strict necesar.",
-    "noteLicense": "Prin trimiterea bibliotecii, ești de acord că aceasta va fi publicată sub <link>Licența MIT, </link>care, pe scurt, înseamnă că oricine o poate folosi fără restricții.",
-    "noteItems": "Fiecare element din bibliotecă trebuie să aibă propriul nume astfel încât să fie filtrabil. Următoarele elemente din bibliotecă vor fi incluse:",
-    "atleastOneLibItem": "Selectează cel puțin un element din bibliotecă pentru a începe",
-    "republishWarning": "Observație: unele dintre elementele selectate sunt marcate ca fiind deja publicate/trimise. Ar trebui să retrimiți elemente numai atunci când actualizezi o trimitere sau o bibliotecă existentă."
-  },
-  "publishSuccessDialog": {
-    "title": "Bibliotecă trimisă",
-    "content": "Îți mulțumim, {{authorName}}. Biblioteca a fost trimisă spre revizuire. Poți urmări starea <link>aici</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Resetare bibliotecă",
@@ -595,7 +543,6 @@
       "center_heading": "Desenele tale sunt salvate în spațiul de stocare al navigatorului tău.",
       "center_heading_line2": "Spațiul de stocare al navigatorului poate fi șters în mod neașteptat.",
       "center_heading_line3": "Salvează-ți periodic munca într-un fișier pentru a evita pierderea acesteia.",
-      "center_heading_plus": "Ai vrut să mergi în schimb la Excalidraw+?",
       "menuHint": "Exportare, preferințe, limbi, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Salvare pe disc",
         "button": "Salvare pe disc",
         "description": "Exportă datele scenei pe un fișier din care poți importa mai târziu."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportare în Excalidraw+",
-        "description": "Salvează scena în spațiul de lucru Excalidraw+."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Încărcare din fișier",
         "button": "Încărcare din fișier",
         "description": "Încărcarea dintr-un fișier va <bold>înlocui conținutul existent</bold>.<br></br>Poți face mai întâi o copie de rezervă a desenului folosind una dintre opțiunile de mai jos."
-      },
-      "shareableLink": {
-        "title": "Încărcare din lnk",
-        "button": "Înlocuiește conținutul meu",
-        "description": "Încărcarea unui desen extern va <bold>înlocui conținutul existent</bold>.<br></br>Poți face mai întâi o copie de rezervă a desenului folosind una dintre opțiunile de mai jos."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Eroare de sintaxă Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Ai atins limita IA la planul gratuit. Încearcă Excalidraw+ pentru mai multe sau revino mâine.",
+      "messageLimit": "",
       "generalRateLimit": "Stai puțin, te grăbești! Așteaptă un moment înainte de a reîncerca.",
       "messageLimitInputPlaceholder": "Ai atins limita de mesaje"
-    },
-    "upsellBtnLabel": "Actualizare la Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Căutare rapidă"

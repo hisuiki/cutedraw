@@ -232,7 +232,6 @@
     "save": "",
     "saveAs": "",
     "load": "",
-    "getShareableLink": "",
     "close": "",
     "selectLanguage": "",
     "scrollBackToContent": "",
@@ -258,29 +257,22 @@
     "clear": "",
     "remove": "",
     "embed": "",
-    "publishLibrary": "",
     "submit": "",
     "confirm": "",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "【‼️ 警告 ‼️ 無法復原的動作】你確定要清空呢塊畫布嗎？",
-    "couldNotCreateShareableLink": "",
-    "couldNotCreateShareableLinkTooBig": "",
     "couldNotLoadInvalidFile": "",
-    "importBackendFailed": "",
     "cannotExportEmptyCanvas": "無嘢可以匯出喎～畫吓嘢先？",
     "couldNotCopyToClipboard": "",
     "decryptFailed": "",
-    "uploadedSecurly": "",
-    "loadSceneOverridePrompt": "",
     "collabStopOverridePrompt": "",
     "errorAddingToLibrary": "",
     "errorRemovingFromLibrary": "",
     "confirmAddLibrary": "",
     "imageDoesNotContainScene": "",
     "cannotRestoreFromImage": "",
-    "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
     "invalidEncryptionKey": "",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "",
     "sceneContent": ""
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "",
     "disk_details": "",
-    "disk_button": "",
-    "link_title": "",
-    "link_details": "",
-    "link_button": "",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "",
-    "excalidrawplus_exportError": ""
+    "disk_button": ""
   },
   "helpDialog": {
     "blog": "",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": ""
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "",
-    "authorName": "",
-    "githubUsername": "",
-    "twitterUsername": "",
-    "libraryName": "",
-    "libraryDesc": "",
-    "website": "",
-    "placeholder": {
-      "authorName": "",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "",
-      "website": ""
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

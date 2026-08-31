@@ -77,8 +77,8 @@ export default function Page() {
 
 See the local examples for complete setups:
 
-- [examples/with-nextjs](https://github.com/excalidraw/excalidraw/tree/master/examples/with-nextjs)
-- [examples/with-script-in-browser](https://github.com/excalidraw/excalidraw/tree/master/examples/with-script-in-browser)
+- [examples/with-nextjs](https://github.com/hisuiki/cutedraw/tree/main/examples/with-nextjs)
+- [examples/with-script-in-browser](https://github.com/hisuiki/cutedraw/tree/main/examples/with-script-in-browser)
 
 ## LLM / agent tips
 
@@ -127,7 +127,7 @@ For self-hosting, copy the contents of `node_modules/@excalidraw/excalidraw/dist
 
 ## Demo
 
-Try the [CodeSandbox example](https://codesandbox.io/p/sandbox/github/excalidraw/excalidraw/tree/master/examples/with-script-in-browser).
+Try the [CodeSandbox example](https://codesandbox.io/p/sandbox/github/hisuiki/cutedraw/tree/main/examples/with-script-in-browser).
 
 ## Integration
 

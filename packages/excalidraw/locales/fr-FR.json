@@ -232,7 +232,6 @@
     "save": "Enregistrer dans le fichier actuel",
     "saveAs": "Enregistrer sous",
     "load": "Ouvrir",
-    "getShareableLink": "Obtenir un lien de partage",
     "close": "Fermer",
     "selectLanguage": "Choisir une langue",
     "scrollBackToContent": "Revenir au contenu",
@@ -258,29 +257,22 @@
     "clear": "Effacer",
     "remove": "Supprimer",
     "embed": "Activer/Désactiver l'intégration",
-    "publishLibrary": "Renommer ou publier",
     "submit": "Envoyer",
     "confirm": "Confirmer",
     "embeddableInteractionButton": "Cliquez pour interagir"
   },
   "alerts": {
     "clearReset": "L'intégralité du canevas va être effacée. Êtes-vous sûr ?",
-    "couldNotCreateShareableLink": "Impossible de créer un lien de partage.",
-    "couldNotCreateShareableLinkTooBig": "Impossible de créer un lien de partage : la scène est trop volumineuse",
     "couldNotLoadInvalidFile": "Impossible de charger un fichier invalide",
-    "importBackendFailed": "L'importation depuis le serveur a échoué.",
     "cannotExportEmptyCanvas": "Impossible d'exporter un canevas vide.",
     "couldNotCopyToClipboard": "Impossible de copier dans le presse-papiers.",
     "decryptFailed": "Les données n'ont pas pu être déchiffrées.",
-    "uploadedSecurly": "Le téléchargement a été sécurisé avec un chiffrement de bout en bout, ce qui signifie que ni Excalidraw ni personne d'autre ne peut en lire le contenu.",
-    "loadSceneOverridePrompt": "Le chargement d'un dessin externe remplacera votre contenu actuel. Souhaitez-vous continuer ?",
     "collabStopOverridePrompt": "Arrêter la session écrasera votre précédent dessin stocké localement. Êtes-vous sûr·e ?\n\n(Si vous voulez garder votre dessin local, fermez simplement l'onglet du navigateur à la place.)",
     "errorAddingToLibrary": "Impossible d'ajouter l'élément à la bibliothèque",
     "errorRemovingFromLibrary": "Impossible de retirer l'élément de la bibliothèque",
     "confirmAddLibrary": "Cela va ajouter {{numShapes}} forme(s) à votre bibliothèque. Êtes-vous sûr·e ?",
     "imageDoesNotContainScene": "Cette image ne semble pas contenir de données de scène. Avez-vous activé l'intégration de scène lors de l'exportation ?",
     "cannotRestoreFromImage": "Impossible de restaurer la scène depuis ce fichier image",
-    "invalidSceneUrl": "Impossible d'importer la scène depuis l'URL fournie. Elle est soit incorrecte, soit ne contient pas de données JSON Excalidraw valides.",
     "resetLibrary": "Cela va effacer votre bibliothèque. Êtes-vous sûr·e ?",
     "removeItemsFromsLibrary": "Supprimer {{count}} élément(s) de la bibliothèque ?",
     "invalidEncryptionKey": "La clé de chiffrement doit comporter 22 caractères. La collaboration en direct est désactivée.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Impossible de se connecter au serveur collaboratif. Veuillez recharger la page et réessayer.",
     "importLibraryError": "Impossible de charger la bibliothèque",
     "saveLibraryError": "Impossible d'enregistrer la bibliothèque sur le stockage. Veuillez enregistrer votre bibliothèque dans un fichier localement pour éviter de perdre vos modifications.",
-    "collabSaveFailed": "Impossible d'enregistrer dans la base de données en arrière-plan. Si des problèmes persistent, vous devriez enregistrer votre fichier localement pour vous assurer de ne pas perdre votre travail.",
-    "collabSaveFailed_sizeExceeded": "Impossible d'enregistrer dans la base de données en arrière-plan, le tableau semble trop grand. Vous devriez enregistrer le fichier localement pour vous assurer de ne pas perdre votre travail.",
     "imageToolNotSupported": "Les images sont désactivées.",
     "brave_measure_text_error": {
       "line1": "On dirait que vous utilisez le navigateur Brave avec l'option <bold>Bloquer agressivement le fichage</bold> activée.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Double-cliquez ou appuyez sur {{shortcut}} pour modifier le texte",
     "lineEditor_pointSelected": "Appuyez sur {{shortcut_1}} pour supprimer le(s) point(s),\n{{shortcut_2}} pour dupliquer, ou faites glisser pour déplacer",
     "lineEditor_nothingSelected": "Sélectionnez un point à éditer (maintenez {{shortcut_1}} enfoncé pour en sélectionner plusieurs),\nou maintenez {{shortcut_2}} et cliquez pour ajouter de nouveaux points",
-    "publishLibrary": "Publier votre propre bibliothèque",
     "bindTextToElement": "{{shortcut}} pour ajouter du texte",
     "createFlowchart": "{{shortcut}} pour créer un diagramme",
     "deepBoxSelect": "Maintenez {{shortcut}} enfoncé pour sélectionner en profondeur, et pour éviter le glissement",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Nous avons fait très attention à ne pas inclure les informations de votre scène dans l'erreur. Si votre scène n'est pas privée, veuillez envisager de poursuivre sur notre <button>outil de suivi des bugs.</button> Veuillez inclure les informations ci-dessous en les copiant-collant dans le ticket GitHub.",
     "sceneContent": "Contenu de la scène :"
   },
-  "shareDialog": {
-    "or": "Ou"
-  },
   "roomDialog": {
     "desc_intro": "Invitez des personnes à collaborer sur votre dessin.",
     "desc_privacy": "Ne vous inquiétez pas, la session est chiffrée de bout en bout et entièrement privée. Même notre serveur ne peut pas voir ce que vous dessinez.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Enregistrer sur le disque",
     "disk_details": "Exporter les données de la scène comme un fichier que vous pourrez importer ultérieurement.",
-    "disk_button": "Enregistrer comme fichier",
-    "link_title": "Lien partageable",
-    "link_details": "Exporter comme un lien en lecture seule.",
-    "link_button": "Exporter comme lien",
-    "excalidrawplus_description": "Enregistrer la scène dans votre espace de travail Excalidraw+.",
-    "excalidrawplus_button": "Exporter",
-    "excalidrawplus_exportError": "Impossible d'exporter vers Excalidraw+ pour le moment..."
+    "disk_button": "Enregistrer comme fichier"
   },
   "helpDialog": {
     "blog": "Lire notre blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Effacer la zone de dessin"
-  },
-  "publishDialog": {
-    "title": "Publier la bibliothèque",
-    "itemName": "Nom de l’élément",
-    "authorName": "Nom de l'auteur",
-    "githubUsername": "Nom d'utilisateur GitHub",
-    "twitterUsername": "Nom d'utilisateur Twitter",
-    "libraryName": "Nom de la bibliothèque",
-    "libraryDesc": "Description de la bibliothèque",
-    "website": "Site web",
-    "placeholder": {
-      "authorName": "Votre nom ou nom d'utilisateur",
-      "libraryName": "Nom de votre bibliothèque",
-      "libraryDesc": "Description de votre bibliothèque pour aider les gens à comprendre son usage",
-      "githubHandle": "Nom d'utilisateur GitHub (optionnel), pour que tu puisses modifier la bibliothèque une fois soumise pour vérification",
-      "twitterHandle": "Nom d'utilisateur Twitter (optionnel), pour savoir qui créditer lors de la promotion sur Twitter",
-      "website": "Lien vers votre site web personnel ou autre (optionnel)"
-    },
-    "errors": {
-      "required": "Requis",
-      "website": "Entrer une URL valide"
-    },
-    "noteDescription": "Soumets ta bibliothèque pour l'inclure au <link>dépôt de bibliothèque publique</link>pour permettre son utilisation par autrui dans leurs dessins.",
-    "noteGuidelines": "La bibliothèque doit d'abord être approuvée manuellement. Veuillez lire les <link>lignes directrices</link> avant de la soumettre. Vous aurez besoin d'un compte GitHub pour communiquer et apporter des modifications si demandé, mais ce n'est pas obligatoire.",
-    "noteLicense": "En soumettant, vous acceptez que la bibliothèque soit publiée sous la <link>Licence MIT, </link>ce qui en gros signifie que tout le monde peut l'utiliser sans restrictions.",
-    "noteItems": "Chaque élément de la bibliothèque doit avoir son propre nom afin qu'il soit filtrable. Les éléments de bibliothèque suivants seront inclus :",
-    "atleastOneLibItem": "Veuillez sélectionner au moins un élément de bibliothèque pour commencer",
-    "republishWarning": "Remarque : certains des éléments sélectionnés sont marqués comme étant déjà publiés/soumis. Vous devez uniquement resoumettre des éléments lors de la mise à jour d'une bibliothèque ou d'une soumission existante."
-  },
-  "publishSuccessDialog": {
-    "title": "Bibliothèque soumise",
-    "content": "Merci {{authorName}}. Votre bibliothèque a été soumise pour examen. Vous pouvez suivre le statut<link>ici</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Réinitialiser la bibliothèque",
@@ -595,7 +543,6 @@
       "center_heading": "Vos dessins sont enregistrés dans le stockage de votre navigateur.",
       "center_heading_line2": "Le stockage du navigateur peut être effacé de manière inattendue.",
       "center_heading_line3": "Enregistrez régulièrement votre travail dans un fichier pour éviter de le perdre.",
-      "center_heading_plus": "Vouliez-vous plutôt aller à Excalidraw+ à la place ?",
       "menuHint": "Exportation, préférences, langues, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Sauvegarder sur le disque",
         "button": "Sauvegarder sur le disque",
         "description": "Exporter les données de la scène comme un fichier que vous pourrez importer ultérieurement."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exporter vers Excalidraw+",
-        "description": "Enregistrer la scène dans votre espace de travail Excalidraw+."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Charger depuis un fichier",
         "button": "Charger depuis un fichier",
         "description": "Charger depuis un fichier va <bold>remplacer votre contenu existant</bold>.<br></br>Vous pouvez d'abord sauvegarder votre dessin en utilisant l'une des options ci-dessous."
-      },
-      "shareableLink": {
-        "title": "Charger depuis un lien",
-        "button": "Remplacer mon contenu",
-        "description": "Charger un dessin externe va <bold>remplacer votre contenu existant</bold>.<br></br>Vous pouvez d'abord sauvegarder votre dessin en utilisant l'une des options ci-dessous."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Erreur de syntaxe Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Vous avez atteint votre limite d'IA sur le plan gratuit. Essayez Excalidraw+ pour plus ou revenez demain.",
+      "messageLimit": "",
       "generalRateLimit": "Tenez vos chevaux, vous êtes trop rapide pour nous! Veuillez attendre un instant avant de réessayer.",
       "messageLimitInputPlaceholder": "Vous avez atteint votre limite de messages"
-    },
-    "upsellBtnLabel": "Devenez Premium"
+    }
   },
   "quickSearch": {
     "placeholder": "Recherche rapide"

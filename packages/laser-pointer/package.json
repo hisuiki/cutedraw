@@ -21,8 +21,8 @@
     "excalidraw",
     "laserpointer"
   ],
-  "bugs": "https://github.com/excalidraw/excalidraw/issues",
-  "repository": "https://github.com/excalidraw/excalidraw",
+  "bugs": "https://github.com/hisuiki/cutedraw/issues",
+  "repository": "https://github.com/hisuiki/cutedraw",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

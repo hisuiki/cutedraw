@@ -232,7 +232,6 @@
     "save": "Sekles deg ufaylu amiran",
     "saveAs": "Sekles am",
     "load": "Ldi",
-    "getShareableLink": "Awi-d aseɣwen n beṭṭu",
     "close": "Mdel",
     "selectLanguage": "Fren tutlayt",
     "scrollBackToContent": "Uɣal s agbur",
@@ -258,29 +257,22 @@
     "clear": "Sfeḍ",
     "remove": "Kkes",
     "embed": "",
-    "publishLibrary": "",
     "submit": "Azen",
     "confirm": "Sentem",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "Ayagi ad isfeḍ akk taɣzut n usuneɣ. Tetḥeqqeḍ?",
-    "couldNotCreateShareableLink": "D awezɣi asnulfu n useɣwen n beṭṭu.",
-    "couldNotCreateShareableLinkTooBig": "D awezɣi asnulfu n useɣwen n beṭṭu. Asayes ɣezzif aṭas",
     "couldNotLoadInvalidFile": "D awezɣi asali n ufaylu armeɣtu",
-    "importBackendFailed": "Takterḍ seg uɣawas n deffir ur teddi ara.",
     "cannotExportEmptyCanvas": "D awezɣi asifeḍ n teɣzut n usuneɣ tilemt.",
     "couldNotCopyToClipboard": "Ulamek anɣal ɣer tecfawit.",
     "decryptFailed": "D awezɣi tukksa n uwgelhen i yisefka.",
-    "uploadedSecurly": "Asili yettwasɣelles s uwgelhen ixef s ixef, ayagi yebɣa ad d-yini belli aqeddac n Excalidraw akked medden ur zmiren ara ad ɣren agbur.",
-    "loadSceneOverridePrompt": "Asali n wunuɣ uffiɣ ad isemselsi agbur-inek (m) yellan. Tebɣiḍ ad tkemmeleḍ?",
     "collabStopOverridePrompt": "Aḥbas n tɣimit ad yesefsex unuɣ-inek (m) yettwaḥerzen yakan s wudem adigan. Tetḥeqqeḍ?\n(Ma tebɣiḍ ad teǧǧeḍ unuɣ-inek (m) adigan, mdel iccer n yiminig, deg umḍiq.)",
     "errorAddingToLibrary": "Ulamek ara yettwarnu uferdis ɣer temkarḍit",
     "errorRemovingFromLibrary": "Ulamek ara yettwakkes uferdis si temkarḍit",
     "confirmAddLibrary": "Ayagi adirnu talɣa (win) {{numShapes}} ɣer temkarḍit-inek (m). Tetḥeqqeḍ?",
     "imageDoesNotContainScene": "Tugna-agi tettban-d ur tesɛi ara isefka n usayes. Tesremdeḍ aseddu n usayes deg usifeḍ?",
     "cannotRestoreFromImage": "Asayes ulamek ara d-yettwarr seg ufaylu-agi n tugna",
-    "invalidSceneUrl": "Ulamek taktert n usayes seg URL i d-ittunefken. Ahat mačči d tameɣtut neɣ ur tegbir ara isefka JSON n Excalidraw.",
     "resetLibrary": "Ayagi ad isfeḍ tamkarḍit-inek•m. Tetḥeqqeḍ?",
     "removeItemsFromsLibrary": "Ad tekkseḍ {{count}} n uferdis (en) si temkarḍit?",
     "invalidEncryptionKey": "Tasarut n uwgelhen isefk ad tesɛu 22 n yiekkilen. Amɛiwen srid yensa.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Ulamek tuqqna s aqeddac n umyalel. Ma ulac uɣilif ales asali n usebter sakin eɛreḍ tikkelt-nniḍen.",
     "importLibraryError": "Ur d-ssalay ara tamkarḍit",
     "saveLibraryError": "",
-    "collabSaveFailed": "Ulamek asekles deg uzadur n yisefka deg ugilal. Ma ikemmel wugur, isefk ad teskelseḍ afaylu s wudem adigan akken ad tetḥeqqeḍ ur tesruḥuyeḍ ara amahil-inek•inem.",
-    "collabSaveFailed_sizeExceeded": "Ulamek asekles deg uzadur n yisefka deg ugilal, taɣzut n usuneɣ tettban-d temqer aṭas. Isefk ad teskelseḍ afaylu s wudem adigan akken ad tetḥeqqeḍ ur tesruḥuyeḍ ara amahil-inek•inem.",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Siẓreg tamkarḍit-inek•inem",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Nḥuder aṭas akken ur nseddu ara talɣut n usayes-inek (m) di tuccḍa. Ma yella asayes-inek (m) mačči d amaẓlay, ttxil-k (m) xemmem ad ḍefreḍ <button>afecku n weḍfar n yibugen.</button> Ma ulac uɣilif seddu talɣut ukessar-agi s wenɣal akked usenṭeḍ di GitHub issue.",
     "sceneContent": "Agbur n usayes:"
   },
-  "shareDialog": {
-    "or": "Neɣ"
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Sekles deg uḍebsi",
     "disk_details": "Sekles isefka n usayes deg ufaylu ansi ara tizmireḍ ad d-tketreḍ areḍqal.",
-    "disk_button": "Sekles deg ufaylu",
-    "link_title": "Aseɣwen n beṭṭu",
-    "link_details": "Sifeḍ am useɣwen n tɣuri kan.",
-    "link_button": "Sifeḍ deg useɣwen",
-    "excalidrawplus_description": "Sekles asayes-inek•inem di tallunt n umahil Excalidraw+.",
-    "excalidrawplus_button": "Sifeḍ",
-    "excalidrawplus_exportError": "Ulamek asifeḍ ɣer Excalidraw+ akka tura..."
+    "disk_button": "Sekles deg ufaylu"
   },
   "helpDialog": {
     "blog": "Ɣeṛ ablug-nneɣ",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Sfeḍ taɣzut n usuneɣ"
-  },
-  "publishDialog": {
-    "title": "Suffeɣ-d tamkarḍit",
-    "itemName": "Isem n uferdis",
-    "authorName": "Isem n umeskar",
-    "githubUsername": "Isem n useqdac n GitHub",
-    "twitterUsername": "Isem n useqdac n Twitter",
-    "libraryName": "Isem n temkarḍit",
-    "libraryDesc": "Aglam n temkarḍit",
-    "website": "Asmel n web",
-    "placeholder": {
-      "authorName": "Isem neɣ isem n useqdac inek•inem",
-      "libraryName": "Isem n temkarḍit-inek•inem",
-      "libraryDesc": "Aglam n temkarḍit-inek•inem akken ad tɛiwneḍ medden ad fehmen aseqdec-inec",
-      "githubHandle": "Isem n useqdac n GitHub ( d anefrunan) akken ad tizmireḍ ad tisẓrigeḍ tamkarḍit ticki tuzneḍ-tt i uselken",
-      "twitterHandle": "Isem n useqdac n Twitter (d anefrunan) akken ad nẓer anwa ara nsenmer deg udellel di Twitter",
-      "website": "Aseɣwen ɣer usmel-inek•inem neɣ wayeḍ (d anefrunan)"
-    },
-    "errors": {
-      "required": "Yettwasra",
-      "website": "Sekcem URL ameɣtu"
-    },
-    "noteDescription": "Azen tamkarḍit-inek•inem akken ad teddu di <link>akaram azayez n temkarḍit</link>i yimdanen-nniḍen ara isqedcen deg wunuɣen-nnsen.",
-    "noteGuidelines": "Tamkarḍit teḥwaǧ ad tettwaqbel s ufus qbel. Ma ulac uɣilif ɣer <link>iwellihen</link> send ad tazneḍ. Tesriḍ amiḍan n GitHub akken ad tmmeslayeḍ yerna ad tgeḍ ibeddilen ma yelaq, maca mačči d ayen yettwaḥetmen.",
-    "noteLicense": "Mi tuzneḍ ad tqebleḍ akken tamkarḍit ad d-teffeɣ s <link>Turagt MIT, </link>ayen yebɣan ad d-yini belli yal yiwen izmer ad ten-iseqdec war tilist.",
-    "noteItems": "Yal aferdis n temkarḍit isefk ad isɛu isem-is i yiman-is akken ad yili wamek ara yettusizdeg. Iferdisen-agi n temkarḍit ad ddun:",
-    "atleastOneLibItem": "Ma ulac uɣilif fern ma drus yiwen n uferdis n temkarḍit akken ad tebduḍ",
-    "republishWarning": "Tamawt: kra n yiferdisen yettwafernen ttwacerḍen ffeɣen-d/ttwaznen. Isefk ad talseḍ tuzzna n yiferdisen anagar mi ara tleqqemeḍ tamkarḍit neɣ tuzzna yellan."
-  },
-  "publishSuccessDialog": {
-    "title": "Tamkarḍit tettwazen",
-    "content": "Tanemmirt-ik•im {{authorName}}. Tamkarḍit-inek•inem tettwazen i weselken. Tzemreḍ ad tḍefreḍ aẓayer<link>dagi</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Ales awennez n temkarḍit",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "Tebɣiḍ ad tedduḍ ɣer Excalidraw+ deg umḍiq?",
       "menuHint": "Asifeḍ, ismenyifen, tutlayin, ..."
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "Sekles ar uḍebsi",
         "button": "Sekles ar uḍebsi",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

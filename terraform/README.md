@@ -11,7 +11,7 @@ This stack hosts Cutedraw on Google Cloud and uses Cloudflare only as the author
 | Artifact Registry + Workload Identity Federation | Keyless deployments from `powerm1nt/cutedraw` |
 | Cloudflare MCP | DNS-only apex A and `www` CNAME records pointing to GCP |
 
-Cloudflare MCP inspection on 2026-08-31 confirmed that zone `a4a2f907b86ec4fe5b282bf2a2d5e9a3` is active in NukaWorks Solutions and initially contained no DNS records. Terraform manages only Google Cloud resources. The connected Cloudflare MCP owns the apex and `www` records so a separate API token is not stored locally or in CI. Cloudflare proxying, CDN, certificates, Workers, and analytics remain disabled.
+Cloudflare MCP inspection on 2026-08-31 confirmed that zone `a4a2f907b86ec4fe5b282bf2a2d5e9a3` is active in NukaWorks Solutions and initially contained no DNS records. Terraform manages only Google Cloud resources. The connected Cloudflare MCP owns the apex and `www` records so a separate API token is not stored locally or in CI. Cloudflare proxying, CDN, certificates, Workers, and optional services remain disabled.
 
 ## Bootstrap
 

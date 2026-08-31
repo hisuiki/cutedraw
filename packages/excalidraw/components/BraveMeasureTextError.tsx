@@ -29,9 +29,7 @@ const BraveMeasureTextError = () => {
         <Trans
           i18nKey="errors.brave_measure_text_error.line4"
           issueLink={(el) => (
-            <a href="https://github.com/excalidraw/excalidraw/issues/new">
-              {el}
-            </a>
+            <a href="https://github.com/hisuiki/cutedraw/issues/new">{el}</a>
           )}
           discordLink={(el) => <a href="https://discord.gg/UexuTaE">{el}.</a>}
         />

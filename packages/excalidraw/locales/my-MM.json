@@ -232,7 +232,6 @@
     "save": "",
     "saveAs": "ပြောင်းသိမ်း",
     "load": "",
-    "getShareableLink": "မျှဝေရန် လင့်ခ်ရယူ",
     "close": "ပိတ်",
     "selectLanguage": "ဘာသာစကားရွေးပါ",
     "scrollBackToContent": "ကားချပ်ပြန်တည်",
@@ -258,29 +257,22 @@
     "clear": "",
     "remove": "",
     "embed": "",
-    "publishLibrary": "",
     "submit": "",
     "confirm": "",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "ကားချပ်တစ်ခုလုံးရှင်းလင်းပါတော့မည်။ အတည်ပြုပါ။",
-    "couldNotCreateShareableLink": "မျှဝေရန် လင့်ခ်မရယူနိုင်သေးပါ။",
-    "couldNotCreateShareableLinkTooBig": "မြင်ကွင်းအရမ်းကြီးနေသဖြင့် မျှဝေရန် လင့်ခ်မရယူနိုင်သေးပါ။",
     "couldNotLoadInvalidFile": "လွဲမှားနေသောဖိုင်အား တင်၍မရပါ။",
-    "importBackendFailed": "Backend မှမလုပ်ဆောင်နိုင်သေးပါ။",
     "cannotExportEmptyCanvas": "ကားချပ်အလွတ်အားထုတ်ယူ၍မရပါ။",
     "couldNotCopyToClipboard": "",
     "decryptFailed": "အချက်အလက်ဖော်ယူ၍မရပါ။",
-    "uploadedSecurly": "တင်သွင်းအချက်အလက်များအား နှစ်ဘက်စွန်းတိုင်လျှို့ဝှက်စနစ်အသုံးပြု၍လုံခြုံစွာထိန်းသိမ်းထားပါသဖြင့် Excalidraw ဆာဗာနှင့်ဆက်စပ်အဖွဲ့အစည်းများပင်လျှင်မဖတ်ရှုနိုင်ပါ။",
-    "loadSceneOverridePrompt": "လက်ရှိရေးဆွဲထားသမျှအား ပြင်ပမှတင်သွင်းသောပုံနှင့်အစားထိုးပါမည်။ ဆက်လက်ဆောင်ရွက်လိုပါသလား။",
     "collabStopOverridePrompt": "",
     "errorAddingToLibrary": "",
     "errorRemovingFromLibrary": "",
     "confirmAddLibrary": "{{numShapes}} ခုသောပုံသဏ္ဌာန်အားမှတ်တမ်းတင်ပါမည်။ အတည်ပြုပါ။",
     "imageDoesNotContainScene": "",
     "cannotRestoreFromImage": "ဤပုံဖြင့်မြင်ကွင်းပြန်လည်မရယူနိုင်ပါ။",
-    "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
     "invalidEncryptionKey": "",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "ချို့ယွင်းမှုမှတ်တမ်းတွင် အရေးကြီးအချက်အလက်များပါဝင်မှုမရှိစေရန်အထူးသတိပြုပါသည်။ မပါဝင်ပါက ဆက်လက်ဆောင်ရွက်ရန် <button>ချို့ယွင်းမှုအားခြေရာကောက်ပါ။</button> အောက်ပါအချက်အလက်များအား Github တွင် Issue အနေဖြင့်ဖြည့်သွင်းဖော်ပြပေးပါ။",
     "sceneContent": "မြင်ကွင်းပါအချက်အလက်။ ။"
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "",
     "disk_details": "",
-    "disk_button": "",
-    "link_title": "",
-    "link_details": "",
-    "link_button": "",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "",
-    "excalidrawplus_exportError": ""
+    "disk_button": ""
   },
   "helpDialog": {
     "blog": "",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": ""
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "",
-    "authorName": "",
-    "githubUsername": "",
-    "twitterUsername": "",
-    "libraryName": "",
-    "libraryDesc": "",
-    "website": "",
-    "placeholder": {
-      "authorName": "",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "",
-      "website": ""
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

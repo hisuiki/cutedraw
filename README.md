@@ -11,9 +11,7 @@ Cutedraw is a telemetry-free fork of Excalidraw. See [PRIVACY.md](./PRIVACY.md) 
 
 <h4 align="center">
   <a href="https://excalidraw.com">Excalidraw Editor</a> |
-  <a href="https://plus.excalidraw.com/blog">Blog</a> |
-  <a href="https://docs.excalidraw.com">Documentation</a> |
-  <a href="https://plus.excalidraw.com">Excalidraw+</a>
+  <a href="https://docs.excalidraw.com">Documentation</a>
 </h4>
 
 <div align="center">
@@ -26,7 +24,7 @@ Cutedraw is a telemetry-free fork of Excalidraw. See [PRIVACY.md](./PRIVACY.md) 
 
 <br />
 <p align="center">
-  <a href="https://github.com/excalidraw/excalidraw/blob/master/LICENSE">
+  <a href="https://github.com/hisuiki/cutedraw/blob/main/LICENSE">
     <img alt="Excalidraw is released under the MIT license." src="https://img.shields.io/badge/license-MIT-blue.svg"  /></a>
   <a href="https://www.npmjs.com/package/@excalidraw/excalidraw">
     <img alt="npm downloads/month" src="https://img.shields.io/npm/dm/@excalidraw/excalidraw"  /></a>
@@ -74,13 +72,12 @@ The Excalidraw editor (npm package) supports:
 
 ## Excalidraw.com
 
-The app hosted at [excalidraw.com](https://excalidraw.com) is a minimal showcase of what you can build with Excalidraw. Its [source code](https://github.com/excalidraw/excalidraw/tree/master/excalidraw-app) is part of this repository as well, and the app features:
+The app hosted at [excalidraw.com](https://excalidraw.com) is a minimal showcase of what you can build with Excalidraw. Its [source code](https://github.com/hisuiki/cutedraw/tree/main/excalidraw-app) is part of this repository as well, and the app features:
 
 - 📡&nbsp;PWA support (works offline).
 - 🤼&nbsp;Real-time collaboration.
 - 🔒&nbsp;End-to-end encryption.
 - 💾&nbsp;Local-first support (autosaves to the browser).
-- 🔗&nbsp;Shareable links (export to a readonly link you can share with others).
 
 We'll be adding these features as drop-in plugins for the npm package in the future.
 
@@ -100,7 +97,7 @@ Check out our [documentation](https://docs.excalidraw.com/docs/@excalidraw/excal
 
 ## Contributing
 
-- Missing something or found a bug? [Report here](https://github.com/excalidraw/excalidraw/issues).
+- Missing something or found a bug? [Report here](https://github.com/hisuiki/cutedraw/issues).
 - Want to contribute? Check out our [contribution guide](https://docs.excalidraw.com/docs/introduction/contributing) or let us know on [Discord](https://discord.gg/UexuTaE).
 - Want to help with translations? See the [translation guide](https://docs.excalidraw.com/docs/introduction/contributing#translating).
 
@@ -115,7 +112,7 @@ Check out our [documentation](https://docs.excalidraw.com/docs/@excalidraw/excal
 
 ## Sponsors & support
 
-If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/excalidraw) or use [Excalidraw+](https://plus.excalidraw.com/).
+If you like the project, you can become a sponsor at [Open Collective](https://opencollective.com/excalidraw).
 
 ## Thank you for supporting Excalidraw
 

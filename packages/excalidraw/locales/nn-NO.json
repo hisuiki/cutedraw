@@ -232,7 +232,6 @@
     "save": "Lagre til noverande fil",
     "saveAs": "Lagre som",
     "load": "",
-    "getShareableLink": "Hent delingslenke",
     "close": "Lukk",
     "selectLanguage": "Vel språk",
     "scrollBackToContent": "Skroll tilbake til innhald",
@@ -258,29 +257,22 @@
     "clear": "Tøm",
     "remove": "Fjern",
     "embed": "",
-    "publishLibrary": "",
     "submit": "Send inn",
     "confirm": "Stadfest",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "Dette vil tømme lerretet. Er du sikker?",
-    "couldNotCreateShareableLink": "Kunne ikkje lage delingslenke.",
-    "couldNotCreateShareableLinkTooBig": "Kunne ikkje opprette deleleg lenke: scena er for stor",
     "couldNotLoadInvalidFile": "Kunne ikkje laste inn ugyldig fil",
-    "importBackendFailed": "Importering av backend feila.",
     "cannotExportEmptyCanvas": "Kan ikkje eksportere eit tomt lerret.",
     "couldNotCopyToClipboard": "",
     "decryptFailed": "Kunne ikkje dekryptere data.",
-    "uploadedSecurly": "Opplastinga er kryptert og er ikkje mogleg å lese av Excalidraw-serveren eller tredjepartar.",
-    "loadSceneOverridePrompt": "Innlasting av ekstern teikning erstattar ditt eksisterande innhald. Ynskjer du å fortsette?",
     "collabStopOverridePrompt": "Viss du avsluttar økta overskriv du den førre, lokalt lagra teikninga di. Er du sikker?\n\n(Ønsker du å halde fram med denne? Då er det berre å lukke denne fana.)",
     "errorAddingToLibrary": "Kunne ikkje legge elementet i biblioteket",
     "errorRemovingFromLibrary": "Kunne ikkje fjerne elementet frå biblioteket",
     "confirmAddLibrary": "Dette vil legge til {{numShapes}} form(er) i biblioteket ditt. Er du sikker?",
     "imageDoesNotContainScene": "Dette biletet ser ikkje ut til å ha noko scenedata. Har du skrutt på innbygging av scene medan eksporteringa heldt på?",
     "cannotRestoreFromImage": "Scena kunne ikkje gjenopprettast frå denne biletfila",
-    "invalidSceneUrl": "Kunne ikkje hente noko scene frå den URL-en. Ho er anten øydelagd eller inneheld ikkje gyldig Excalidraw JSON-data.",
     "resetLibrary": "Dette vil fjerne alt innhald frå biblioteket. Er du sikker?",
     "removeItemsFromsLibrary": "Slette {{count}} element frå biblioteket?",
     "invalidEncryptionKey": "Krypteringsnøkkelen må ha 22 teikn. Sanntidssamarbeid er deaktivert.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Kunne ikkje kople til samarbeidsserveren. Ver vennleg å oppdatere inn sida og prøv på nytt.",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Publiser ditt eige bibliotek",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Vi er veldig nøye med å ikkje inkludere scene-opplysingane dine i feilmeldinga. Viss scena di ikkje er privat kan du vurdere å følge opp i <button>feilrapporteringssystemet vårt.</button> Ta med opplysingane nedanfor ved å kopiere og lime inn i GitHub-saka.",
     "sceneContent": "Scene-innhald:"
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Lagre til disk",
     "disk_details": "Eksporter scenedataa til ei fil du kan importere seinare.",
-    "disk_button": "Lagre til fil",
-    "link_title": "Deleleg lenke",
-    "link_details": "Eksporter som skrivebeskytta lenke.",
-    "link_button": "Eksporter til lenke",
-    "excalidrawplus_description": "Lagre scena til Excalidraw+-arbeidsområdet ditt.",
-    "excalidrawplus_button": "Eksporter",
-    "excalidrawplus_exportError": "Kunne ikkje eksportere til Excalidraw+ akkurat no..."
+    "disk_button": "Lagre til fil"
   },
   "helpDialog": {
     "blog": "Les bloggen vår",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Tøm lerretet"
-  },
-  "publishDialog": {
-    "title": "Publiser bibliotek",
-    "itemName": "Elementnamn",
-    "authorName": "Eigaren sitt namn",
-    "githubUsername": "GitHub-brukarnamn",
-    "twitterUsername": "Twitter-brukarnamn",
-    "libraryName": "Biblioteknamn",
-    "libraryDesc": "Bibliotekskildring",
-    "website": "Nettstad",
-    "placeholder": {
-      "authorName": "Namnet eller brukarnamnet ditt",
-      "libraryName": "Namnet på biblioteket ditt",
-      "libraryDesc": "Skildring av biblioteket ditt sånn at andre forstår bruken av det",
-      "githubHandle": "GitHub-brukarnamn (valfritt), slik at du kan redigere bibiloteket når det er sendt inn til vurdering",
-      "twitterHandle": "Twitter-brukarnamn (valfritt), så vi veit kven vi skal kreditere på Twitter",
-      "website": "Lenke til den personlege nettstaden din eller ein anna stad (valfritt)"
-    },
-    "errors": {
-      "required": "Kravt",
-      "website": "Fyll inn ein gyldig URL"
-    },
-    "noteDescription": "Send inn biblioteket ditt til inkludering i <link>den offentlege bibliotek-kjeldekoda</link>slik at andre kan bruke det i teikningane deira.",
-    "noteGuidelines": "Biblioteket må godkjennast manuelt fyrst. Ver vennleg å lese <link>retningslinjene</link> før du sender inn. Du kjem til å trenge ein GitHub-konto for å kommunisere og gjere endringar dersom kravt, men det er ikkje strengt naudsynt.",
-    "noteLicense": "Ved å sende inn godkjenner du at biblioteket vert publisert under <link>MIT-lisensen, </link>som kort sagt betyr at kven som helst kan bruke det utan avgrensingar.",
-    "noteItems": "Kvart bibliotekselement må ha eit eige namn, slik at det er mogleg å filtrere. Dei følgande bibliotekselementa blir inkludert:",
-    "atleastOneLibItem": "Ver vennleg å markere minst eitt bibliotekselement for å starte",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "Bibliotek innsendt",
-    "content": "Tusen takk {{authorName}}! Biblioteket ditt har blitt sendt inn til gjennomgang. Du kan halde styr på status<link>her</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Tilbakestill bibliotek",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

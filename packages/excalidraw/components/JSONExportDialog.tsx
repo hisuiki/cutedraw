@@ -9,7 +9,7 @@ import { t } from "../i18n";
 import { Card } from "./Card";
 import { Dialog } from "./Dialog";
 import { IconButton } from "./IconButton";
-import { exportToFileIcon, LinkIcon } from "./icons";
+import { exportToFileIcon } from "./icons";
 
 import "./ExportDialog.scss";
 
@@ -25,23 +25,18 @@ export type ExportCB = (
 const JSONExportModal = ({
   elements,
   appState,
-  setAppState,
   files,
   actionManager,
   exportOpts,
   canvas,
-  onCloseRequest,
 }: {
   appState: UIAppState;
-  setAppState: React.Component<any, UIAppState>["setState"];
   files: BinaryFiles;
   elements: readonly NonDeletedExcalidrawElement[];
   actionManager: ActionManager;
-  onCloseRequest: () => void;
   exportOpts: ExportOpts;
   canvas: HTMLCanvasElement;
 }) => {
-  const { onExportToBackend } = exportOpts;
   return (
     <div className="ExportDialog ExportDialog--json">
       <div className="ExportDialog-cards">
@@ -62,28 +57,6 @@ const JSONExportModal = ({
               showAriaLabel={true}
               onClick={() => {
                 actionManager.executeAction(actionSaveFileToDisk, "ui");
-              }}
-            />
-          </Card>
-        )}
-        {onExportToBackend && (
-          <Card color="pink">
-            <div className="Card-icon">{LinkIcon}</div>
-            <h2>{t("exportDialog.link_title")}</h2>
-            <div className="Card-details">{t("exportDialog.link_details")}</div>
-            <IconButton
-              className="Card-button"
-              type="button"
-              title={t("exportDialog.link_button")}
-              aria-label={t("exportDialog.link_button")}
-              showAriaLabel={true}
-              onClick={async () => {
-                try {
-                  await onExportToBackend(elements, appState, files);
-                  onCloseRequest();
-                } catch (error: any) {
-                  setAppState({ errorMessage: error.message });
-                }
               }}
             />
           </Card>
@@ -123,10 +96,8 @@ export const JSONExportDialog = ({
           <JSONExportModal
             elements={elements}
             appState={appState}
-            setAppState={setAppState}
             files={files}
             actionManager={actionManager}
-            onCloseRequest={handleClose}
             exportOpts={exportOpts}
             canvas={canvas}
           />

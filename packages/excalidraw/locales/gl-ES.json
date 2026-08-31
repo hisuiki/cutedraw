@@ -232,7 +232,6 @@
     "save": "Gardar no ficheiro actual",
     "saveAs": "Gardar como",
     "load": "Abrir",
-    "getShareableLink": "Obter unha ligazón que se poida compartir",
     "close": "Pechar",
     "selectLanguage": "Seleccionar idioma",
     "scrollBackToContent": "Volver ao contido",
@@ -258,29 +257,22 @@
     "clear": "Limpar",
     "remove": "Eliminar",
     "embed": "",
-    "publishLibrary": "",
     "submit": "Enviar",
     "confirm": "Confirmar",
     "embeddableInteractionButton": "Faga clic para interactuar"
   },
   "alerts": {
     "clearReset": "Isto limpará todo o lenzo. Estás seguro?",
-    "couldNotCreateShareableLink": "Non se puido crear unha ligazón para compartir.",
-    "couldNotCreateShareableLinkTooBig": "Non se puido crear a ligazón para compartir: a escena é demasiado grande",
     "couldNotLoadInvalidFile": "Non se puido cargar o ficheiro non válido",
-    "importBackendFailed": "A importación dende o backend fallou.",
     "cannotExportEmptyCanvas": "Non se pode exportar un lenzo baleiro.",
     "couldNotCopyToClipboard": "Non se puido copiar ao portapapeis.",
     "decryptFailed": "Non se poideron descifrar os datos.",
-    "uploadedSecurly": "A carga foi asegurada con cifrado de extremo a extremo, o que significa que o servidor de Excalidraw e terceiros non poden ler o contido.",
-    "loadSceneOverridePrompt": "A carga dun debuxo externo substituirá o contido existente. Desexa continuar?",
     "collabStopOverridePrompt": "Deter a sesión, sobrescribirá o seu debuxo local previamente almacenado. Está seguro?\n\n(Se quere manter o seu debuxo local, simplemente peche a lapela do navegador.)",
     "errorAddingToLibrary": "Non se puido engadir o elemento á biblioteca",
     "errorRemovingFromLibrary": "Non se puido eliminar o elemento da biblioteca",
     "confirmAddLibrary": "Isto engadirá {{numShapes}} forma(s) a túa biblioteca. Estás seguro?",
     "imageDoesNotContainScene": "Esta imaxe non parece conter ningún dato da escena. Activou a inserción de escenas durante a exportación?",
     "cannotRestoreFromImage": "Non se puido restaurar a escena dende este arquivo de imaxe",
-    "invalidSceneUrl": "Non se puido importar a escena dende a URL proporcionada. Ou ben está malformada ou non contén un JSON con información válida para Excalidraw.",
     "resetLibrary": "Isto limpará a súa biblioteca. Está seguro?",
     "removeItemsFromsLibrary": "Eliminar {{count}} elemento(s) da biblioteca?",
     "invalidEncryptionKey": "A clave de cifrado debe ter 22 caracteres. A colaboración en directo está desactivada.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Non se puido conectar ao servidor de colaboración. Por favor recargue a páxina e probe de novo.",
     "importLibraryError": "Non se puido cargar a biblioteca",
     "saveLibraryError": "",
-    "collabSaveFailed": "Non se puido gardar na base de datos. Se o problema persiste, deberías gardar o teu arquivo de maneira local para asegurarte de non perdelo teu traballo.",
-    "collabSaveFailed_sizeExceeded": "Non se puido gardar na base de datos, o lenzo semella demasiado grande. Deberías gardar o teu arquivo de maneira local para asegurarte de non perdelo teu traballo.",
     "imageToolNotSupported": "As imaxes están desactivadas.",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Publica a túa propia biblioteca",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Fomos moi cautelosos de non incluír a información da súa escena no erro. Se a súa escena non é privada, por favor, considere o seguimento do noso <button>rastrexador de erros.</button> Por favor inclúa a seguinte información copiándoa e pegándoa na issue de Github.",
     "sceneContent": "Contido da escena:"
   },
-  "shareDialog": {
-    "or": "Ou"
-  },
   "roomDialog": {
     "desc_intro": "Invita xente a colaborar no teu diagrama.",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Gardar no disco",
     "disk_details": "Exporte os datos da escena a un ficheiro que poderás importar máis tarde.",
-    "disk_button": "Gardar nun ficheiro",
-    "link_title": "Ligazón para compartir",
-    "link_details": "Exportar como unha ligazón de só lectura.",
-    "link_button": "Exportar a unha ligazón",
-    "excalidrawplus_description": "Garde a escena no seu espazo de traballo en Excalidraw+.",
-    "excalidrawplus_button": "Exportar",
-    "excalidrawplus_exportError": "Non se puido exportar a Excalidraw+ neste momento..."
+    "disk_button": "Gardar nun ficheiro"
   },
   "helpDialog": {
     "blog": "Le o noso blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Limpar lenzo"
-  },
-  "publishDialog": {
-    "title": "Publicar biblioteca",
-    "itemName": "Nome do elemento",
-    "authorName": "Nome do autor",
-    "githubUsername": "Nome de usuario en Github",
-    "twitterUsername": "Nome de usuario en Twitter",
-    "libraryName": "Nome da biblioteca",
-    "libraryDesc": "Descrición da biblioteca",
-    "website": "Páxina web",
-    "placeholder": {
-      "authorName": "O seu nome ou nome de usuario",
-      "libraryName": "Nome da súa biblioteca",
-      "libraryDesc": "Descrición da súa biblioteca para axudar a xente a entender o seu uso",
-      "githubHandle": "Nome de usuario de GitHub (opcional), así poderás editar a biblioteca unha vez enviada para a súa revisión",
-      "twitterHandle": "Nome de usuario en Twitter(opcional), así sabemos a quen darlle crédito cando se lle de promoción a través de Twitter",
-      "website": "Ligazón ao teu sitio web persoal ou a outro sitio (opcional)"
-    },
-    "errors": {
-      "required": "Obrigatorio",
-      "website": "Introduza unha URL válida"
-    },
-    "noteDescription": "Envíe a súa biblioteca para que sexa incluída no <link>repositorio público de bibliotecas</link>para que outra xente a poida usar nos seus debuxos.",
-    "noteGuidelines": "A biblioteca necesita ser aprobada manualmente primeiro. Por favor, lea as <link>normas</link> antes de ser enviado. Necesitarás unha conta de GitHub para comunicarte ou facer cambios se se solicitan, pero non é estritamente necesario.",
-    "noteLicense": "Ao enviar, estás de acordo con que a biblioteca sexa publicada baixo a <link>Licenza MIT, </link>o cal significa que, en resumo, calquera pode usalo sen restricións.",
-    "noteItems": "Cada elemento da biblioteca debe ter o seu nome propio para que se poida filtrar. Os seguintes elementos da biblioteca serán incluídos:",
-    "atleastOneLibItem": "Por favor seleccione polo menos un elemento da biblioteca para comezar",
-    "republishWarning": "Nota: algúns dos elementos seleccionados están marcados como xa publicados/enviados. Só deberías reenviar elementos cando se actualice unha biblioteca ou envío."
-  },
-  "publishSuccessDialog": {
-    "title": "Biblioteca enviada",
-    "content": "Grazas {{authorName}}. A súa biblioteca foi enviada para ser revisada. Pode seguir o estado<link>aquí</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Restablecer biblioteca",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "Queres ir a Excalidraw+ no seu lugar?",
       "menuHint": "Exportar, preferencias, idiomas, ..."
     },
     "defaults": {
@@ -628,22 +575,12 @@
         "title": "Gardar no disco",
         "button": "Gardar no disco",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportar a Excalidraw+",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
         "title": "Cargar dende arquivo",
         "button": "Cargar dende arquivo",
-        "description": ""
-      },
-      "shareableLink": {
-        "title": "Cargar dende un enlace",
-        "button": "Substituír o meu contido",
         "description": ""
       }
     }
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

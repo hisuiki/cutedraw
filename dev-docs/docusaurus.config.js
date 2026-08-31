@@ -35,8 +35,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl:
-            "https://github.com/excalidraw/excalidraw/tree/master/dev-docs/",
+          editUrl: "https://github.com/hisuiki/cutedraw/tree/main/dev-docs/",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
@@ -66,12 +65,7 @@ const config = {
             label: "Docs",
           },
           {
-            to: "https://plus.excalidraw.com/blog",
-            label: "Blog",
-            position: "left",
-          },
-          {
-            to: "https://github.com/excalidraw/excalidraw",
+            to: "https://github.com/hisuiki/cutedraw",
             label: "GitHub",
             position: "right",
           },
@@ -110,12 +104,8 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "https://plus.excalidraw.com/blog",
-              },
-              {
                 label: "GitHub",
-                to: "https://github.com/excalidraw/excalidraw",
+                to: "https://github.com/hisuiki/cutedraw",
               },
             ],
           },

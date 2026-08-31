@@ -232,7 +232,6 @@
     "save": "Salvar para o arquivo atual",
     "saveAs": "Salvar como",
     "load": "Abrir",
-    "getShareableLink": "Obter um link de compartilhamento",
     "close": "Fechar",
     "selectLanguage": "Selecionar idioma",
     "scrollBackToContent": "Voltar para o conteúdo",
@@ -258,29 +257,22 @@
     "clear": "Limpar",
     "remove": "Remover",
     "embed": "Alternar incorporação",
-    "publishLibrary": "Renomear ou publicar",
     "submit": "Enviar",
     "confirm": "Confirmar",
     "embeddableInteractionButton": "Clique para interagir"
   },
   "alerts": {
     "clearReset": "Isto irá limpar toda a tela. Você tem certeza?",
-    "couldNotCreateShareableLink": "Não foi possível criar um link de compartilhamento.",
-    "couldNotCreateShareableLinkTooBig": "Não foi possível criar um link compartilhável: a cena é muito grande",
     "couldNotLoadInvalidFile": "Não foi possível carregar o arquivo inválido",
-    "importBackendFailed": "A importação do servidor falhou.",
     "cannotExportEmptyCanvas": "Não é possível exportar uma tela vazia.",
     "couldNotCopyToClipboard": "Não foi possível copiar para a área de transferência.",
     "decryptFailed": "Não foi possível descriptografar os dados.",
-    "uploadedSecurly": "O upload foi protegido com criptografia de ponta a ponta, o que significa que o servidor do Excalidraw e terceiros não podem ler o conteúdo.",
-    "loadSceneOverridePrompt": "Carregar um desenho externo substituirá o seu conteúdo existente. Deseja continuar?",
     "collabStopOverridePrompt": "Ao interromper a sessão, você substituirá seu desenho anterior, armazenado localmente. Você tem certeza?\n\n(Se você deseja manter seu desenho local, simplesmente feche a aba do navegador.)",
     "errorAddingToLibrary": "Não foi possível adicionar o item à biblioteca",
     "errorRemovingFromLibrary": "Não foi possível remover o item da biblioteca",
     "confirmAddLibrary": "Isso adicionará {{numShapes}} forma(s) à sua biblioteca. Tem certeza?",
     "imageDoesNotContainScene": "Esta imagem parece não conter dados de cenas. Você ativou a incorporação da cena durante a exportação?",
     "cannotRestoreFromImage": "Não foi possível restaurar a cena deste arquivo de imagem",
-    "invalidSceneUrl": "Não foi possível importar a cena da URL fornecida. Ela está incompleta ou não contém dados JSON válidos do Excalidraw.",
     "resetLibrary": "Isto limpará a sua biblioteca. Você tem certeza?",
     "removeItemsFromsLibrary": "Excluir {{count}} item(ns) da biblioteca?",
     "invalidEncryptionKey": "A chave de encriptação deve ter 22 caracteres. A colaboração ao vivo está desabilitada.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Não foi possível conectar-se ao servidor colaborativo. Por favor, recarregue a página e tente novamente.",
     "importLibraryError": "Não foi possível carregar a biblioteca",
     "saveLibraryError": "Não foi possível salvar a biblioteca no armazenamento. Salve sua biblioteca em um arquivo localmente para garantir que você não perca as alterações.",
-    "collabSaveFailed": "Não foi possível salvar no banco de dados do servidor. Se os problemas persistirem, salve o arquivo localmente para garantir que não perca o seu trabalho.",
-    "collabSaveFailed_sizeExceeded": "Não foi possível salvar no banco de dados do servidor, a tela parece ser muito grande. Se os problemas persistirem, salve o arquivo localmente para garantir que não perca o seu trabalho.",
     "imageToolNotSupported": "Imagens estão desabilitadas.",
     "brave_measure_text_error": {
       "line1": "Parece que você está usando o navegador Brave com a configuração <bold>Bloquear Impressões Digitais</bold> no modo agressivo.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Clique duas vezes ou pressione {{shortcut}} para editar pontos",
     "lineEditor_pointSelected": "Pressione {{shortcut_1}} para remover ponto(s),\n{{shortcut_2}} para duplicar ou arraste para mover",
     "lineEditor_nothingSelected": "Selecione um ponto para editar (segure {{shortcut_1}} para selecionar vários),\nou segure {{shortcut_2}} e clique para adicionar novos pontos",
-    "publishLibrary": "Publicar sua própria biblioteca",
     "bindTextToElement": "{{shortcut}} para adicionar texto",
     "createFlowchart": "{{shortcut}} para criar um fluxo",
     "deepBoxSelect": "Segure {{shortcut}} para ativar seleção profunda e para evitar arrastamentos",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Fomos muito cautelosos para não incluir suas informações de cena no erro. Se sua cena não for privada, por favor, considere seguir nosso <button>rastreador de bugs.</button> Por favor, inclua informações abaixo, copiando e colando para a issue do GitHub.",
     "sceneContent": "Conteúdo da cena:"
   },
-  "shareDialog": {
-    "or": "Ou"
-  },
   "roomDialog": {
     "desc_intro": "Convide pessoas para colaborar em seu desenho.",
     "desc_privacy": "Não se preocupe, a sessão é criptografada de ponta a ponta e totalmente privada. Nem mesmo nosso servidor pode ver o que você desenha.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Salvar no computador",
     "disk_details": "Exportar os dados da cena para um arquivo que você poderá importar mais tarde.",
-    "disk_button": "Salvar em um arquivo",
-    "link_title": "Link compartilhável",
-    "link_details": "Exportar como link de somente leitura.",
-    "link_button": "Exportar link",
-    "excalidrawplus_description": "Salvar a cena na sua área de trabalho Excalidraw+.",
-    "excalidrawplus_button": "Exportar",
-    "excalidrawplus_exportError": "Não é possível exportar para o Excalidraw+ neste momento..."
+    "disk_button": "Salvar em um arquivo"
   },
   "helpDialog": {
     "blog": "Leia o nosso blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Limpar a tela"
-  },
-  "publishDialog": {
-    "title": "Publicar biblioteca",
-    "itemName": "Nome do item",
-    "authorName": "Nome do autor",
-    "githubUsername": "Nome de usuário do GitHub",
-    "twitterUsername": "Nome de usuário do Twitter",
-    "libraryName": "Nome da Biblioteca",
-    "libraryDesc": "Descrição da biblioteca",
-    "website": "Site",
-    "placeholder": {
-      "authorName": "Seu nome ou nome de usuário",
-      "libraryName": "Nome da sua biblioteca",
-      "libraryDesc": "Descrição para ajudar as pessoas a entenderem o uso da sua biblioteca",
-      "githubHandle": "Identificador do GitHub (opcional), para que você possa editar a biblioteca depois de enviar para revisão",
-      "twitterHandle": "Nome de usuário do Twitter (opcional), para que saibamos quem deve ser creditado se promovermos no Twitter",
-      "website": "Link para o seu site pessoal ou outro lugar (opcional)"
-    },
-    "errors": {
-      "required": "Obrigatório",
-      "website": "Informe uma URL válida"
-    },
-    "noteDescription": "Envie sua biblioteca para ser incluída no <link>repositório de biblioteca pública</link>para outras pessoas usarem em seus desenhos.",
-    "noteGuidelines": "A biblioteca precisa ser aprovada manualmente primeiro. Por favor, leia o <link>orientações</link> antes de enviar. Você precisará de uma conta do GitHub para se comunicar e fazer alterações quando solicitado, mas não é estritamente necessário.",
-    "noteLicense": "Ao enviar, você concorda que a biblioteca será publicada sob a <link>Licença MIT, </link>o que, em suma, significa que qualquer pessoa pode utilizá-los sem restrições.",
-    "noteItems": "Cada item da biblioteca deve ter seu próprio nome para que seja filtrável. Os seguintes itens da biblioteca serão incluídos:",
-    "atleastOneLibItem": "Por favor, selecione pelo menos um item da biblioteca para começar",
-    "republishWarning": "Nota: alguns dos itens selecionados estão marcados como já publicado/enviado. Você só deve reenviar itens ao atualizar uma biblioteca existente ou submissão."
-  },
-  "publishSuccessDialog": {
-    "title": "Biblioteca enviada",
-    "content": "Obrigado {{authorName}}. Sua biblioteca foi enviada para análise. Você pode acompanhar o status <link>aqui</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Redefinir biblioteca",
@@ -595,7 +543,6 @@
       "center_heading": "Seus desenhos estão salvos no armazenamento do seu navegador.",
       "center_heading_line2": "O armazenamento do navegador pode ser apagado inesperadamente.",
       "center_heading_line3": "Salve seu trabalho em um arquivo regularmente para evitar perdê-lo.",
-      "center_heading_plus": "Você queria ir para o Excalidraw+ em vez disso?",
       "menuHint": "Exportar, preferências, idiomas..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Salvar no computador",
         "button": "Salvar no computador",
         "description": "Exportar os dados da cena para um arquivo que você poderá importar mais tarde."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportar para Excalidraw+",
-        "description": "Salvar a cena na sua área de trabalho Excalidraw+."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Carregar de arquivo",
         "button": "Carregar de arquivo",
         "description": "Carregar de um arquivo irá <bold> substituir o conteúdo existente</bold>.<br></br>Você pode salvar seu desenho primeiro usando uma das opções abaixo."
-      },
-      "shareableLink": {
-        "title": "Carregar de um link",
-        "button": "Substituir meu conteúdo",
-        "description": "Carregar um desenho externo irá <bold> substituir seu conteúdo existente</bold>.<br></br>Você pode salvar seu desenho antes utilizando uma das opções abaixo."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Erro de sintaxe Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Você atingiu o limite de IA no plano gratuito. Experimente o Excalidraw+ para mais ou tente novamente amanhã.",
+      "messageLimit": "",
       "generalRateLimit": "Vai com calma, colega! Espere um momento antes de tentar novamente.",
       "messageLimitInputPlaceholder": "Você atingiu seu limite de mensagens"
-    },
-    "upsellBtnLabel": "Atualize para o Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Busca rápida"

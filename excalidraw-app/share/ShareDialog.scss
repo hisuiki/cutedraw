@@ -10,23 +10,6 @@
       height: calc(100vh - 5rem);
     }
 
-    &__separator {
-      border-top: 1px solid var(--dialog-border-color);
-      text-align: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 1em;
-
-      span {
-        background: var(--island-bg-color);
-        padding: 0px 0.75rem;
-        transform: translateY(-1ch);
-        display: inline-flex;
-        line-height: 1;
-      }
-    }
-
     &__popover {
       @keyframes ShareDialog__popover__scaleIn {
         from {

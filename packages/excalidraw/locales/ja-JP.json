@@ -232,7 +232,6 @@
     "save": "現在のファイルに保存",
     "saveAs": "名前を付けて保存",
     "load": "開く",
-    "getShareableLink": "共有可能なリンクを取得する",
     "close": "閉じる",
     "selectLanguage": "言語の選択",
     "scrollBackToContent": "コンテンツまでスクロールで戻る",
@@ -258,29 +257,22 @@
     "clear": "消去",
     "remove": "削除",
     "embed": "埋め込みの切り替え",
-    "publishLibrary": "名前の変更または公開",
     "submit": "送信",
     "confirm": "確認",
     "embeddableInteractionButton": "クリックして操作"
   },
   "alerts": {
     "clearReset": "キャンバス全体を消去します。本当によろしいですか？",
-    "couldNotCreateShareableLink": "共有URLを作成できませんでした。",
-    "couldNotCreateShareableLinkTooBig": "共有可能なリンクを作成できませんでした: シーンが大きすぎます",
     "couldNotLoadInvalidFile": "無効なファイルを読み込めませんでした。",
-    "importBackendFailed": "サーバーからの読み込みに失敗しました。",
     "cannotExportEmptyCanvas": "空のキャンバスはエクスポートできません。",
     "couldNotCopyToClipboard": "クリップボードにコピーできませんでした。",
     "decryptFailed": "データを復号できませんでした。",
-    "uploadedSecurly": "データのアップロードはエンドツーエンド暗号化によって保護されています。Excalidrawサーバーと第三者はデータの内容を見ることができません。",
-    "loadSceneOverridePrompt": "外部の描画データを読み込むと、既存のコンテンツが置き換わります。続行しますか？",
     "collabStopOverridePrompt": "セッションを停止すると、ローカルに保存されている図が上書きされます。 本当によろしいですか？\n\n(ローカルの図を保持したい場合は、セッションを停止せずにブラウザーのタブを閉じてください。)",
     "errorAddingToLibrary": "アイテムをライブラリに追加できませんでした",
     "errorRemovingFromLibrary": "ライブラリからアイテムを削除できませんでした",
     "confirmAddLibrary": "{{numShapes}} 個の図形をライブラリに追加します。よろしいですか？",
     "imageDoesNotContainScene": "この画像にはシーンデータが含まれていないようです。エクスポート時にシーンの埋め込みを有効にしましたか？",
     "cannotRestoreFromImage": "このイメージファイルからシーンを復元できませんでした",
-    "invalidSceneUrl": "指定された URL からシーンをインポートできませんでした。不正な形式であるか、有効な Excalidraw JSON データが含まれていません。",
     "resetLibrary": "ライブラリを消去します。本当によろしいですか？",
     "removeItemsFromsLibrary": "{{count}} 個のアイテムをライブラリから削除しますか？",
     "invalidEncryptionKey": "暗号化キーは22文字でなければなりません。共同編集は無効化されています。",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "コラボレーションサーバに接続できませんでした。ページを再読み込みして、もう一度お試しください。",
     "importLibraryError": "ライブラリを読み込めませんでした。",
     "saveLibraryError": "ライブラリをストレージに保存できませんでした。変更を失わないように、ローカルにファイルとして保存してください。",
-    "collabSaveFailed": "バックエンドデータベースに保存できませんでした。問題が解決しない場合は、作業を失わないようにローカルにファイルを保存してください。",
-    "collabSaveFailed_sizeExceeded": "キャンバスが大きすぎるため、バックエンドデータベースに保存できませんでした。問題が解決しない場合は、作業を失わないようにローカルにファイルを保存してください。",
     "imageToolNotSupported": "画像ツールは使用不可です。",
     "brave_measure_text_error": {
       "line1": "<bold>Aggressly Block Fingerprinting</bold> 設定が有効なBraveブラウザーを使用しているようです。",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "ダブルクリック、または {{shortcut}} を押して点を編集",
     "lineEditor_pointSelected": "{{shortcut_1}} で点を削除、\n{{shortcut_2}} で複製、またはドラッグで移動",
     "lineEditor_nothingSelected": "点を選択して編集 ({{shortcut_1}} を押し続けて複数選択)、\nまたは {{shortcut_2}} を押しながらクリックで新しい点を追加",
-    "publishLibrary": "自分のライブラリを公開",
     "bindTextToElement": "{{shortcut}} でテキストを追加",
     "createFlowchart": "{{shortcut}} でフローチャートを作成",
     "deepBoxSelect": "{{shortcut}} を押し続けて詳細選択・ドラッグ防止",
@@ -410,9 +399,6 @@
     "openIssueMessage": "エラーにシーン情報が含まれないよう配慮しています。シーンが非公開でなければ、<button>バグ報告</button>へのご協力をお願いします。以下の情報をコピーしてGitHub Issueに貼り付けてください。",
     "sceneContent": "シーンの内容:"
   },
-  "shareDialog": {
-    "or": "または"
-  },
   "roomDialog": {
     "desc_intro": "他の人を描画の共同編集に招待しましょう。",
     "desc_privacy": "心配しないでください、セッションはエンドツーエンドで暗号化されており、完全にプライベートです。私たちのサーバーでさえも、あなたが描いたものを見ることができません。",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "ディスクに保存",
     "disk_details": "シーンデータを後からインポートできるファイルにエクスポートします。",
-    "disk_button": "ファイルへ保存",
-    "link_title": "共有可能なリンク",
-    "link_details": "読み取り専用リンクとしてエクスポート",
-    "link_button": "リンクとしてエクスポート",
-    "excalidrawplus_description": "Excalidraw+ ワークスペースにシーンを保存します。",
-    "excalidrawplus_button": "エクスポート",
-    "excalidrawplus_exportError": "Excalidraw+ にエクスポートできませんでした..."
+    "disk_button": "ファイルへ保存"
   },
   "helpDialog": {
     "blog": "公式ブログを読む",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "キャンバスを消去"
-  },
-  "publishDialog": {
-    "title": "ライブラリを公開",
-    "itemName": "アイテム名",
-    "authorName": "作成者名",
-    "githubUsername": "GitHub ユーザ名",
-    "twitterUsername": "Twitter ユーザ名",
-    "libraryName": "ライブラリ名",
-    "libraryDesc": "ライブラリの説明",
-    "website": "Webサイト",
-    "placeholder": {
-      "authorName": "お名前またはユーザー名",
-      "libraryName": "あなたのライブラリ名",
-      "libraryDesc": "ライブラリの使い方を理解するための説明",
-      "githubHandle": "GitHubハンドル(任意)。一度レビューのために送信されると、ライブラリを編集できます",
-      "twitterHandle": "Twitterのユーザー名 (任意)。Twitterでプロモーションする際にクレジットする人を知っておくためのものです",
-      "website": "個人のウェブサイトまたは他のサイトへのリンク (任意)"
-    },
-    "errors": {
-      "required": "必須項目",
-      "website": "有効な URL を入力してください"
-    },
-    "noteDescription": "あなたのライブラリを<link>公開ライブラリリポジトリ</link>に投稿して、他の人が作図に使えるようにしましょう。",
-    "noteGuidelines": "投稿されたライブラリは担当者が審査します。投稿前に<link>ガイドライン</link>をお読みください。修正をお願いすることがあるため、GitHubアカウントがあると便利ですが、必須ではありません。",
-    "noteLicense": "投稿することで、ライブラリが<link>MITライセンス</link>で公開されることに同意したものとみなします。これは誰でも自由に利用できることを意味します。",
-    "noteItems": "各アイテムにはフィルタリング用に固有の名前が必要です。以下のアイテムが含まれます:",
-    "atleastOneLibItem": "開始するには少なくとも1つのライブラリ項目を選択してください",
-    "republishWarning": "注意: 選択された項目の中には、すでに公開/投稿済みと表示されているものがあります。既存のライブラリや投稿を更新する場合のみ、アイテムを再投稿してください。"
-  },
-  "publishSuccessDialog": {
-    "title": "ライブラリを送信しました",
-    "content": "{{authorName}} さん、ありがとうございます。あなたのライブラリはレビューのために提出されました。状況を追跡できます。<link>こちら</link>"
   },
   "confirmDialog": {
     "resetLibrary": "ライブラリをリセット",
@@ -595,7 +543,6 @@
       "center_heading": "描画データはブラウザーのストレージに保存されます。",
       "center_heading_line2": "ブラウザーのストレージは予期せず消去されることがあります。",
       "center_heading_line3": "作業を失わないよう、定期的にファイルへ保存してください。",
-      "center_heading_plus": "代わりにExcalidraw+を開きますか？",
       "menuHint": "エクスポート、設定、言語..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "ディスクに保存",
         "button": "ディスクに保存",
         "description": "シーンデータを後でインポートできるファイルにエクスポートします。"
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Excalidraw+にエクスポート",
-        "description": "Excalidraw+ ワークスペースにシーンを保存します。"
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "ファイルからロード",
         "button": "ファイルからロード",
         "description": "ファイルからの読み込みは、<bold>現在の描画内容を置き換えます</bold>。<br></br>その前に、以下の選択肢のいずれかにより描画内容を保存できます。"
-      },
-      "shareableLink": {
-        "title": "リンクから読み込み",
-        "button": "描画内容を置き換える",
-        "description": "外部の描画データの読み込みは、<bold>現在の描画内容を置き換えます</bold>。<br></br>その前に、以下の選択肢のいずれかにより描画内容を保存できます。"
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Mermaid構文エラー"
     },
     "rateLimit": {
-      "messageLimit": "無料プランのAI利用上限に達しました。Excalidraw+をお試しいただくか、また明日ご利用ください。",
+      "messageLimit": "",
       "generalRateLimit": "操作が速すぎたようです。もう少し待ってから再度お試しください。",
       "messageLimitInputPlaceholder": "メッセージの送信上限に達しました"
-    },
-    "upsellBtnLabel": "Plusにアップグレード"
+    }
   },
   "quickSearch": {
     "placeholder": "クイック検索"

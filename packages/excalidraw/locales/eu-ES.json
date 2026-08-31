@@ -232,7 +232,6 @@
     "save": "Gorde uneko fitxategian",
     "saveAs": "Gorde honela",
     "load": "Ireki",
-    "getShareableLink": "Lortu partekatzeko esteka",
     "close": "Itxi",
     "selectLanguage": "Hautatu hizkuntza",
     "scrollBackToContent": "Joan atzera edukira",
@@ -258,29 +257,22 @@
     "clear": "Garbitu",
     "remove": "Kendu",
     "embed": "Aldatu kapsulatzea",
-    "publishLibrary": "Berrizendatu edo argitaratu",
     "submit": "Bidali",
     "confirm": "Bai",
     "embeddableInteractionButton": "Egin klik elkar eragiteko"
   },
   "alerts": {
     "clearReset": "Honek oihal osoa garbituko du. Ziur zaude?",
-    "couldNotCreateShareableLink": "Ezin izan da partekatzeko estekarik sortu.",
-    "couldNotCreateShareableLinkTooBig": "Ezin izan da partekatzeko estekarik sortu: eszena handiegia da",
     "couldNotLoadInvalidFile": "Ezin izan da kargatu, fitxategiak ez du balio",
-    "importBackendFailed": "Inportazioak huts egin du.",
     "cannotExportEmptyCanvas": "Ezin izan da oihal hutsa esportatu.",
     "couldNotCopyToClipboard": "Ezin izan da arbelean kopiatu.",
     "decryptFailed": "Ezin izan da deszifratu.",
-    "uploadedSecurly": "Kargatzea muturretik muturrerako zifratze bidez ziurtatu da, hau da, Excalidraw zerbitzariak eta hirugarrenek ezin dutela edukia irakurri.",
-    "loadSceneOverridePrompt": "Kanpoko marrazkia kargatzeak lehendik duzun edukia ordezkatuko du. Jarraitu nahi duzu?",
     "collabStopOverridePrompt": "Saioa gelditzeak lokalean gordetako zure aurreko marrazkia gainidatziko du. Ziur zaude?\n\n(Zure marrazki lokala mantendu nahi baduzu, itxi arakatzailearen fitxa.)",
     "errorAddingToLibrary": "Ezin izan da elementua liburutegian gehitu",
     "errorRemovingFromLibrary": "Ezin izan da elementua liburutegitik kendu",
     "confirmAddLibrary": "Honek {{numShapes}} forma gehituko ditu zure liburutegian. Ziur zaude?",
     "imageDoesNotContainScene": "Irudi honek ez dirudi eszena daturik duenik. Eszena kapsulatzea gaitu al duzu esportazioan?",
     "cannotRestoreFromImage": "Ezin izan da eszena leheneratu irudi fitxategi honetatik",
-    "invalidSceneUrl": "Ezin izan da eszena inportatu emandako URLtik. Gaizki eratuta dago edo ez du baliozko Excalidraw JSON daturik.",
     "resetLibrary": "Honek zure liburutegia garbituko du. Ziur zaude?",
     "removeItemsFromsLibrary": "Liburutegitik {{count}} elementu ezabatu?",
     "invalidEncryptionKey": "Enkriptazio-gakoak 22 karaktere izan behar ditu. Zuzeneko lankidetza desgaituta dago.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Ezin izan da elkarlaneko zerbitzarira konektatu. Mesedez, berriro kargatu orria eta saiatu berriro.",
     "importLibraryError": "Ezin izan da liburutegia kargatu",
     "saveLibraryError": "Ezin izan da liburutegian gorde. Mesedez, gorde fitxategi lokal batetara aldaketarik ez galtzeko.",
-    "collabSaveFailed": "Ezin izan da backend datu-basean gorde. Arazoak jarraitzen badu, zure fitxategia lokalean gorde beharko zenuke zure lana ez duzula galtzen ziurtatzeko.",
-    "collabSaveFailed_sizeExceeded": "Ezin izan da backend datu-basean gorde, ohiala handiegia dela dirudi. Fitxategia lokalean gorde beharko zenuke zure lana galtzen ez duzula ziurtatzeko.",
     "imageToolNotSupported": "Irudiak desgaituak daude.",
     "brave_measure_text_error": {
       "line1": "Brave arakatzailea erabiltzen ari zarela dirudi <bold>Blokeatu hatz-markak erasokorki</bold> ezarpena gaituta.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Egin klik bikoitza edo sakatu {{shortcut}} puntuak editatzeko",
     "lineEditor_pointSelected": "Sakatu {{shortcut_1}} puntua(k) kentzeko, {{shortcut_2}} bikoizteko edo arrastatu mugitzeko",
     "lineEditor_nothingSelected": "Hautatu puntu bate editatzeko (heldu {{shortcut_1}} gehiago hautatzeko), edo heldu {{shortcut_2}} eta egin klik puntu berriak gehitzeko",
-    "publishLibrary": "Argitaratu zure liburutegia",
     "bindTextToElement": "{{shortcut}} testua gehitzeko",
     "createFlowchart": "{{shortcut}} fluxu-diagrama sortzeko",
     "deepBoxSelect": "Heldu {{shortcut}} sakon hautatzeko eta arrastatzea saihesteko",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Oso kontuz ibili gara zure eszenaren informazioa errorean ez sartzeko. Zure eszena pribatua ez bada, kontuan hartu gure <button>erroreen jarraipena egitea.</button> Sartu beheko informazioa kopiatu eta itsatsi bidez GitHub issue-n.",
     "sceneContent": "Eszenaren edukia:"
   },
-  "shareDialog": {
-    "or": "Edo"
-  },
   "roomDialog": {
     "desc_intro": "Gonbidatu jendea zure marrazkira.",
     "desc_privacy": "Lasai, sesioa encriptatua dago eta erabat pribatua da. Gure zerbitzarian ere ezin da ikusi zure marrazkia.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Gorde diskoan",
     "disk_details": "Esportatu eszenaren datuak geroago inportatu ahal izango duzun fitxategi batan.",
-    "disk_button": "Gorde fitxategian",
-    "link_title": "Partekatzeko esteka",
-    "link_details": "Esportatu irakurtzeko soilik moduko esteka.",
-    "link_button": "Esportatu esteka",
-    "excalidrawplus_description": "Gorde eszena zure Excalidraw+ laneko areara.",
-    "excalidrawplus_button": "Esportatu",
-    "excalidrawplus_exportError": "Une honetan ezin izan da esportatu Excalidraw+era..."
+    "disk_button": "Gorde fitxategian"
   },
   "helpDialog": {
     "blog": "Irakurri gure bloga",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Garbitu oihala"
-  },
-  "publishDialog": {
-    "title": "Argitaratu liburutegia",
-    "itemName": "Elementuaren izena",
-    "authorName": "Egilearen izena",
-    "githubUsername": "GitHub-eko erabiltzaile-izena",
-    "twitterUsername": "Twitter-eko erabiltzaile-izena",
-    "libraryName": "Liburutegiaren izena",
-    "libraryDesc": "Liburutegiaren deskripzioa",
-    "website": "Webgunea",
-    "placeholder": {
-      "authorName": "Zure izena edo erabiltzaile-izena",
-      "libraryName": "Zure liburutegiaren izena",
-      "libraryDesc": "Zure liburutegiaren deskripzioa laguntzeko jendeari ulertzen haren erabilpena",
-      "githubHandle": "GitHub heldulekua (aukerakoa), liburutegia editatu ahal izateko berrikustera bidalitakoan",
-      "twitterHandle": "Twitter-eko erabiltzaile-izena (aukerakoa), badakigu nori kreditatu behar dugun Twitter bidez sustatzeko",
-      "website": "Estekatu zure webgunera edo nahi duzun tokira (aukerakoa)"
-    },
-    "errors": {
-      "required": "Beharrezkoa",
-      "website": "Sartu baliozko URL bat"
-    },
-    "noteDescription": "Bidali zure liburutegira sartu ahal izateko <link>zure liburutegiko biltegian</link>beste jendeak bere marrazkietan erabili ahal izateko.",
-    "noteGuidelines": "Liburutegia eskuz onartu behar da. Irakurri <link>gidalerroak</link> bidali aurretik. GitHub kontu bat edukitzea komeni da komunikatzeko eta aldaketak egin ahal izateko, baina ez da guztiz beharrezkoa.",
-    "noteLicense": "Bidaltzen baduzu, onartzen duzu liburutegia <link>MIT lizentziarekin argitaratuko dela, </link>zeinak, laburbilduz, esan nahi du edozeinek erabiltzen ahal duela murrizketarik gabe.",
-    "noteItems": "Liburutegiko elementu bakoitzak bere izena eduki behar du iragazi ahal izateko. Liburutegiko hurrengo elementuak barne daude:",
-    "atleastOneLibItem": "Hautatu gutxienez liburutegiko elementu bat gutxienez hasi ahal izateko",
-    "republishWarning": "Oharra: hautatutako elementu batzuk dagoeneko argitaratuta/bidalita bezala markatuta daude. Elementuak berriro bidali behar dituzu lehendik dagoen liburutegi edo bidalketa eguneratzen duzunean."
-  },
-  "publishSuccessDialog": {
-    "title": "Liburutegia bidali da",
-    "content": "Eskerrik asko {{authorName}}. Zure liburutegia bidali da berrikustera. Jarraitu dezakezu haren egoera<link>hemen</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Leheneratu liburutegia",
@@ -595,7 +543,6 @@
       "center_heading": "Zure marrazkiak zure nabigatzailearen biltegian gordetzen dira.",
       "center_heading_line2": "Nabigatzailearen biltegia ustekabean hustu daiteke.",
       "center_heading_line3": "Gorde zure lana maiz fitxategi batean, ez galtzeko.",
-      "center_heading_plus": "Horren ordez Excalidraw+-era joan nahi al zenuen?",
       "menuHint": "Esportatu, hobespenak, hizkuntzak..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Gorde diskoan",
         "button": "Gorde diskoan",
         "description": "Esportatu eszenaren datuak geroago inportatu ahal izango duzun fitxategi batan."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Esportatu Excalidraw+ra",
-        "description": "Gorde eszena zure Excalidraw+ laneko areara."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Fitxategitik kargatu",
         "button": "Fitxategitik kargatu",
         "description": "Fitxategi batetik kargatzeak <bold>lehendik duzun edukia ordezkatuko du</bold>.<br></br>Lehenengo marrazkiaren babeskopia egin dezakezu beheko aukeretako bat erabiliz."
-      },
-      "shareableLink": {
-        "title": "Estekatik kargatu",
-        "button": "Ordeztu nire edukia",
-        "description": "Kanpoko irudi bat kargatzeak <bold>lehendik duzun edukia ordezkatuko du</bold>.<br></br>. Zure marrazkiaren babeskopia egin dezakezu lehenik beheko aukeretako bat erabiliz."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Mermaid sintaxi errorea"
     },
     "rateLimit": {
-      "messageLimit": "Doako planean zure AA mugara iritsi zara. Probatu Excalidraw+ gehiago lortzeko edo itzuli bihar.",
+      "messageLimit": "",
       "generalRateLimit": "Eutsi zaldiak, azkarregi zoaz guretzat! Mesedez, itxaron une bat berriro saiatu aurretik.",
       "messageLimitInputPlaceholder": "Mezuen mugara iritsi zara"
-    },
-    "upsellBtnLabel": "Plus-era pasa"
+    }
   },
   "quickSearch": {
     "placeholder": "Bilaketa azkarra"

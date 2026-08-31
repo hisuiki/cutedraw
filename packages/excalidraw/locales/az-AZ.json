@@ -232,7 +232,6 @@
     "save": "",
     "saveAs": "",
     "load": "",
-    "getShareableLink": "",
     "close": "",
     "selectLanguage": "",
     "scrollBackToContent": "",
@@ -258,29 +257,22 @@
     "clear": "Təmizlə",
     "remove": "Sil",
     "embed": "Yerləşdirməni aktiv et",
-    "publishLibrary": "",
     "submit": "Göndər",
     "confirm": "Təsdiqlə",
     "embeddableInteractionButton": "Əlaqə üçün kliklə"
   },
   "alerts": {
     "clearReset": "Bu, bütün lövhəni təmizləyəcək. Sən əminsiniz?",
-    "couldNotCreateShareableLink": "Paylaşıla bilən keçid yaratmaq mümkün olmadı.",
-    "couldNotCreateShareableLinkTooBig": "Paylaşıla bilən link yaratmaq mümkün olmadı. Səhnə çox böyükdür",
     "couldNotLoadInvalidFile": "Faylı açmaq müknü olmadı",
-    "importBackendFailed": "İdxal zamanı xəta baş verdi.",
     "cannotExportEmptyCanvas": "Boş lövhəni ixrac etmək mümkün deyil.",
     "couldNotCopyToClipboard": "Kopyalana bilmədi.",
     "decryptFailed": "Məlumatın şifrəsini açmaq mümkün olmadı.",
-    "uploadedSecurly": "Yükləmə end-to-end şifrələmə texnologiyası ilə qorunub, yəni Excalidraw serveri və üçüncü tərəflər məzmunu oxuya bilməz.",
-    "loadSceneOverridePrompt": "Xarici rəsmin yüklənməsi mövcud məzmununuzu əvəz edəcək. Davam etmək istəyirsiniz?",
     "collabStopOverridePrompt": "Sessiyanın dayandırılması əvvəlki, yerli olaraq saxlanılan çertyojunuzun üzərinə yazılacaq. Əminsiniz?",
     "errorAddingToLibrary": "Kitabxanaya əlavə etmək mümkün olmadı",
     "errorRemovingFromLibrary": "Kitabxanadan silmək mümkün olmadı",
     "confirmAddLibrary": "Bu, kitabxananıza {{numShapes}} forma əlavə edəcək. Əminsiniz?",
     "imageDoesNotContainScene": "Bu təsvirdə heç bir səhnə məlumatı yoxdur. İxrac zamanı səhnə yerləşdirməni aktiv etmisiniz?",
     "cannotRestoreFromImage": "Səhnəni bu şəkil faylından bərpa etmək mümkün olmadı",
-    "invalidSceneUrl": "",
     "resetLibrary": "",
     "removeItemsFromsLibrary": "",
     "invalidEncryptionKey": "",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "",
     "sceneContent": ""
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "",
     "disk_details": "",
-    "disk_button": "",
-    "link_title": "",
-    "link_details": "",
-    "link_button": "",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "",
-    "excalidrawplus_exportError": ""
+    "disk_button": ""
   },
   "helpDialog": {
     "blog": "",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": ""
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "",
-    "authorName": "",
-    "githubUsername": "",
-    "twitterUsername": "",
-    "libraryName": "",
-    "libraryDesc": "",
-    "website": "",
-    "placeholder": {
-      "authorName": "",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "",
-      "website": ""
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

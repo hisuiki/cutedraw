@@ -232,7 +232,6 @@
     "save": "Simpan ke file sekarang",
     "saveAs": "Simpan sebagai",
     "load": "Buka",
-    "getShareableLink": "Buat Tautan yang Bisa Dibagian",
     "close": "Tutup",
     "selectLanguage": "Pilih bahasa",
     "scrollBackToContent": "Gulir kembali ke konten",
@@ -258,29 +257,22 @@
     "clear": "Hapus",
     "remove": "Hapus",
     "embed": "Mati/nyala penyematan",
-    "publishLibrary": "Ubah nama atau publikasikan",
     "submit": "Kirimkan",
     "confirm": "Konfirmasi",
     "embeddableInteractionButton": "Pencet untuk interaksi"
   },
   "alerts": {
     "clearReset": "Ini akan menghapus semua yang ada dikanvas. Apakah kamu yakin ?",
-    "couldNotCreateShareableLink": "Tidak bisa membuat tautan yang bisa dibagikan",
-    "couldNotCreateShareableLinkTooBig": "Tidak dapat membuat tautan yang dapat dibagikan: pemandangan terlalu besar",
     "couldNotLoadInvalidFile": "Tidak dapat memuat berkas yang tidak valid",
-    "importBackendFailed": "Gagal mengimpor dari backend",
     "cannotExportEmptyCanvas": "Tidak bisa mengekspor kanvas kosong",
     "couldNotCopyToClipboard": "Tidak bisa menyalin ke papan klip.",
     "decryptFailed": "Tidak dapat mengdekripsi data.",
-    "uploadedSecurly": "Pengunggahan ini telah diamankan menggunakan enkripsi end-to-end, artinya server Excalidraw dan pihak ketiga tidak data membaca nya",
-    "loadSceneOverridePrompt": "Memuat gambar external akan mengganti konten Anda yang ada. Apakah Anda ingin melanjutkan?",
     "collabStopOverridePrompt": "Menghentikan sesi akan menimpa gambar Anda yang tersimpan secara lokal. Anda yakin?\n\n(Jika Anda ingin menyimpan gambar lokal Anda, gantinya cukup tutup tab browser.)",
     "errorAddingToLibrary": "Tidak dapat menambahkan item ke pustaka",
     "errorRemovingFromLibrary": "Tidak dapat membuang item dari pustaka",
     "confirmAddLibrary": "Ini akan menambahkan {{numShapes}} bentuk ke pustaka Anda. Anda yakin?",
     "imageDoesNotContainScene": "Gambar ini tampaknya tidak ada data pemandangan. Apakah penyematan pemandangan sudah diaktifkan saat ekspor?",
     "cannotRestoreFromImage": "Pemandangan tidak dapat dipulihkan dari file gambar ini",
-    "invalidSceneUrl": "Tidak dapat impor pemandangan dari URL. Kemungkinan URL itu rusak atau tidak berisi data JSON Excalidraw yang valid.",
     "resetLibrary": "Ini akan menghapus pustaka Anda. Anda yakin?",
     "removeItemsFromsLibrary": "Hapus {{count}} item dari pustaka?",
     "invalidEncryptionKey": "Sandi enkripsi harus 22 karakter. Kolaborasi langsung dinonaktifkan.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Tidak dapat terhubung ke server kolab. Muat ulang laman dan coba lagi.",
     "importLibraryError": "Tidak dapat memuat pustaka",
     "saveLibraryError": "Tidak dapat menyimpan library ke penyimpanan. Simpanlah library Anda ke file secara lokal untuk memastikan Anda tidak kehilangan perubahan.",
-    "collabSaveFailed": "Tidak dapat menyimpan ke dalam basis data server. Jika masih berlanjut, Anda sebaiknya simpan berkas Anda secara lokal untuk memastikan pekerjaan Anda tidak hilang.",
-    "collabSaveFailed_sizeExceeded": "Tidak dapat menyimpan ke dalam basis data server, tampaknya ukuran kanvas terlalu besar. Anda sebaiknya simpan berkas Anda secara lokal untuk memastikan pekerjaan Anda tidak hilang.",
     "imageToolNotSupported": "Gambar dinonaktifkan.",
     "brave_measure_text_error": {
       "line1": "Sepertinya Anda menggunkan peramban Brave dengan pengaturan <bold>Blokir Fingerprinting yang Agresif</bold> diaktifkan.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Klik dua kali atau tekan {{shortcut}} untuk mengedit titik",
     "lineEditor_pointSelected": "Tekan {{shortcut_1}} untuk menghapus titik, {{shortcut_2}} untuk menggandakan, atau seret untuk memindahkan",
     "lineEditor_nothingSelected": "Pilih titik untuk mengedit (tahan {{shortcut_1}} untuk memilih beberapa), atau tahan {{shortcut_2}} dan klik untuk menambahkan titik baru",
-    "publishLibrary": "Terbitkan pustaka Anda",
     "bindTextToElement": "{{shortcut}} untuk menambahkan teks",
     "createFlowchart": "{{shortcut}} untuk membuat diagram alir",
     "deepBoxSelect": "Tahan {{shortcut}} untuk memilih tingkat dalam, dan untuk mencegah pergeseran",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Kami sangat berhati-hati untuk tidak menyertakan informasi pemandangan Anda pada kesalahan. Jika pemandangan Anda tidak bersifat pribadi, mohon pertimbangkan menindak lanjut pada <button>pelacak bug.</button> Mohon sertakan informasi dibawah ini dengan menyalin dan menempelkan di Github issue.",
     "sceneContent": "Pemandangan konten:"
   },
-  "shareDialog": {
-    "or": "Atau"
-  },
   "roomDialog": {
     "desc_intro": "Ajak orang-orang ikut menggambar denganmu.",
     "desc_privacy": "Tenang, sesi ini terenkripsi ujung-ke-ujung, sepenuhnya privat. Bahkan gambarmu tidak terlihat server kami.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Simpan ke disk",
     "disk_details": "Ekspor data pemandangan ke file yang mana Anda dapat impor nanti.",
-    "disk_button": "Simpan ke file",
-    "link_title": "Tautan",
-    "link_details": "Ekspor sebagai tautan yang hanya dibaca.",
-    "link_button": "Ekspor ke tautan",
-    "excalidrawplus_description": "Simpan pemandangan ke ruang kerja Excalidraw+ Anda.",
-    "excalidrawplus_button": "Ekspor",
-    "excalidrawplus_exportError": "Tidak dapat ekspor ke Excalidraw+ saat ini..."
+    "disk_button": "Simpan ke file"
   },
   "helpDialog": {
     "blog": "Baca blog kami",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Hapus kanvas"
-  },
-  "publishDialog": {
-    "title": "Terbitkan pustaka",
-    "itemName": "Nama item",
-    "authorName": "Nama pembuat",
-    "githubUsername": "Nama pengguna github",
-    "twitterUsername": "Nama pengguna Twitter",
-    "libraryName": "Nama Pustaka",
-    "libraryDesc": "Deskripsi pustaka",
-    "website": "Situs Web",
-    "placeholder": {
-      "authorName": "Nama atau nama pengguna Anda",
-      "libraryName": "Nama dari pustaka Anda",
-      "libraryDesc": "Deskripsi pustaka Anda untuk membantu orang mengerti penggunaannya",
-      "githubHandle": "Akun GitHub (opsional), jadi Anda dapat mengubah pustaka ketika diserahkan untuk review",
-      "twitterHandle": "Nama pengguna Twitter (opsional), jadi kami tahu siapa dipuji ketika mempromosikannya melalui Twitter",
-      "website": "Hubungkan ke situs personal Anda atau lainnya (opsional)"
-    },
-    "errors": {
-      "required": "Dibutuhkan",
-      "website": "Masukkan URL valid"
-    },
-    "noteDescription": "Kirimkan pustaka Anda untuk disertakan di <link>repositori pustaka publik</link>untuk orang lain menggunakannya dalam gambar mereka.",
-    "noteGuidelines": "Pustaka butuh disetujui secara manual terlebih dahulu. Baca <link>pedoman</link> sebelum mengirim. Anda butuh akun GitHub untuk berkomunikasi dan membuat perubahan jika dibutuhkan, tetapi tidak wajib dibutukan.",
-    "noteLicense": "Dengan mengkirimkannya, Anda setuju pustaka akan diterbitkan dibawah <link>Lisensi MIT, </link>yang artinya siapa pun dapat menggunakannya tanpa batasan.",
-    "noteItems": "Setiap item pustaka harus memiliki nama, sehingga bisa disortir. Item pustaka di bawah ini akan dimasukan:",
-    "atleastOneLibItem": "Pilih setidaknya satu item pustaka untuk mulai",
-    "republishWarning": "Catatan: beberapa item yang dipilih telah ditandai sebagai sudah dipublikasikan/diserahkan. Anda hanya dapat menyerahkan kembali item-item ketika memperbarui pustaka atau pengumpulan."
-  },
-  "publishSuccessDialog": {
-    "title": "Pustaka telah dikirm",
-    "content": "Terima kasih {{authorName}}. pustaka Anda telah diserahkan untuk ditinjau ulang. Anda dapat cek statusnya<link>di sini</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Reset pustaka",
@@ -595,7 +543,6 @@
       "center_heading": "Gambar anda disimpan di penyimpanan browser anda.",
       "center_heading_line2": "Penyimpanan browser dapat terhapus secara tidak terduga.",
       "center_heading_line3": "Simpan pekerjaan anda ke file secara berkala agar tidak hilang.",
-      "center_heading_plus": "Apa Anda ingin berpindah ke Excalidraw+?",
       "menuHint": "Ekspor, preferensi, bahasa, ..."
     },
     "defaults": {
@@ -628,22 +575,12 @@
         "title": "Simpan ke disk",
         "button": "Simpan ke disk",
         "description": "Ekspor data pemandangan ke file yang dapat Anda dapat impor nanti."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Ekspor ke Excalidraw+",
-        "description": "Simpan pemandangan ke ruang kerja Excalidraw+ Anda."
       }
     },
     "modal": {
       "loadFromFile": {
         "title": "Muat dari file",
         "button": "Muat dari file",
-        "description": "Memuat dari file yang akan <bold>menggantikan konten Anda sekarang</bold>.<br></br>Anda dapat mencadangkan gambar anda dulu menggunakan opsi-opsi ini."
-      },
-      "shareableLink": {
-        "title": "Muat dari link",
-        "button": "Ganti konten saya",
         "description": "Memuat dari file yang akan <bold>menggantikan konten Anda sekarang</bold>.<br></br>Anda dapat mencadangkan gambar anda dulu menggunakan opsi-opsi ini."
       }
     }
@@ -698,11 +635,10 @@
       "mermaidParseError": "Kesalahan sintaks Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Anda telah mencapai batas AI pada paket gratis. Coba Excalidraw + untuk akses lebih atau kembali lagi besok.",
+      "messageLimit": "",
       "generalRateLimit": "Tunggu sebentar, Anda terlalu cepat! Harap tunggu sejenak sebelum mencoba lagi.",
       "messageLimitInputPlaceholder": "Anda telah mencapai batas pesan anda"
-    },
-    "upsellBtnLabel": "Tingkatkan ke Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Pencarian Cepat"

@@ -1973,7 +1973,7 @@ class App extends React.Component<AppProps, AppState> {
             >
               <div
                 //this is a hack that addresses isse with embedded excalidraw.com embeddable
-                //https://github.com/excalidraw/excalidraw/pull/6691#issuecomment-1607383938
+                //https://github.com/hisuiki/cutedraw/pull/6691#issuecomment-1607383938
                 /*ref={(ref) => {
                   if (!this.excalidrawContainerRef.current) {
                     return;
@@ -7750,7 +7750,7 @@ class App extends React.Component<AppProps, AppState> {
       ) {
         // Since we are reading from previous state which is not possible with
         // automatic batching in React 18 hence using flush sync to synchronously
-        // update the state. Check https://github.com/excalidraw/excalidraw/pull/5508 for more details.
+        // update the state. Check https://github.com/hisuiki/cutedraw/pull/5508 for more details.
         flushSync(() => {
           this.setState({
             selectedLinearElement: editingLinearElement,
@@ -10697,7 +10697,7 @@ class App extends React.Component<AppProps, AppState> {
 
           // Since we are reading from previous state which is not possible with
           // automatic batching in React 18 hence using flush sync to synchronously
-          // update the state. Check https://github.com/excalidraw/excalidraw/pull/5508 for more details.
+          // update the state. Check https://github.com/hisuiki/cutedraw/pull/5508 for more details.
 
           flushSync(() => {
             if (this.state.selectedLinearElement) {

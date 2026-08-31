@@ -114,7 +114,7 @@ const MAX_LINEAR_PX = 75_000;
 // Last resort fix for extremely large linear elements (lines / arrows), which
 // would otherwise freeze the editor while rendering — e.g. a dotted or dashed
 // stroke spanning a huge distance generates an enormous dash array.
-// https://github.com/excalidraw/excalidraw/issues/11497
+// https://github.com/hisuiki/cutedraw/issues/11497
 const handleOversizedLinearElements = <T extends ExcalidrawLinearElement>(
   element: T,
 ): T => {
@@ -1039,7 +1039,7 @@ export const restoreElements = <T extends ExcalidrawElement>(
  * When replacing elements that may exist locally, this bumps their versions
  * to the local version + 1. Mainly for later reconciliation to work properly.
  *
- * See https://github.com/excalidraw/excalidraw/issues/3795
+ * See https://github.com/hisuiki/cutedraw/issues/3795
  *
  * Generally use this on editor boundaries (importing from file etc.), though
  * it does not apply universally (e.g. we don't want to do this for collab

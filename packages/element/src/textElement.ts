@@ -359,11 +359,11 @@ export const getContainerCoords = (container: ExcalidrawElement) => {
   let offsetY = BOUND_TEXT_PADDING;
 
   if (container.type === "ellipse") {
-    // The derivation of coordinates is explained in https://github.com/excalidraw/excalidraw/pull/6172
+    // The derivation of coordinates is explained in https://github.com/hisuiki/cutedraw/pull/6172
     offsetX += (container.width / 2) * (1 - Math.sqrt(2) / 2);
     offsetY += (container.height / 2) * (1 - Math.sqrt(2) / 2);
   }
-  // The derivation of coordinates is explained in https://github.com/excalidraw/excalidraw/pull/6265
+  // The derivation of coordinates is explained in https://github.com/hisuiki/cutedraw/pull/6265
   if (container.type === "diamond") {
     offsetX += container.width / 4;
     offsetY += container.height / 4;
@@ -479,12 +479,12 @@ export const getBoundTextMaxWidth = (
   if (container.type === "ellipse") {
     // The width of the largest rectangle inscribed inside an ellipse is
     // Math.round((ellipse.width / 2) * Math.sqrt(2)) which is derived from
-    // equation of an ellipse -https://github.com/excalidraw/excalidraw/pull/6172
+    // equation of an ellipse -https://github.com/hisuiki/cutedraw/pull/6172
     return Math.round((width / 2) * Math.sqrt(2)) - BOUND_TEXT_PADDING * 2;
   }
   if (container.type === "diamond") {
     // The width of the largest rectangle inscribed inside a rhombus is
-    // Math.round(width / 2) - https://github.com/excalidraw/excalidraw/pull/6265
+    // Math.round(width / 2) - https://github.com/hisuiki/cutedraw/pull/6265
     return Math.round(width / 2) - BOUND_TEXT_PADDING * 2;
   }
   return width - BOUND_TEXT_PADDING * 2;
@@ -505,12 +505,12 @@ export const getBoundTextMaxHeight = (
   if (container.type === "ellipse") {
     // The height of the largest rectangle inscribed inside an ellipse is
     // Math.round((ellipse.height / 2) * Math.sqrt(2)) which is derived from
-    // equation of an ellipse - https://github.com/excalidraw/excalidraw/pull/6172
+    // equation of an ellipse - https://github.com/hisuiki/cutedraw/pull/6172
     return Math.round((height / 2) * Math.sqrt(2)) - BOUND_TEXT_PADDING * 2;
   }
   if (container.type === "diamond") {
     // The height of the largest rectangle inscribed inside a rhombus is
-    // Math.round(height / 2) - https://github.com/excalidraw/excalidraw/pull/6265
+    // Math.round(height / 2) - https://github.com/hisuiki/cutedraw/pull/6265
     return Math.round(height / 2) - BOUND_TEXT_PADDING * 2;
   }
   return height - BOUND_TEXT_PADDING * 2;

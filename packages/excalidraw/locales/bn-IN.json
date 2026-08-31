@@ -232,7 +232,6 @@
     "save": "জমা করুন",
     "saveAs": "অন্যভাবে জমা করুন",
     "load": "",
-    "getShareableLink": "ভাগযোগ্য লিঙ্ক পান",
     "close": "বন্ধ করুন",
     "selectLanguage": "ভাষা চিহ্নিত করুন",
     "scrollBackToContent": "বিষয়বস্তুতে ফেরত যান",
@@ -258,29 +257,22 @@
     "clear": "সাফ",
     "remove": "বিয়োগ",
     "embed": "",
-    "publishLibrary": "",
     "submit": "জমা করুন",
     "confirm": "নিশ্চিত করুন",
     "embeddableInteractionButton": ""
   },
   "alerts": {
     "clearReset": "এটি পুরো ক্যানভাস সাফ করবে। আপনি কি নিশ্চিত?",
-    "couldNotCreateShareableLink": "ভাগ করা যায় এমন লিঙ্ক তৈরি করা যায়নি।",
-    "couldNotCreateShareableLinkTooBig": "ভাগ করা যায় এমন লিঙ্ক তৈরি করা যায়নি: দৃশ্যটি খুব বড়",
     "couldNotLoadInvalidFile": "অবৈধ ফাইল লোড করা যায়নি",
-    "importBackendFailed": "ব্যাকেন্ড থেকে আপলোড ব্যর্থ হয়েছে।",
     "cannotExportEmptyCanvas": "খালি ক্যানভাস নিবদ্ধ করা যাবে না।",
     "couldNotCopyToClipboard": "ক্লিপবোর্ডে কপি করা যায়নি।",
     "decryptFailed": "তথ্য ডিক্রিপ্ট করা যায়নি।",
-    "uploadedSecurly": "আপলোডটি এন্ড-টু-এন্ড এনক্রিপশনের মাধ্যমে সুরক্ষিত করা হয়েছে, যার অর্থ হল এক্সক্যালিড্র সার্ভার এবং তৃতীয় পক্ষের দ্বারা পড়তে পারা সম্ভব নয়।",
-    "loadSceneOverridePrompt": "বাহ্যিক অঙ্কন লোড করা আপনার বিদ্যমান দৃশ্য প্রতিস্থাপন করবে। আপনি কি অবিরত করতে চান?",
     "collabStopOverridePrompt": "অধিবেশন বন্ধ করা আপনার পূর্ববর্তী, স্থানীয়ভাবে সঞ্চিত অঙ্কন ওভাররাইট করবে। আপনি কি নিশ্চিত?\n\n(যদি আপনি আপনার স্থানীয় অঙ্কন রাখতে চান, তাহলে শুধু ব্রাউজার ট্যাবটি বন্ধ করুন।)",
     "errorAddingToLibrary": "বস্তুটি সংগ্রহে যোগ করা যায়নি",
     "errorRemovingFromLibrary": "বস্তুটি সংগ্রহ থেকে বিয়োগ করা যায়নি",
     "confirmAddLibrary": "এটি আপনার সংগ্রহে {{numShapes}} আকার(গুলি) যোগ করবে। আপনি কি নিশ্চিত?",
     "imageDoesNotContainScene": "এই ছবিতে কোনো দৃশ্যের তথ্য আছে বলে মনে হয় না৷ আপনি কি নিবদ্ধ করার সময় দৃশ্য এমবেডিং করতে সক্ষম?",
     "cannotRestoreFromImage": "এই ফাইল থেকে দৃশ্য পুনরুদ্ধার করা যায়নি",
-    "invalidSceneUrl": "সরবরাহ করা লিঙ্ক থেকে দৃশ্য লোড করা যায়নি৷ এটি হয় বিকৃত, অথবা বৈধ এক্সক্যালিড্র জেসন তথ্য নেই৷",
     "resetLibrary": "এটি আপনার সংগ্রহ পরিষ্কার করবে। আপনি কি নিশ্চিত?",
     "removeItemsFromsLibrary": "সংগ্রহ থেকে {{count}} বস্তু বিয়োগ করা হবে। আপনি কি নিশ্চিত?",
     "invalidEncryptionKey": "অবৈধ এনক্রীপশন কী।",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "কোল্যাব সার্ভারের সাথে সংযোগ করা যায়নি। পৃষ্ঠাটি পুনরায় লোড করে আবার চেষ্টা করুন।",
     "importLibraryError": "সংগ্রহ লোড করা যায়নি",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "আপনার নিজস্ব সংগ্রহ প্রকাশ করুন",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "আমরা ত্রুটিতে আপনার দৃশ্যের তথ্য অন্তর্ভুক্ত না করার জন্য খুব সতর্ক ছিলাম। আপনার দৃশ্য ব্যক্তিগত না হলে, আমাদের অনুসরণ করার কথা বিবেচনা করুন <button>ত্রুটি ইতিবৃত্ত।</button> অনুগ্রহ করে GitHub ইস্যুতে অনুলিপি এবং পেস্ট করে নীচের তথ্য অন্তর্ভুক্ত করুন।",
     "sceneContent": "দৃশ্য বিষয়বস্তু:"
   },
-  "shareDialog": {
-    "or": ""
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "",
     "disk_details": "",
-    "disk_button": "",
-    "link_title": "",
-    "link_details": "",
-    "link_button": "",
-    "excalidrawplus_description": "",
-    "excalidrawplus_button": "নিবদ্ধ",
-    "excalidrawplus_exportError": ""
+    "disk_button": ""
   },
   "helpDialog": {
     "blog": "",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": ""
-  },
-  "publishDialog": {
-    "title": "",
-    "itemName": "",
-    "authorName": "",
-    "githubUsername": "",
-    "twitterUsername": "",
-    "libraryName": "",
-    "libraryDesc": "",
-    "website": "",
-    "placeholder": {
-      "authorName": "",
-      "libraryName": "",
-      "libraryDesc": "",
-      "githubHandle": "",
-      "twitterHandle": "",
-      "website": ""
-    },
-    "errors": {
-      "required": "",
-      "website": ""
-    },
-    "noteDescription": "",
-    "noteGuidelines": "",
-    "noteLicense": "",
-    "noteItems": "",
-    "atleastOneLibItem": "",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "",
-    "content": ""
   },
   "confirmDialog": {
     "resetLibrary": "",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": ""

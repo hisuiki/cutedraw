@@ -232,7 +232,6 @@
     "save": "Salvar al fichièr actual",
     "saveAs": "Enregistrar jos",
     "load": "Dobrir",
-    "getShareableLink": "Obténer lo ligam de partatge",
     "close": "Tampar",
     "selectLanguage": "Causir una lenga",
     "scrollBackToContent": "Tornar al contengut",
@@ -258,29 +257,22 @@
     "clear": "Escafar",
     "remove": "Tirar",
     "embed": "Alternar l’integracion",
-    "publishLibrary": "",
     "submit": "Enviar",
     "confirm": "Confirmar",
     "embeddableInteractionButton": "Clicar per interagir"
   },
   "alerts": {
     "clearReset": "Aquò suprimirà lo canabàs complèt. O volètz vertadièrament ?",
-    "couldNotCreateShareableLink": "Creacion impossibla del ligam de partatge.",
-    "couldNotCreateShareableLinkTooBig": "Creacion impossibla del ligam de partatge : la scèna es tròp granda",
     "couldNotLoadInvalidFile": "Cargament impossible d’un fichièr invalid",
-    "importBackendFailed": "Importacion fracassada.",
     "cannotExportEmptyCanvas": "Impossible d’exportar los canabasses voids.",
     "couldNotCopyToClipboard": "Còpia impossibla al quichapapièrs.",
     "decryptFailed": "Deschiframent impossible de las donadas.",
-    "uploadedSecurly": "Lo telecargament es estat securizat amb un chiframent del cap a la fin, significa que los servidors d’Excalidraw o que quina tèrça part que siá pòdon pas legir lo contengut.",
-    "loadSceneOverridePrompt": "Cargar un dessenh extèrn remplaçarà vòstre contengut existent. Volètz contunhar ?",
     "collabStopOverridePrompt": "Arrestar la session remplaçarà vòstre precedent dessenh gardat localament. O volètz vertadièrament ?\n\n(Se volètz gardar vòstre dessenh local, tampatz simplament l’onglet del navegador a la plaça)",
     "errorAddingToLibrary": "Apondon impossible de l’element a la bibliotèca",
     "errorRemovingFromLibrary": "Supression impossibla de l’element a la bibliotèca",
     "confirmAddLibrary": "Apondrà {{numShapes}} forma(s) a vòstra bibliotèca. Confirmatz ?",
     "imageDoesNotContainScene": "Aqueste imatge sembla pas conténer cap de donadas de scèna. Avètz activat l’integracion de scèna pendent l’exportacion ?",
     "cannotRestoreFromImage": "Restauracion impossibla de la scèna a partir del fichièr imatge",
-    "invalidSceneUrl": "Importacion impossibla de la scèna a partir de l’URL provesida. Es siá mal formatada o siá conten pas cap de donada JSON Excalidraw valida.",
     "resetLibrary": "Aquò suprimirà vòstra bibliotèca. O volètz vertadièrament ?",
     "removeItemsFromsLibrary": "Suprimir {{count}} element(s) de la bibliotèca ?",
     "invalidEncryptionKey": "La clau de chiframent deu conténer 22 caractèrs. La collaboracion en dirèct es desactivada.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Connexion impossibla al servidor collab. Mercés de recargar la pagina e tornar ensajar.",
     "importLibraryError": "Impossible de cargar la bibliotèca",
     "saveLibraryError": "",
-    "collabSaveFailed": "Enregistrament impossible dins la basa de donada del backend. Se lo problèma persistís, deuriatz enregistrar lo fichièr localament per vos assegurar que perdretz pas vòstre trabalh.",
-    "collabSaveFailed_sizeExceeded": "Enregistrament impossible dins la basa de donada del backend, lo canabàs sembla tròp pesuc. Deuriatz enregistrar lo fichièr localament per vos assegurar que perdretz pas vòstre trabalh.",
     "imageToolNotSupported": "Los imatges son desactivats.",
     "brave_measure_text_error": {
       "line1": "Semblatz utilizar lo navegador Brave amb lo paramètre <bold>Blocatge agressiu de las emprentas numericas</bold> activat.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Publicar vòstra pròpria bibliotèca",
     "bindTextToElement": "{{shortcut}} per apondre un tèxt",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Èrem plan prudents per inclure pas d’informacions de la scèna vòstra sus l’error. Se vòstra scèna es pas privada, volgatz considerar de perseguir sus nòstre <button>traçadors d’avarias.</button> Volgatz inclure las informacions çai-jos en las copiant e pegant a l’issue GitHub.",
     "sceneContent": "Contengut de la scèna :"
   },
-  "shareDialog": {
-    "or": "O"
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Salvar al disc",
     "disk_details": "Exportar las donadas de la scèna cap a un fichièr que podètz importar mai tard.",
-    "disk_button": "Salvar al fichièr",
-    "link_title": "Ligam de partejar",
-    "link_details": "Exportar coma un ligam de lectura sola.",
-    "link_button": "Exportar en ligam",
-    "excalidrawplus_description": "Enregistrar la scèna dins vòstre espaci de trabalh Excalidraw+.",
-    "excalidrawplus_button": "Exportar",
-    "excalidrawplus_exportError": "Export impossibla cap a Excalidraw+ pel moment..."
+    "disk_button": "Salvar al fichièr"
   },
   "helpDialog": {
     "blog": "Legir nòstre blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Escafar canabàs"
-  },
-  "publishDialog": {
-    "title": "Publicar la bibliotèca",
-    "itemName": "Nom de l’element",
-    "authorName": "Nom de l’autor",
-    "githubUsername": "Nom d’utilizaire GitHub",
-    "twitterUsername": "Nom d’utilizaire Twitter",
-    "libraryName": "Nom de la bibliotèca",
-    "libraryDesc": "Descripcion de la bibliotèca",
-    "website": "Site web",
-    "placeholder": {
-      "authorName": "Vòstre nom o nom d’utilizaire",
-      "libraryName": "Nom de vòstra bibliotèca",
-      "libraryDesc": "Descripcion de vòstra bibliotèca per ajudar lo monde a comprendre son utilizacion",
-      "githubHandle": "GitHub handle(opcional), per poder modificar la bibliotèca un còp enviada per repassa",
-      "twitterHandle": "Nom d’utilizaire Twitter (opcional), per saber qual mercejar quand ne parlam sus Twitter",
-      "website": "Ligam cap a vòstre site web personal o endacòm mai (opcional)"
-    },
-    "errors": {
-      "required": "Requerit",
-      "website": "Picatz una URL valida"
-    },
-    "noteDescription": "Enviatz vòstra bibliotèca per èsser compresa al <link>repertòri public de bibliotèca</link>per que los autres l’utilizen dins lor dessenhs.",
-    "noteGuidelines": "Qualqu’un deu aprovar la bibliotèca manualament per començar. Volgatz legir las <link>linhas directrises</link> abans de sometre. Vos farà mestièr un compte GitHub per comunicar e realizar de modificacions se demandadas, mas es pas complètament obligatòri.",
-    "noteLicense": "En sometent, acceptatz que la bibliotèca siá publicada sota la <link>Licéncia MIT, </link>que significa en brèu que qual que siá pòt l’utilizar sens cap de restriccion.",
-    "noteItems": "Cada element de bibliotèca deu aver un nom pròpri per èsser filtrable. Los elements de bibliotèca seguentas seràn incluses :",
-    "atleastOneLibItem": "Volgatz seleccionar almens un element de bibliotèca per començar",
-    "republishWarning": "Nòta : d’unes elements seleccionats son marcats ja coma publicats/enviats. Deuriatz sonque tornar enviar los elements pendent l’actualizacion d’una bibliotèca existenta o un mandadís."
-  },
-  "publishSuccessDialog": {
-    "title": "Bibliotèca somesa",
-    "content": "Mercés {{authorName}}. Vòstre bibliotèca es estada somesa per repassa. Podètz seguir l’avançament<link>aquí</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Reïnicializar la bibliotèca",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "Voliatz puslèu utilizar Excalidraw+ a la plaça ?",
       "menuHint": "Exportar, preferéncias, lengas, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Salvar al disc",
         "button": "Salvar al disc",
         "description": "Exportar las donadas de la scèna cap a un fichièr que podètz importar mai tard."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportar dins Excalidraw+",
-        "description": "Enregistrar la scèna dins vòstre espaci de trabalh Excalidraw+."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Cargar d’un fichièr",
         "button": "Cargar d’un fichièr",
         "description": "Lo cargament dempuèi un fichièr <bold>remplaçarà vòstre contengut actual</bold>.<br></br>Podètz d'en primièr far una còpia de seguretat de vòstre dessenh en utilizant una de las opcions çaijós."
-      },
-      "shareableLink": {
-        "title": "Cargar d’un ligam",
-        "button": "Remplaçar mon contengut",
-        "description": "Lo cargament d'un dessenh extèrne <bold>remplaçarà vòstre contengut existent</bold>.<br></br>Podètz d'en primièr far una còpia de seguretat de vòstre dessenh en utilizant una de las opcions çaijós."
       }
     }
   },
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": ""
+    }
   },
   "quickSearch": {
     "placeholder": "Recèrca rapida"

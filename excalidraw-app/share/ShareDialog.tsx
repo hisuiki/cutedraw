@@ -4,7 +4,6 @@ import { FilledButton } from "@excalidraw/excalidraw/components/FilledButton";
 import { TextField } from "@excalidraw/excalidraw/components/TextField";
 import {
   copyIcon,
-  LinkIcon,
   playerPlayIcon,
   playerStopFilledIcon,
   share,
@@ -25,12 +24,9 @@ import { QRCode } from "./QRCode";
 
 import type { CollabAPI } from "../collab/Collab";
 
-type OnExportToBackend = () => void;
-type ShareDialogType = "share" | "collaborationOnly";
-
-export const shareDialogStateAtom = atom<
-  { isOpen: false } | { isOpen: true; type: ShareDialogType }
->({ isOpen: false });
+export const shareDialogStateAtom = atom<{ isOpen: boolean }>({
+  isOpen: false,
+});
 
 const getShareIcon = () => {
   const navigator = window.navigator as any;
@@ -49,8 +45,6 @@ const getShareIcon = () => {
 export type ShareDialogProps = {
   collabAPI: CollabAPI | null;
   handleClose: () => void;
-  onExportToBackend: OnExportToBackend;
-  type: ShareDialogType;
 };
 
 const ActiveRoomDialog = ({
@@ -181,7 +175,7 @@ const ShareDialogPicker = (props: ShareDialogProps) => {
 
   const { collabAPI } = props;
 
-  const startCollabJSX = collabAPI ? (
+  return collabAPI ? (
     <>
       <div className="ShareDialog__picker__header">
         {t("labels.liveCollaboration").replace(/\./g, "")}
@@ -202,43 +196,8 @@ const ShareDialogPicker = (props: ShareDialogProps) => {
           }}
         />
       </div>
-
-      {props.type === "share" && (
-        <div className="ShareDialog__separator">
-          <span>{t("shareDialog.or")}</span>
-        </div>
-      )}
     </>
   ) : null;
-
-  return (
-    <>
-      {startCollabJSX}
-
-      {props.type === "share" && (
-        <>
-          <div className="ShareDialog__picker__header">
-            {t("exportDialog.link_title")}
-          </div>
-          <div className="ShareDialog__picker__description">
-            {t("exportDialog.link_details")}
-          </div>
-
-          <div className="ShareDialog__picker__button">
-            <FilledButton
-              size="large"
-              label={t("exportDialog.link_button")}
-              icon={LinkIcon}
-              onClick={async () => {
-                await props.onExportToBackend();
-                props.handleClose();
-              }}
-            />
-          </div>
-        </>
-      )}
-    </>
-  );
 };
 
 const ShareDialogInner = (props: ShareDialogProps) => {
@@ -261,10 +220,7 @@ const ShareDialogInner = (props: ShareDialogProps) => {
   );
 };
 
-export const ShareDialog = (props: {
-  collabAPI: CollabAPI | null;
-  onExportToBackend: OnExportToBackend;
-}) => {
+export const ShareDialog = (props: { collabAPI: CollabAPI | null }) => {
   const [shareDialogState, setShareDialogState] = useAtom(shareDialogStateAtom);
 
   const { openDialog } = useUIAppState();
@@ -283,8 +239,6 @@ export const ShareDialog = (props: {
     <ShareDialogInner
       handleClose={() => setShareDialogState({ isOpen: false })}
       collabAPI={props.collabAPI}
-      onExportToBackend={props.onExportToBackend}
-      type={shareDialogState.type}
     />
   );
 };

@@ -232,7 +232,6 @@
     "save": "שמירה לקובץ הנוכחי",
     "saveAs": "שמירה בשם",
     "load": "פתיחה",
-    "getShareableLink": "קבלת קישור לשיתוף",
     "close": "סגירה",
     "selectLanguage": "בחירת שפה",
     "scrollBackToContent": "גלילה בחזרה לתוכן",
@@ -258,29 +257,22 @@
     "clear": "ניקוי",
     "remove": "הסרה",
     "embed": "להציג את ההטמעה",
-    "publishLibrary": "שינוי שם או פרסום",
     "submit": "שליחה",
     "confirm": "אישור",
     "embeddableInteractionButton": "לחיצה לתפעול"
   },
   "alerts": {
     "clearReset": "פעולה זו תנקה את כל לוח הציור. להמשיך?",
-    "couldNotCreateShareableLink": "יצירת קישור לשיתוף נכשלה.",
-    "couldNotCreateShareableLinkTooBig": "יצירת קישור לשיתוף נכשלה: הסצנה גדולה מדי",
     "couldNotLoadInvalidFile": "טעינת קובץ לא תקין נכשלה",
-    "importBackendFailed": "ייבוא מהמנגנון נכשל.",
     "cannotExportEmptyCanvas": "לא ניתן לייצא לוח ציור ריק.",
     "couldNotCopyToClipboard": "לא ניתן להעתיק ללוח.",
     "decryptFailed": "פענוח הצפנת הנתונים נכשל.",
-    "uploadedSecurly": "ההעלאה אובטחה באמצעות הצפנה מקצה לקצה, פירוש הדבר שהשרת של Excalidraw וגורמי צד ג׳ לא יכולים לקרוא את התוכן.",
-    "loadSceneOverridePrompt": "טעינה של ציור חיצוני תחליף את התוכן הקיים שלך. האם תרצה להמשיך?",
     "collabStopOverridePrompt": "עצירת השיתוף תוביל למחיקת הציור הקודם ששמור מקומית בדפדפן. האם אתה בטוח?\n\n(אם תרצה לשמור את הציור המקומי, סגור את הטאב של הדפדפן במקום.)",
     "errorAddingToLibrary": "לא ניתן להוסיף פריט לספרייה",
     "errorRemovingFromLibrary": "לא ניתן להסיר פריט מהספריה",
     "confirmAddLibrary": "זה יוסיף {{numShapes}} צורה(ות) לספריה שלך. האם אתה בטוח?",
     "imageDoesNotContainScene": "נראה שהתמונה לא מכילה מידע על הסצינה. האם אפשרת הטמעת מידע הסצינה בעת השמירה?",
     "cannotRestoreFromImage": "לא הצלחנו לשחזר את הסצנה מקובץ התמונה",
-    "invalidSceneUrl": "ייבוא מידע סצנה מהקישור שסופק כשל. או שהוא משובש, או שאינו מכיל מידע של Excalidraw בפורמט JSON.",
     "resetLibrary": "פעולה זו תנקה את כל הספריה שלך. אתה בטוח?",
     "removeItemsFromsLibrary": "מחק {{count}} פריט(ים) מהספריה?",
     "invalidEncryptionKey": "מפתח ההצפנה חייב להיות בן 22 תוים. השיתוף החי מנוטרל.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "לא הצלחתי להתחבר לשרת השיתוף. אנא רענן את הדף ונסה שוב.",
     "importLibraryError": "לא ניתן היה לטעון את הספריה",
     "saveLibraryError": "שמירת הספריה בזיכרון לא הצליחה. יש לשמור את הספריה מקומית כקובץ כדי לוודא שהשינויים לא ילכו לאיבוד.",
-    "collabSaveFailed": "לא הצלחתי להתחבר למסד הנתונים האחורי. אם הבעיה ממשיכה, כדאי שתשמור את הקובץ מקומית כדי לוודא שלא תאבד את העבודה שלך.",
-    "collabSaveFailed_sizeExceeded": "לא הצלחתי לשמור למסד הנתונים האחורי, נראה שהקנבס שלך גדול מדי. כדאי שתשמור את הקובץ מקומית כדי לוודא שלא תאבד את העבודה שלך.",
     "imageToolNotSupported": "תמונות מושבתות.",
     "brave_measure_text_error": {
       "line1": "נראה שהנכם משתמשים בדפדפן Brave אשר מוגדר<bold>למנוע באופן אגרסיבי חתימה אלקטרונית</bold>.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "לחיצה כפולה או הקשה על {{shortcut}} יאפשרו לך לערוך נקודות",
     "lineEditor_pointSelected": "יש ללחוץ על {{shortcut_1}} כדי להסיר נקודות,\nעל {{shortcut_2}} כדי לשכפל, או לגרור בשביל להזיז",
     "lineEditor_nothingSelected": "בחר נקודה לעריכה (החזק את {{shortcut_1}} כדי לבחור מספר נקודות), או החזק את {{shortcut_2}} ולחץ להוספת נקודות חדשות",
-    "publishLibrary": "פרסם ספריה משלך",
     "bindTextToElement": "‏{{shortcut}} להוספת טקסט",
     "createFlowchart": "‏{{shortcut}} ליצירת תרשים זרימה",
     "deepBoxSelect": "החזק את {{shortcut}} לבחירה עמוקה ולמניעת גרירה",
@@ -410,9 +399,6 @@
     "openIssueMessage": "אנו נזהרים מאוד לא להכניס מידע על הסצנה שלך בתוך דיווח התקלה. אם הסצנה אינה פרטית, אנא שקלו לשלוח אותה ל<button>מעקב השגיאות שלנו</button>. אנא הוסיפו בתחתית הבאג מידע על ידי העתקה והדבקה לתוך הסוגיה ב-GitHub.",
     "sceneContent": "תוכן הקנבאס:"
   },
-  "shareDialog": {
-    "or": "או"
-  },
   "roomDialog": {
     "desc_intro": "הזמנת משתתפים לעבודה משותפת.",
     "desc_privacy": "אל דאגה, סשן העבודה מוצפן מקצה לקצה והוא פרטי לגמרי. אפילו השרתים שלנו לא יכולים לראות מה ציירתם.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "שמור לכונן",
     "disk_details": "ייצא מידע של הקנבאס לקובץ שתוכל לייבא אחר כך.",
-    "disk_button": "שמירה לקובץ",
-    "link_title": "קבל קישור לשיתוף",
-    "link_details": "ייצוא כקישור לקריאה בלבד.",
-    "link_button": "ייצוא לקישור",
-    "excalidrawplus_description": "שמור את הקנבאס לסביבת העבודה שלך ב- +Excalidraw.",
-    "excalidrawplus_button": "ייצוא",
-    "excalidrawplus_exportError": "לא הצלחתי לייצא ל- +Excalidraw כרגע..."
+    "disk_button": "שמירה לקובץ"
   },
   "helpDialog": {
     "blog": "קרא את הבלוג שלנו",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "ניקוי הקנבס"
-  },
-  "publishDialog": {
-    "title": "פרסם ספריה",
-    "itemName": "שם הפריט",
-    "authorName": "שם היוצר",
-    "githubUsername": "שם המשתמש שלך ב-GitHub",
-    "twitterUsername": "שם המשתמש שלך ב-Twitter",
-    "libraryName": "שם הספריה",
-    "libraryDesc": "תיאור הספריה",
-    "website": "אתר",
-    "placeholder": {
-      "authorName": "שמך או שם המשתמש שלך",
-      "libraryName": "תנו שם לספריה",
-      "libraryDesc": "תיאור של הספריה שלך כדי לסייע למשתמשים להבין את השימוש בה",
-      "githubHandle": "כינוי GitHub (לא חובה), כדי שתוכל לערוך את הספרית לאחר שנשלחה לבדיקה",
-      "twitterHandle": "שם משתמש טוויטר (לא חובה), כדי שנדע למי לתת קרדיט כשאנחנו מפרסמים בטוויטר",
-      "website": "קישור לאתר הפרטי שלך או לכל מקום אחר (אופציונאלי)"
-    },
-    "errors": {
-      "required": "נדרש",
-      "website": "הזינו כתובת URL תקינה"
-    },
-    "noteDescription": "שלח את הספריה שלך כך שתצורף ל<link>מאגר הספריות הציבורי</link> כך שאנשים נוספים יוכלו להשתמש בה בעבודות שלהם.",
-    "noteGuidelines": "תחילה הספריה נדרשת לעבור אישור ידני. אנא קראו את <link>הנחיות</link> לפני שאתם לוחצים על שליחה. יש צורך בחשבון GitHub כדי לתקשר ולבצע שינויים אם נדרש, אך אין זה הכרחי לשיתוף הספריה.",
-    "noteLicense": "על ידי לחיצה על שליחה את/ה מסכימ/ה שהספריה תפורסם תחת <link>רישיון MIT</link>, אשר, בקצרה, מאפשר לכל אחד להשתמש בספריה ללא הגבלה.",
-    "noteItems": "לכל פריט בסיפריה חייב להיות שם כדי שאפשר יהיה לסנן. הפריטי סיפריה הבאים יהיו כלולים:",
-    "atleastOneLibItem": "אנא בחר לפחות פריט אחד מספריה כדי להתחיל",
-    "republishWarning": "הערה: חלק מהפריטים שבחרת מסומנים ככאלו שכבר פורסמו/נשלחו. אתה צריך לשלוח פריטים מחדש כאשר אתה מעדכן ספריה או הגשה קיימים."
-  },
-  "publishSuccessDialog": {
-    "title": "הספריה הוגשה",
-    "content": "תודה {{authorName}}. הספריה שלך נשלחה לבחינה. תוכל לעקוב אחרי סטטוס הפרסום"
   },
   "confirmDialog": {
     "resetLibrary": "איפוס ספריה",
@@ -595,7 +543,6 @@
       "center_heading": "השרטוטים שלך נשמרים באחסון הדפדפן שלך.",
       "center_heading_line2": "זיכרון הדפדפן יכול להתנקות באופן לא צפוי.",
       "center_heading_line3": "כדאי לשמור את העבודה שלך תדיר בתור קובץ בשביל שהיא לא תיאבד.",
-      "center_heading_plus": "אתה רוצה ללכת אל Excalidraw+ במקום?",
       "menuHint": "ייצוא, העדפות, שפות, ..."
     },
     "defaults": {
@@ -628,22 +575,12 @@
         "title": "שמירה לכונן",
         "button": "שמירה לכונן",
         "description": "ייצוא נתוני הסצנה לקובץ אותו אפשר לייבא בהמשך."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+‎",
-        "button": "ייצוא ל־Excalidraw+‎",
-        "description": "שמירת הסצנה לסביבת העבודה שלך ב־+Excalidraw."
       }
     },
     "modal": {
       "loadFromFile": {
         "title": "טעינה מקובץ",
         "button": "טעינה מקובץ",
-        "description": "טעינת הקובץ <bold>תחליף את התוכן הקיים</bold>.<br></br>אתם יכולים לגבות את העבודה שלכם תחילה בעזרת האפשרויות שלהלן."
-      },
-      "shareableLink": {
-        "title": "טעינה מקישור",
-        "button": "החלפת התוכן שלי",
         "description": "טעינת הקובץ <bold>תחליף את התוכן הקיים</bold>.<br></br>אתם יכולים לגבות את העבודה שלכם תחילה בעזרת האפשרויות שלהלן."
       }
     }
@@ -698,11 +635,10 @@
       "mermaidParseError": "שגיאת תחביר Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "הגעת למכסת השימוש ב־AI של התוכנית החינמית. נא לנסות את ‎Excalidraw+‏ בשביל לקבל מכסה רחבה יותר, או לחזור מחר.",
+      "messageLimit": "",
       "generalRateLimit": "נא להאט את הקצב, אתה מהיר מדי עבורנו! אנא המתן רגע לפני שתנסה שוב.",
       "messageLimitInputPlaceholder": "הגעת למכסת ההודעות היומית"
-    },
-    "upsellBtnLabel": "שדרוג לגרסת Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "חיפוש מהיר"

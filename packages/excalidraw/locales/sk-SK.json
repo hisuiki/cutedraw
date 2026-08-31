@@ -232,7 +232,6 @@
     "save": "Uložiť do aktuálneho súboru",
     "saveAs": "Uložiť ako",
     "load": "Otvoriť",
-    "getShareableLink": "Získať odkaz na zdieľanie",
     "close": "Zavrieť",
     "selectLanguage": "Zvoliť jazyk",
     "scrollBackToContent": "Vrátiť sa späť na obsah",
@@ -258,29 +257,22 @@
     "clear": "Vymazať",
     "remove": "Odstrániť",
     "embed": "Prepnúť zapustenie",
-    "publishLibrary": "Premenovať a zverejniť",
     "submit": "Potvrdiť",
     "confirm": "Potvrdiť",
     "embeddableInteractionButton": "Kliknite pre interakciu"
   },
   "alerts": {
     "clearReset": "Týmto sa vyčistí celé plátno. Ste si istí?",
-    "couldNotCreateShareableLink": "Nepodarilo sa vytvoriť odkaz na zdieľanie.",
-    "couldNotCreateShareableLinkTooBig": "Nepodarilo sa vytvoriť odkaz na zdieľanie: scéna je príliš veľká",
     "couldNotLoadInvalidFile": "Nepodarilo sa načítať nevalidný súbor",
-    "importBackendFailed": "Nepodarilo sa importovanie zo serveru.",
     "cannotExportEmptyCanvas": "Nie je možné exportovať prázdne plátno.",
     "couldNotCopyToClipboard": "Kopírovanie do schránky sa nepodarilo.",
     "decryptFailed": "Nepodarilo sa rozšifrovať údaje.",
-    "uploadedSecurly": "Nahratie je zabezpečené end-to-end šifrovaním, takže Excalidraw server a tretie strany nedokážu prečítať jeho obsah.",
-    "loadSceneOverridePrompt": "Nahratie externej kresby nahradí existujúci obsah. Prajete si pokračovať?",
     "collabStopOverridePrompt": "Ukončenie schôdze nahradí vašu predchádzajúcu lokálne uloženú scénu. Ste si istý?\n\n(Ak si chcete ponechať lokálnu scénu, jednoducho iba zavrite kartu prehliadača.)",
     "errorAddingToLibrary": "Nepodarilo sa pridať položku do knižnice",
     "errorRemovingFromLibrary": "Nepodarilo sa odstrániť položku z knižnice",
     "confirmAddLibrary": "Týmto sa pridá {{numShapes}} tvar(ov) do vašej knižnice. Ste si istí?",
     "imageDoesNotContainScene": "Tento obrázok neobsahuje žiadne údaje scény. Zvolili ste možnosť zahrnúť scénu počas exportu?",
     "cannotRestoreFromImage": "Nepodarilo sa obnoviť scénu z tohto obrázkového súboru",
-    "invalidSceneUrl": "Nepodarilo sa načítať scénu z poskytnutej URL. Je nevalidná alebo neobsahuje žiadne validné Excalidraw JSON dáta.",
     "resetLibrary": "Týmto vyprázdnite vašu knižnicu. Ste si istý?",
     "removeItemsFromsLibrary": "Odstrániť {{count}} položiek z knižnice?",
     "invalidEncryptionKey": "Šifrovací kľúč musí mať 22 znakov. Živá spolupráca je vypnutá.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "Nepodarilo sa pripojiť ku kolaboračnému serveru. Prosím obnovte stránku a skúste to znovu.",
     "importLibraryError": "Nepodarilo sa načítať knižnicu",
     "saveLibraryError": "Nepodarilo sa uložiť knižnicu. Prosím uložte si vašu knižnicu lokálne do súboru, aby ste nestratili zmeny.",
-    "collabSaveFailed": "Uloženie do databázy sa nepodarilo. Ak tento problém pretrváva uložte si váš súbor lokálne aby ste nestratili vašu prácu.",
-    "collabSaveFailed_sizeExceeded": "Uloženie do databázy sa nepodarilo, pretože veľkosť plátna je príliš veľká. Uložte si váš súbor lokálne aby ste nestratili vašu prácu.",
     "imageToolNotSupported": "Obrázky sú vypnuté.",
     "brave_measure_text_error": {
       "line1": "Vyzerá to, že používate prehliadač Brave so zapnutým nastavením pre <bold>agresívne blokovanie</bold>.",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "Použite dvojklik alebo stlačte {{shortcut}} na editovanie textu",
     "lineEditor_pointSelected": "Stačte {{shortcut_1}} pre vymazanie bodov, {{shortcut_2}} pre ich duplikovanie alebo potiahnite pre ich posunutie",
     "lineEditor_nothingSelected": "Zvoľte bod na upravovanie (podržte {{shortcut_1}} pre zvolenie viacerých bodov) alebo podržte {{shortcut_2}} a kliknite na pridanie nového bodu",
-    "publishLibrary": "Uverejniť vašu knižnicu",
     "bindTextToElement": "{{shortcut}} na pridanie textu",
     "createFlowchart": "{{shortcut}} pre vytvorenie vývojového diagramu",
     "deepBoxSelect": "Podržte {{shortcut}} na výber v skupine alebo zamedzeniu potiahnutia",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Boli sme veľmi opatrní, aby informácie vašej scény neboli v chybe zaznamenané. Ak vaša scéna nie je súkromná, prosím zvážte pokračovanie na naše <button>hlásenie chýb.</button> Prosím zahrňte informácie nižšie pomocou kopírovania a prilepenia do GitHub issue.",
     "sceneContent": "Obsah scény:"
   },
-  "shareDialog": {
-    "or": "Alebo"
-  },
   "roomDialog": {
     "desc_intro": "Pozvite ľudí a spolupracujte s nimi na vašich kresbách.",
     "desc_privacy": "Nemajte obavy, relácia je end-to-end šifrovaná a úplne privátna. Ani náš server nedokáže vidieť čo kreslíte.",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Uložiť na disk",
     "disk_details": "Exportovať údaje scény do súboru, z ktorého môžu byť neskôr importované.",
-    "disk_button": "Uložiť do súboru",
-    "link_title": "Odkaz na zdieľanie",
-    "link_details": "Exportovať ako odkaz iba na čítanie.",
-    "link_button": "Exportovať ako odkaz",
-    "excalidrawplus_description": "Uložiť scénu do vášho Excalidraw+ pracovného priestoru.",
-    "excalidrawplus_button": "Exportovať",
-    "excalidrawplus_exportError": "Nepodarilo sa vykonať export do Excalidraw+..."
+    "disk_button": "Uložiť do súboru"
   },
   "helpDialog": {
     "blog": "Prečítajte si náš blog",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Vyčistiť plátno"
-  },
-  "publishDialog": {
-    "title": "Uverejniť knižnicu",
-    "itemName": "Názov položky",
-    "authorName": "Meno autora",
-    "githubUsername": "Github užívateľské meno",
-    "twitterUsername": "Twitter užívateľské meno",
-    "libraryName": "Názov knižnice",
-    "libraryDesc": "Popis knižnice",
-    "website": "Webová stránka",
-    "placeholder": {
-      "authorName": "Vaše meno alebo užívateľské meno",
-      "libraryName": "Názov vašej knižnice",
-      "libraryDesc": "Popis vašej knižnice, ktorý ostatným pomôže porozumieť jej vhodnému použitiu",
-      "githubHandle": "GitHub užívateľské meno (nepovinné), aby ste mohli robiť úpravy po tom, čo bude knižnica uverejnená na schválenie",
-      "twitterHandle": "Twitter užívateľské meno (nepovinné), aby sme vedeli komu pripísať zásluhu pri propagovaní cez Twitter",
-      "website": "Odkaz na vašu osobnú webovú stránku alebo niekam inam (nepovinné)"
-    },
-    "errors": {
-      "required": "Povinné",
-      "website": "Zadajte platnú adresu URL"
-    },
-    "noteDescription": "Uverejnite vašu knižnicu vo <link>verejnom zozname knižníc</link>aby ju aj ostatní mohli použiť v ich náčrtoch.",
-    "noteGuidelines": "Knižnica musí byť najprv manuálne schválená. Prosím prečítajte si <link>pokyny</link> pred uverejnením. Budete potrebovať Github účet na komunikáciu a vykonanie zmien, ak budú potrebné, avšak nie je to úplne povinné.",
-    "noteLicense": "Potvrdením súhlasíte, že knižnica bude zverejnená s <link>MIT licenciou, </link>čo v skratke znamená, že ju môže použiť hocikto bez obmedzení.",
-    "noteItems": "Každá položka v knižnici musí mať svoje vlastné meno, aby sa dala vyhľadať. Súčasťou knižnice budú nasledujúce položky:",
-    "atleastOneLibItem": "Začnite prosím zvolením aspoň jednej položky z knižnice",
-    "republishWarning": "Poznámka: Niektoré z vybraných položiek sú už označené ako zverejnené. Ich znovu uverejnenie by ste mali vykovať iba vtedy ak aktualizujete už existujúcu knižnicu alebo požiadavku na uverejnenie."
-  },
-  "publishSuccessDialog": {
-    "title": "Knižnica uverejnená",
-    "content": "Ďakujeme vám {{authorName}}. Vaša knižnica bola uverejnená na posúdenie. Stav môžete skontrolovať<link>tu</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Obnoviť knižnicu",
@@ -595,7 +543,6 @@
       "center_heading": "Vaše kresby sú uložené v pamäti vášho prehliadača.",
       "center_heading_line2": "Pamäť prehliadača môže byť neočakávane vymazaná.",
       "center_heading_line3": "Pravidelne si ukladajte si vašu prácu do súboru, aby ste ju nestratili.",
-      "center_heading_plus": "Chceli ste namiesto toho prejsť do Excalidraw+?",
       "menuHint": "Exportovanie, nastavenia, jazyky, ..."
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "Uložiť na disk",
         "button": "Uložiť na disk",
         "description": "Exportovať údaje scény do súboru, z ktorého môžu byť neskôr importované."
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "Exportovať ako Excalidraw+",
-        "description": "Uložiť scénu do vášho Excalidraw+ pracovného priestoru."
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "Načítať zo súboru",
         "button": "Načítať zo súboru",
         "description": "Načítanie zo súboru <bold>nahradí váš existujúci obsah</bold>.<br></br>Vašu kresbu môžete zálohovať jednou z nižšie uvedených možností."
-      },
-      "shareableLink": {
-        "title": "Načítať z odkazu",
-        "button": "Nahradiť môj obsah",
-        "description": "Načítanie externej kresby <bold>nahradí váš existujúci obsah</bold>.<br></br>Vašu kresbu môžete zálohovať jednou z nižšie uvedených možností."
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Chyba syntax Mermaid"
     },
     "rateLimit": {
-      "messageLimit": "Dosiahli ste limit pre AI v pláne zadarmo. Vyskúšajte viac s Excalidraw+ alebo sa vráťte opäť zajtra.",
+      "messageLimit": "",
       "generalRateLimit": "Spomaľte, ste príliš rýchly! Prosím počkajte chvíľu predtým ako to skúsite znovu.",
       "messageLimitInputPlaceholder": "Dosiali ste denný limit správ"
-    },
-    "upsellBtnLabel": "Vylepšiť na Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "Rýchle vyhľadávanie"

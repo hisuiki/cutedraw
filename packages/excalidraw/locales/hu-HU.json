@@ -232,7 +232,6 @@
     "save": "Mentés az aktuális fájlba",
     "saveAs": "Mentés másként",
     "load": "Megnyitás",
-    "getShareableLink": "Megosztható link létrehozása",
     "close": "Bezárás",
     "selectLanguage": "Nyelv kiválasztása",
     "scrollBackToContent": "Visszagörgetés a tartalomhoz",
@@ -258,29 +257,22 @@
     "clear": "Kiűrítés",
     "remove": "Eltávolítás",
     "embed": "Beágyazás be/ki",
-    "publishLibrary": "",
     "submit": "Elküldés",
     "confirm": "Megerősítés",
     "embeddableInteractionButton": "Interakció Kattintással"
   },
   "alerts": {
     "clearReset": "Ez a művelet törli a vászont. Biztos benne?",
-    "couldNotCreateShareableLink": "Nem sikerült megosztható linket létrehozni.",
-    "couldNotCreateShareableLinkTooBig": "Nem sikerült megosztható linket látrehozni: túl nagy a jelenet",
     "couldNotLoadInvalidFile": "Nem sikerült betölteni a helytelen fájlt",
-    "importBackendFailed": "Nem sikerült betölteni a szerverről.",
     "cannotExportEmptyCanvas": "Üres vászont nem lehet exportálni.",
     "couldNotCopyToClipboard": "Nem lehet a vágólapra másolni.",
     "decryptFailed": "Nem sikerült visszafejteni a titkosított adatot.",
-    "uploadedSecurly": "A feltöltést végpontok közötti titkosítással biztosítottuk, ami azt jelenti, hogy egy harmadik fél nem tudja megnézni a tartalmát, beleértve az Excalidraw szervereit is.",
-    "loadSceneOverridePrompt": "A betöltött külső rajz felül fogja írnia meglévőt. Szeretnéd folytatni?",
     "collabStopOverridePrompt": "A munkamenet leállítása felül fogja írni az előzőleg helyben tárolt rajzot. Biztosan ezt akarod?\n(Ha meg akarod tartani a helyben tárolt rajzot, egyszerűen csak zárd be a böngésző fület)",
     "errorAddingToLibrary": "A tétel nem addható hozzá a könyvtárhoz",
     "errorRemovingFromLibrary": "A tétel nem távolítható el a könyvtárból",
     "confirmAddLibrary": "Ez a művelet {{numShapes}} formát fog hozzáadni a könyvtáradhoz. Biztos vagy benne?",
     "imageDoesNotContainScene": "Úgy tűnik, hogy ez a kép nem tartalmaz jelenetadatokat. Engedélyezted a jelenetbeágyazást az exportálás során?",
     "cannotRestoreFromImage": "A jelenet visszaállítása nem sikerült ebből a kép fájlból",
-    "invalidSceneUrl": "Nem sikerült importálni a jelenetet a megadott URL-ről. Rossz formátumú, vagy nem tartalmaz érvényes Excalidraw JSON-adatokat.",
     "resetLibrary": "Ezzel törlöd a könyvtárát. biztos vagy ebben?",
     "removeItemsFromsLibrary": "{{count}} elemet törölsz a könyvtárból?",
     "invalidEncryptionKey": "A titkosítási kulcsnak 22 karakterből kell állnia. Az élő együttműködés le van tiltva.",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "",
     "importLibraryError": "",
     "saveLibraryError": "",
-    "collabSaveFailed": "",
-    "collabSaveFailed_sizeExceeded": "",
     "imageToolNotSupported": "",
     "brave_measure_text_error": {
       "line1": "",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "",
     "lineEditor_pointSelected": "",
     "lineEditor_nothingSelected": "",
-    "publishLibrary": "Tedd közzé saját könyvtáradat",
     "bindTextToElement": "",
     "createFlowchart": "",
     "deepBoxSelect": "",
@@ -410,9 +399,6 @@
     "openIssueMessage": "Vigyáztunk arra, hogy a jelenthez tartozó információ ne jelenjen meg a hibaüzenetben. Ha a jeleneted nem bizalmas, kérjük add hozzá a <button>hibakövető rendszerünkhöz.</button> Kérjük, másolja be az alábbi információkat a GitHub problémába.",
     "sceneContent": "Jelenet tartalma:"
   },
-  "shareDialog": {
-    "or": "Vagy"
-  },
   "roomDialog": {
     "desc_intro": "",
     "desc_privacy": "",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "Mentés lemezre",
     "disk_details": "Exportálja a jelenetadatokat egy fájlba, amelyből később importálhatja.",
-    "disk_button": "Mentés fájlba",
-    "link_title": "Megosztható hivatkozás",
-    "link_details": "Exportálás csak olvasható hivatkozásként.",
-    "link_button": "Exportálás hivatkozásba",
-    "excalidrawplus_description": "Mentse el a jelenetet az Excalidraw+ munkaterületére.",
-    "excalidrawplus_button": "Exportálás",
-    "excalidrawplus_exportError": "Jelenleg nem lehet exportálni az Excalidraw+-ba..."
+    "disk_button": "Mentés fájlba"
   },
   "helpDialog": {
     "blog": "Olvasd a blogunkat",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "Rajzvászon alaphelyzetbe"
-  },
-  "publishDialog": {
-    "title": "Könyvtár közzététele",
-    "itemName": "Tétel neve",
-    "authorName": "Szerző neve",
-    "githubUsername": "GitHub felhasználónév",
-    "twitterUsername": "Twitter felhasználónév",
-    "libraryName": "Könyvtár neve",
-    "libraryDesc": "Könyvtár leírása",
-    "website": "Weboldal",
-    "placeholder": {
-      "authorName": "Neved vagy felhasználóneved",
-      "libraryName": "A könyvtárad neve",
-      "libraryDesc": "A könyvtárad használatát segítő leírás",
-      "githubHandle": "GitHub-handle(opcionális), így szerkesztheted a könyvtárat, miután elküldted ellenőrzésre",
-      "twitterHandle": "Twitter-felhasználónév (opcionális), így tudjuk, kinek kell jóváírni a Twitteren keresztüli reklámozást",
-      "website": "Hivatkozás személyes webhelyedre vagy máshová (nem kötelező)"
-    },
-    "errors": {
-      "required": "Kötelező",
-      "website": "Adj meg egy érvényes URL-t"
-    },
-    "noteDescription": "Küld be könyvtáradat, hogy bekerüljön a <link>nyilvános könyvtár tárolóba</link>hogy mások is felhasználhassák a rajzaikban.",
-    "noteGuidelines": "A könyvtárat először manuálisan kell jóváhagyni. Kérjük, olvassa el a <link>segédletet</link> benyújtása előtt. Szüksége lesz egy GitHub-fiókra a kommunikációhoz és a módosításokhoz, ha kérik, de ez nem feltétlenül szükséges.",
-    "noteLicense": "A beküldéssel elfogadja, hogy a könyvtár a következő alatt kerül közzétételre <link>MIT Licensz </link>ami röviden azt jelenti, hogy bárki korlátozás nélkül használhatja őket.",
-    "noteItems": "Minden könyvtárelemnek saját nevével kell rendelkeznie, hogy szűrhető legyen. A következő könyvtári tételek kerülnek bele:",
-    "atleastOneLibItem": "A kezdéshez válassz ki legalább egy könyvtári elemet",
-    "republishWarning": ""
-  },
-  "publishSuccessDialog": {
-    "title": "A könyvtár beküldve",
-    "content": "Köszönjük {{authorName}}. Könyvtáradat elküldtük felülvizsgálatra. Nyomon követheted az állapotot<link>itt</link>"
   },
   "confirmDialog": {
     "resetLibrary": "Könyvtár alaphelyzetbe állítása",
@@ -595,7 +543,6 @@
       "center_heading": "",
       "center_heading_line2": "",
       "center_heading_line3": "",
-      "center_heading_plus": "",
       "menuHint": ""
     },
     "defaults": {
@@ -628,20 +575,10 @@
         "title": "",
         "button": "",
         "description": ""
-      },
-      "excalidrawPlus": {
-        "title": "",
-        "button": "",
-        "description": ""
       }
     },
     "modal": {
       "loadFromFile": {
-        "title": "",
-        "button": "",
-        "description": ""
-      },
-      "shareableLink": {
         "title": "",
         "button": "",
         "description": ""
@@ -701,8 +638,7 @@
       "messageLimit": "",
       "generalRateLimit": "",
       "messageLimitInputPlaceholder": ""
-    },
-    "upsellBtnLabel": "Frissítés Plus csomagra"
+    }
   },
   "quickSearch": {
     "placeholder": "Gyorskeresés"

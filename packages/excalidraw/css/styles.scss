@@ -121,7 +121,7 @@ body.excalidraw-cursor-resize * {
     }
 
     // Remove the main canvas from document flow to avoid resizeObserver
-    // feedback loop (see https://github.com/excalidraw/excalidraw/pull/3379)
+    // feedback loop (see https://github.com/hisuiki/cutedraw/pull/3379)
   }
 
   &__canvas-wrapper,

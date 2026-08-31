@@ -17,7 +17,7 @@ export interface FontMetadata {
     ascender: number;
     /** hhea.descender metric */
     descender: number;
-    /** harcoded unitless line-height, https://github.com/excalidraw/excalidraw/pull/6360#issuecomment-1477635971 */
+    /** harcoded unitless line-height, https://github.com/hisuiki/cutedraw/pull/6360#issuecomment-1477635971 */
     lineHeight: number;
   };
   /** flag to indicate a deprecated font */

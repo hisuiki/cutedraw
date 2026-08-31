@@ -1,16 +1,18 @@
-import { CaptureUpdateAction } from "@excalidraw/excalidraw";
 import { encryptData } from "@excalidraw/excalidraw/data/encryption";
-import { newElementWith } from "@excalidraw/element";
-import throttle from "lodash.throttle";
+import { isInitializedImageElement } from "@excalidraw/element";
 
 import type { UserIdleState } from "@excalidraw/common";
-import type { OrderedExcalidrawElement } from "@excalidraw/element/types";
 import type {
+  FileId,
+  OrderedExcalidrawElement,
+} from "@excalidraw/element/types";
+import type {
+  BinaryFileData,
   OnUserFollowedPayload,
   SocketId,
 } from "@excalidraw/excalidraw/types";
 
-import { WS_EVENTS, FILE_UPLOAD_TIMEOUT, WS_SUBTYPES } from "../app_constants";
+import { WS_EVENTS, WS_SUBTYPES } from "../app_constants";
 import { isSyncableElement } from "../data";
 
 import type {
@@ -28,6 +30,7 @@ class Portal {
   roomId: string | null = null;
   roomKey: string | null = null;
   broadcastedElementVersions: Map<string, number> = new Map();
+  broadcastedFileIds: Set<FileId> = new Set();
 
   constructor(collab: TCollabClass) {
     this.collab = collab;
@@ -62,13 +65,13 @@ class Portal {
     if (!this.socket) {
       return;
     }
-    this.queueFileUpload.flush();
     this.socket.close();
     this.socket = null;
     this.roomId = null;
     this.roomKey = null;
     this.socketInitialized = false;
     this.broadcastedElementVersions = new Map();
+    this.broadcastedFileIds = new Set();
   }
 
   isOpen() {
@@ -99,44 +102,6 @@ class Portal {
     }
   }
 
-  queueFileUpload = throttle(async () => {
-    try {
-      await this.collab.fileManager.saveFiles({
-        elements: this.collab.excalidrawAPI.getSceneElementsIncludingDeleted(),
-        files: this.collab.excalidrawAPI.getFiles(),
-      });
-    } catch (error: any) {
-      if (error.name !== "AbortError") {
-        this.collab.excalidrawAPI.updateScene({
-          appState: {
-            errorMessage: error.message,
-          },
-        });
-      }
-    }
-
-    let isChanged = false;
-    const newElements = this.collab.excalidrawAPI
-      .getSceneElementsIncludingDeleted()
-      .map((element) => {
-        if (this.collab.fileManager.shouldUpdateImageElementStatus(element)) {
-          isChanged = true;
-          // this will signal collaborators to pull image data from server
-          // (using mutation instead of newElementWith otherwise it'd break
-          // in-progress dragging)
-          return newElementWith(element, { status: "saved" });
-        }
-        return element;
-      });
-
-    if (isChanged) {
-      this.collab.excalidrawAPI.updateScene({
-        elements: newElements,
-        captureUpdate: CaptureUpdateAction.NEVER,
-      });
-    }
-  }, FILE_UPLOAD_TIMEOUT);
-
   broadcastScene = async (
     updateType: WS_SUBTYPES.INIT | WS_SUBTYPES.UPDATE,
     elements: readonly OrderedExcalidrawElement[],
@@ -161,10 +126,25 @@ class Portal {
       return acc;
     }, [] as SyncableExcalidrawElement[]);
 
+    const files = this.collab.excalidrawAPI.getFiles();
+    const filesToBroadcast: BinaryFileData[] = [];
+    for (const element of syncableElements) {
+      if (
+        isInitializedImageElement(element) &&
+        files[element.fileId] &&
+        (updateType === WS_SUBTYPES.INIT ||
+          !this.broadcastedFileIds.has(element.fileId))
+      ) {
+        filesToBroadcast.push(files[element.fileId]);
+        this.broadcastedFileIds.add(element.fileId);
+      }
+    }
+
     const data: SocketUpdateDataSource[typeof updateType] = {
       type: updateType,
       payload: {
         elements: syncableElements,
+        files: filesToBroadcast,
       },
     };
 
@@ -174,8 +154,6 @@ class Portal {
         syncableElement.version,
       );
     }
-
-    this.queueFileUpload();
 
     await this._broadcastSocketData(data as SocketUpdateData);
   };

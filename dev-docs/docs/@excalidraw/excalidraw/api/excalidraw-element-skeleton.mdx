@@ -1,10 +1,10 @@
 # Creating Elements programmatically
 
-We support a simplified API to make it easier to generate Excalidraw elements programmatically. This API is in beta and subject to change before stable. You can check the [PR](https://github.com/excalidraw/excalidraw/pull/6546) for more details.
+We support a simplified API to make it easier to generate Excalidraw elements programmatically. This API is in beta and subject to change before stable. You can check the [PR](https://github.com/hisuiki/cutedraw/pull/6546) for more details.
 
-For this purpose we introduced a new type [`ExcalidrawElementSkeleton`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L133). This is the simplified version of [`ExcalidrawElement`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/element/types.ts#L134) type with the minimum possible attributes so that creating elements programmatically is much easier (especially for cases like binding arrows or creating text containers).
+For this purpose we introduced a new type [`ExcalidrawElementSkeleton`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L133). This is the simplified version of [`ExcalidrawElement`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/element/types.ts#L134) type with the minimum possible attributes so that creating elements programmatically is much easier (especially for cases like binding arrows or creating text containers).
 
-The [`ExcalidrawElementSkeleton`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L133) can be converted to fully qualified Excalidraw elements by using [`convertToExcalidrawElements`](/docs/@excalidraw/excalidraw/api/excalidraw-element-skeleton#converttoexcalidrawelements).
+The [`ExcalidrawElementSkeleton`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L133) can be converted to fully qualified Excalidraw elements by using [`convertToExcalidrawElements`](/docs/@excalidraw/excalidraw/api/excalidraw-element-skeleton#converttoexcalidrawelements).
 
 ## convertToExcalidrawElements
 
@@ -19,7 +19,7 @@ convertToExcalidrawElements(
 
 | Name | Type | Default | Description |
 | --- | --- | --- | --- |
-| `elements` | [ExcalidrawElementSkeleton](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L137) |  | The Excalidraw element Skeleton which needs to be converted to Excalidraw elements. |
+| `elements` | [ExcalidrawElementSkeleton](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L137) |  | The Excalidraw element Skeleton which needs to be converted to Excalidraw elements. |
 | `opts` | `{ regenerateIds: boolean }` | ` {regenerateIds: true}` | By default `id` will be regenerated for all the elements irrespective of whether you pass the `id` so if you don't want the ids to regenerated, you can set this attribute to `false`. |
 
 **_How to use_**
@@ -71,7 +71,7 @@ function App() {
 }
 ```
 
-You can pass additional [`properties`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/element/types.ts#L27) as well to decorate the shapes.
+You can pass additional [`properties`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/element/types.ts#L27) as well to decorate the shapes.
 
 :::info
 
@@ -116,7 +116,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/70ca7063-88fb-434c-838a-cd466e1bc3c2)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/70ca7063-88fb-434c-838a-cd466e1bc3c2)
 
 ### Text Element
 
@@ -141,7 +141,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/085c7ac3-7952-4f22-b9c3-6beb51438526)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/085c7ac3-7952-4f22-b9c3-6beb51438526)
 
 ### Lines and Arrows
 
@@ -162,7 +162,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/0c22a06b-b568-4ab5-9848-a5f0160f66a6)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/0c22a06b-b568-4ab5-9848-a5f0160f66a6)
 
 #### With Addtional properties
 
@@ -188,11 +188,11 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/14f1bf3f-ad81-4096-8c1c-f35235084ec5)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/14f1bf3f-ad81-4096-8c1c-f35235084ec5)
 
 ### Text Containers
 
-In addition to `type`, `x` and `y` properties, [`label`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L124C7-L130C59) property is required for text containers. The `text` property in `label` is required, rest of the attributes are optional.
+In addition to `type`, `x` and `y` properties, [`label`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L124C7-L130C59) property is required for text containers. The `text` property in `label` is required, rest of the attributes are optional.
 
 If you don't provide the dimensions of container, we calculate it based of the label dimensions.
 
@@ -225,7 +225,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/1e2c7b5d-fcb4-4f86-946d-0bfb0e97d532)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/1e2c7b5d-fcb4-4f86-946d-0bfb0e97d532)
 
 #### With Additional properties
 
@@ -272,7 +272,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/f8123cd1-c9aa-452d-b96b-05c846c5030d)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/f8123cd1-c9aa-452d-b96b-05c846c5030d)
 
 ### Labelled Arrows
 
@@ -322,11 +322,11 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/70635e9b-f1c8-4839-89e1-73b813abeb93)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/70635e9b-f1c8-4839-89e1-73b813abeb93)
 
 ### Arrow bindings
 
-To bind arrow to a shape you need to specify its [`start`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L86) and [`end`](https://github.com/excalidraw/excalidraw/blob/master/packages/excalidraw/data/transform.ts#L54) properties. You need to pass either `type` or `id` property in `start` and `end` properties, rest of the attributes are optional
+To bind arrow to a shape you need to specify its [`start`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L86) and [`end`](https://github.com/hisuiki/cutedraw/blob/main/packages/excalidraw/data/transform.ts#L54) properties. You need to pass either `type` or `id` property in `start` and `end` properties, rest of the attributes are optional
 
 ```js
 convertToExcalidrawElements([
@@ -349,7 +349,7 @@ convertToExcalidrawElements([
 
 When position for `start` and `end ` properties are not specified, we compute it according to arrow position.
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/5aff09fd-b7e8-4c63-98be-da40b0698704)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/5aff09fd-b7e8-4c63-98be-da40b0698704)
 
 ```js
 convertToExcalidrawElements([
@@ -372,7 +372,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/2a9f03ac-e45c-4fbd-9be0-5d9f8c8e0343)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/2a9f03ac-e45c-4fbd-9be0-5d9f8c8e0343)
 
 #### When passing `id`
 
@@ -430,7 +430,7 @@ convertToExcalidrawElements([
 ]);
 ```
 
-![image](https://github.com/excalidraw/excalidraw/assets/11256141/a8b047c8-2eed-4aea-82a2-e1e6bbddb8d4)
+![image](https://github.com/hisuiki/cutedraw/assets/11256141/a8b047c8-2eed-4aea-82a2-e1e6bbddb8d4)
 
 ### Frames
 

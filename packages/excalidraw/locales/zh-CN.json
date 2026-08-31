@@ -232,7 +232,6 @@
     "save": "保存至当前文件",
     "saveAs": "保存为",
     "load": "打开",
-    "getShareableLink": "获取共享链接",
     "close": "关闭",
     "selectLanguage": "选择语言",
     "scrollBackToContent": "滚动回到内容",
@@ -258,29 +257,22 @@
     "clear": "清除",
     "remove": "删除",
     "embed": "切换嵌入",
-    "publishLibrary": "重命名或发布",
     "submit": "提交",
     "confirm": "确定",
     "embeddableInteractionButton": "点击以开始交互"
   },
   "alerts": {
     "clearReset": "这将会清除整个画布。您是否要继续?",
-    "couldNotCreateShareableLink": "无法创建共享链接",
-    "couldNotCreateShareableLinkTooBig": "无法创建可共享链接：画布过大",
     "couldNotLoadInvalidFile": "无法加载无效的文件",
-    "importBackendFailed": "从后端导入失败。",
     "cannotExportEmptyCanvas": "无法导出空白画布。",
     "couldNotCopyToClipboard": "无法复制到剪贴板。",
     "decryptFailed": "无法解密数据。",
-    "uploadedSecurly": "上传已被端到端加密保护，这意味着 Excalidraw 的服务器和第三方都无法读取内容。",
-    "loadSceneOverridePrompt": "加载外部绘图将取代您现有的内容。您想要继续吗？",
     "collabStopOverridePrompt": "停止会话将覆盖您先前本地存储的绘图。 您确定吗？\n\n(如果您想保持本地绘图，只需关闭浏览器选项卡。)",
     "errorAddingToLibrary": "无法将项目添加到素材库中",
     "errorRemovingFromLibrary": "无法从素材库中移除项目",
     "confirmAddLibrary": "这将添加 {{numShapes}} 个形状到您的素材库中。您确定吗？",
     "imageDoesNotContainScene": "此图像似乎不包含任何画布数据。您是否在导出时启用了画布嵌入功能？",
     "cannotRestoreFromImage": "无法从此图像文件恢复画布",
-    "invalidSceneUrl": "无法从提供的 URL 导入场景。它或者格式不正确，或者不包含有效的 Excalidraw JSON 数据。",
     "resetLibrary": "这将会清除你的素材库。你确定要这么做吗？",
     "removeItemsFromsLibrary": "确定要从素材库中删除 {{count}} 个项目吗？",
     "invalidEncryptionKey": "密钥必须包含22个字符。实时协作已被禁用。",
@@ -296,8 +288,6 @@
     "cannotResolveCollabServer": "无法连接到实时协作服务器。请重新加载页面并重试。",
     "importLibraryError": "无法加载素材库",
     "saveLibraryError": "无法将库保存至存储。请将库保存为本地文件，以确保您的更改不被丢失。",
-    "collabSaveFailed": "无法保存到后端数据库。如果问题持续存在，您应该保存文件到本地，以确保您的工作不会丢失。",
-    "collabSaveFailed_sizeExceeded": "无法保存到后端数据库，画布似乎过大。您应该保存文件到本地，以确保您的工作不会丢失。",
     "imageToolNotSupported": "图片已被禁用。",
     "brave_measure_text_error": {
       "line1": "您似乎正在使用 Brave 浏览器并启用了<bold>积极阻止指纹识别</bold>的设置。",
@@ -388,7 +378,6 @@
     "lineEditor_line_info": "双击或按{{shortcut}}编辑点",
     "lineEditor_pointSelected": "按{{shortcut_1}}移除点，按{{shortcut_2}}复制点，拖拽移动点",
     "lineEditor_nothingSelected": "选择要编辑的点 (按住{{shortcut_1}}选择多个)，\n或按住{{shortcut_2}}并点击以添加新点",
-    "publishLibrary": "发布您自己的素材库",
     "bindTextToElement": "按{{shortcut}}添加文本",
     "createFlowchart": "按{{shortcut}}创建流程图",
     "deepBoxSelect": "按住{{shortcut}}深度选择，并避免拖拽",
@@ -410,9 +399,6 @@
     "openIssueMessage": "我们非常谨慎地处理错误信息，您的画布内容不会被包含在错误报告中。如果您的画布内容不需要保持私密，请考虑在我们的 <button>bug 跟踪系统</button>上提供更多信息。请复制粘贴以下信息到 GitHub Issue 中。",
     "sceneContent": "画布内容:"
   },
-  "shareDialog": {
-    "or": "或"
-  },
   "roomDialog": {
     "desc_intro": "邀请他人协作绘图。",
     "desc_privacy": "别担心，会话是端到端加密、完全私密的。即使是我们的服务器也无法看到您绘制的内容。",
@@ -433,13 +419,7 @@
   "exportDialog": {
     "disk_title": "保存到本地",
     "disk_details": "将画布数据导出为文件，以便以后导入",
-    "disk_button": "保存为文件",
-    "link_title": "分享链接",
-    "link_details": "导出为只读链接。",
-    "link_button": "导出链接",
-    "excalidrawplus_description": "将画布保存到您的 Excalidraw+ 工作区。",
-    "excalidrawplus_button": "导出",
-    "excalidrawplus_exportError": "暂时无法导出到 Excalidraw+ ..."
+    "disk_button": "保存为文件"
   },
   "helpDialog": {
     "blog": "浏览我们的博客",
@@ -476,38 +456,6 @@
   },
   "clearCanvasDialog": {
     "title": "清除画布"
-  },
-  "publishDialog": {
-    "title": "发布素材库",
-    "itemName": "项目名称",
-    "authorName": "作者名",
-    "githubUsername": "GitHub 用户名",
-    "twitterUsername": "Twitter 用户名",
-    "libraryName": "名称",
-    "libraryDesc": "简介",
-    "website": "网址",
-    "placeholder": {
-      "authorName": "您的名字或用户名",
-      "libraryName": "素材库名称",
-      "libraryDesc": "介绍您的素材库，让人们了解其用途",
-      "githubHandle": "GitHub 用户名（可选），填写后，您可以编辑已提交待审的素材库",
-      "twitterHandle": "Twitter 用户名（可选），填写后，当我们在Twitter发布推广信息时便可提及您",
-      "website": "您个人网站的或任意的链接（可选）"
-    },
-    "errors": {
-      "required": "必填",
-      "website": "输入一个有效的URL"
-    },
-    "noteDescription": "提交后，您的素材库将被包含在<link>公共素材库广场</link>以供其他人在绘图中使用。",
-    "noteGuidelines": "提交的素材库需先经人工审核。在提交之前，请先阅读<link>指南</link> 。后续沟通和对库的修改需要 GitHub 账号，但这不是必须的。",
-    "noteLicense": "提交即表明您已同意素材库将遵循 <link>MIT 许可证</link>，简而言之，任何人都可以不受限制地使用它们。",
-    "noteItems": "素材库中每个项目都有各自的名称以供筛选。以下项目将被包含：",
-    "atleastOneLibItem": "请选择至少一个素材库以开始",
-    "republishWarning": "注意：部分选中的项目已经发布或提交。请仅在更新已有或已提交的素材库时重复提交项目。"
-  },
-  "publishSuccessDialog": {
-    "title": "素材库已提交",
-    "content": "谢谢你 {{authorName}}。您的素材库已被提交审核。请点击<link>此处</link>跟进此次提交的状态"
   },
   "confirmDialog": {
     "resetLibrary": "重置素材库",
@@ -595,7 +543,6 @@
       "center_heading": "您的绘图已保存在您的浏览器存储中。",
       "center_heading_line2": "浏览器存储可能会被无意清除。",
       "center_heading_line3": "将您的工作定期保存到一个文件，以避免丢失。",
-      "center_heading_plus": "是否前往 Excalidraw+ ？",
       "menuHint": "导出、首选项、语言……"
     },
     "defaults": {
@@ -628,11 +575,6 @@
         "title": "保存到本地",
         "button": "保存到本地",
         "description": "将画布数据导出为文件，以便以后导入。"
-      },
-      "excalidrawPlus": {
-        "title": "Excalidraw+",
-        "button": "导出到 Excalidraw+",
-        "description": "将画布保存到您的 Excalidraw+ 工作区。"
       }
     },
     "modal": {
@@ -640,11 +582,6 @@
         "title": "从文件加载",
         "button": "从文件加载",
         "description": "从文件加载将<bold>替换您现有的内容</bold>。<br></br>您可以先使用下列方式备份您的绘图。"
-      },
-      "shareableLink": {
-        "title": "从链接加载",
-        "button": "替换我的内容",
-        "description": "加载外部绘图将<bold>替换您现有的内容</bold>。<br></br>您可以先使用下列方式备份您的绘图。"
       }
     }
   },
@@ -698,11 +635,10 @@
       "mermaidParseError": "Mermaid 语法错误"
     },
     "rateLimit": {
-      "messageLimit": "您已达到免费版的 AI 使用上限。请尝试 Excalidraw+ 获取更多额度，或明天再试。",
+      "messageLimit": "",
       "generalRateLimit": "慢点慢点，您的手速太快了！请稍候再试。",
       "messageLimitInputPlaceholder": "您已达到消息上限"
-    },
-    "upsellBtnLabel": "升级到 Plus"
+    }
   },
   "quickSearch": {
     "placeholder": "快速搜索"
