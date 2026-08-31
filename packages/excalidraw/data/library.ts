@@ -52,6 +52,10 @@ type LibraryUpdate = {
 // such as schema version
 export type LibraryPersistedData = { libraryItems: LibraryItems };
 
+const ALLOWED_LIBRARY_URLS = [
+  "excalidraw.com",
+];
+
 const onLibraryUpdateEmitter = new Emitter<
   [update: LibraryUpdate, libraryItems: LibraryItems]
 >();
@@ -475,6 +479,31 @@ export const distributeLibraryItemsOnSquareGrid = (
   }
 
   return resElements;
+};
+
+export const validateLibraryUrl = (
+  libraryUrl: string,
+  validator: ((libraryUrl: string) => boolean) | string[] = ALLOWED_LIBRARY_URLS,
+): true => {
+  if (
+    typeof validator === "function"
+      ? validator(libraryUrl)
+      : validator.some((allowedUrlDef) => {
+          const allowedUrl = new URL(
+            `https://${allowedUrlDef.replace(/^https?:\/\//, "")}`,
+          );
+          const { hostname, pathname } = new URL(libraryUrl);
+          return (
+            new RegExp(`(^|\\.)${allowedUrl.hostname}$`).test(hostname) &&
+            new RegExp(`^${allowedUrl.pathname.replace(/\/+$/, "")}(\/+|$)`).test(
+              pathname,
+            )
+          );
+        })
+  ) {
+    return true;
+  }
+  throw new Error(`Invalid or disallowed library URL: "${libraryUrl}"`);
 };
 
 class AdapterTransaction {

@@ -17,7 +17,7 @@ import DropdownMenu from "./dropdownMenu/DropdownMenu";
 import { DotsIcon, ExportIcon, LoadIcon, TrashIcon } from "./icons";
 
 import type Library from "../data/library";
-import type { LibraryItem, UIAppState } from "../types";
+import type { LibraryItem, LibraryItems, UIAppState } from "../types";
 
 export const LibraryDropdownMenuButton: React.FC<{
   setAppState: React.Component<any, UIAppState>["setState"];
