@@ -8,7 +8,6 @@ import {
   ExcalidrawAPIProvider,
   useExcalidrawAPI,
 } from "@excalidraw/excalidraw";
-import { trackEvent } from "@excalidraw/excalidraw/analytics";
 import { getDefaultAppState } from "@excalidraw/excalidraw/appState";
 import {
   CommandPalette,
@@ -22,10 +21,7 @@ import Trans from "@excalidraw/excalidraw/components/Trans";
 import {
   APP_NAME,
   EVENT,
-  VERSION_TIMEOUT,
   debounce,
-  getVersion,
-  getFrame,
   isTestEnv,
   preventUnload,
   resolvablePromise,
@@ -396,14 +392,6 @@ const ExcalidrawWrapper = () => {
   }
 
   const debugCanvasRef = useRef<HTMLCanvasElement>(null);
-
-  useEffect(() => {
-    trackEvent("load", "frame", getFrame());
-    // Delayed so that the app has a time to load the latest SW
-    setTimeout(() => {
-      trackEvent("load", "version", getVersion());
-    }, VERSION_TIMEOUT);
-  }, []);
 
   const [, setShareDialogState] = useAtom(shareDialogStateAtom);
   const [collabAPI] = useAtom(collabAPIAtom);

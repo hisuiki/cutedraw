@@ -3,8 +3,6 @@ import { parseMermaidToExcalidraw } from "@excalidraw/mermaid-to-excalidraw";
 import { isFiniteNumber } from "@excalidraw/math";
 
 import { useAtom } from "../../../editor-jotai";
-
-import { trackEvent } from "../../../analytics";
 import { t } from "../../../i18n";
 
 import { errorAtom, rateLimitsAtom, chatHistoryAtom } from "../TTDContext";
@@ -96,8 +94,6 @@ export const useTextGeneration = ({
     }
 
     try {
-      trackEvent("ai", "generate", "ttd");
-
       const previousMessages = getMessagesForLLM(chatHistory);
 
       const messages: LLMMessage[] = [
@@ -192,9 +188,7 @@ export const useTextGeneration = ({
 
       try {
         await parseMermaidToExcalidraw(generatedResponse ?? "");
-        trackEvent("ai", "mermaid parse success", "ttd");
       } catch (error: any) {
-        trackEvent("ai", "mermaid parse failed", "ttd");
         const _error = new Error(
           error.message || t("chat.errors.mermaidParseError"),
         );

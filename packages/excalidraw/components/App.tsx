@@ -341,7 +341,6 @@ import { actionToggleViewMode } from "../actions/actionToggleViewMode";
 import { ActionManager } from "../actions/manager";
 import { actions } from "../actions/register";
 import { getShortcutFromShortcutName } from "../actions/shortcuts";
-import { trackEvent } from "../analytics";
 import {
   getDefaultAppState,
   isEraserActive,
@@ -2721,7 +2720,6 @@ class App extends React.Component<AppProps, AppState> {
     elements: ExportedElements,
     opts: { exportingFrame: NonDeleted<ExcalidrawFrameLikeElement> | null },
   ) => {
-    trackEvent("export", type, "ui");
     const fileHandle = await exportCanvas(
       type,
       elements,
@@ -2818,7 +2816,6 @@ class App extends React.Component<AppProps, AppState> {
     if (!magicFrameChildren.length) {
       if (source === "button") {
         this.setState({ errorMessage: "Cannot generate from an empty frame" });
-        trackEvent("ai", "generate (no-children)", "d2c");
       } else {
         this.setActiveTool({ type: "magicframe" });
       }
@@ -2845,7 +2842,6 @@ class App extends React.Component<AppProps, AppState> {
       selectedElementIds: { [frameElement.id]: true },
     });
 
-    trackEvent("ai", "generate (start)", "d2c");
     try {
       const { html } = await generateDiagramToCode({
         frame: magicFrame,
@@ -2876,8 +2872,6 @@ class App extends React.Component<AppProps, AppState> {
         },
       });
 
-      trackEvent("ai", "generate (success)", "d2c");
-
       if (!html.trim()) {
         this.updateMagicGeneration({
           frameElement,
@@ -2903,7 +2897,6 @@ class App extends React.Component<AppProps, AppState> {
         data: { status: "done", html: parsedHtml },
       });
     } catch (error: any) {
-      trackEvent("ai", "generate (failed)", "d2c");
       this.updateMagicGeneration({
         frameElement,
         data: {
@@ -2933,7 +2926,6 @@ class App extends React.Component<AppProps, AppState> {
 
     if (selectedElements.length === 0) {
       this.setActiveTool({ type: TOOL_TYPE.magicframe });
-      trackEvent("ai", "tool-select (empty-selection)", "d2c");
     } else {
       const selectedMagicFrame:
         | NonDeleted<ExcalidrawMagicFrameElement>
@@ -2952,8 +2944,6 @@ class App extends React.Component<AppProps, AppState> {
         this.setActiveTool({ type: TOOL_TYPE.magicframe });
         return;
       }
-
-      trackEvent("ai", "tool-select (existing selection)", "d2c");
 
       let frame: NonDeleted<ExcalidrawMagicFrameElement>;
       if (selectedMagicFrame) {
@@ -5058,19 +5048,10 @@ class App extends React.Component<AppProps, AppState> {
     }
   };
 
-  toggleLock = (source: "keyboard" | "ui" = "ui") => {
+  toggleLock = () => {
     if (this.props.activeTool) {
       // the active tool — including its lock state — is host-controlled
       return;
-    }
-    if (!this.state.activeTool.locked) {
-      trackEvent(
-        "toolbar",
-        "toggleLock",
-        `${source} (${
-          this.editorInterface.formFactor === "phone" ? "mobile" : "desktop"
-        })`,
-      );
     }
     this.setState((prevState) => {
       return {
@@ -5599,17 +5580,6 @@ class App extends React.Component<AppProps, AppState> {
         }
 
         if (shape) {
-          if (this.state.activeTool.type !== shape) {
-            trackEvent(
-              "toolbar",
-              shape,
-              `keyboard (${
-                this.editorInterface.formFactor === "phone"
-                  ? "mobile"
-                  : "desktop"
-              })`,
-            );
-          }
           if (shape === "arrow" && this.state.activeTool.type === "arrow") {
             const nextArrowType =
               this.state.currentItemArrowType === ARROW_TYPE.sharp
@@ -5646,7 +5616,7 @@ class App extends React.Component<AppProps, AppState> {
 
           return;
         } else if (event.key === KEYS.Q) {
-          this.toggleLock("keyboard");
+          this.toggleLock();
           event.stopPropagation();
           return;
         }
@@ -13248,8 +13218,6 @@ class App extends React.Component<AppProps, AppState> {
       container.getBoundingClientRect();
     const left = event.clientX - offsetLeft;
     const top = event.clientY - offsetTop;
-
-    trackEvent("contextMenu", "openContextMenu", type);
 
     this.setState(
       {

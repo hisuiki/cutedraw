@@ -1,3 +1,7 @@
+# Cutedraw
+
+Cutedraw is a telemetry-free fork of Excalidraw. See [PRIVACY.md](./PRIVACY.md) for the privacy boundary and the check used to keep upstream merges free of analytics and crash reporting.
+
 <a href="https://excalidraw.com/" target="_blank" rel="noopener">
   <picture>
     <source media="(prefers-color-scheme: dark)" alt="Excalidraw" srcset="https://excalidraw.nyc3.cdn.digitaloceanspaces.com/github/excalidraw_github_cover_2_dark.png" />
@@ -121,4 +125,4 @@ If you like the project, you can become a sponsor at [Open Collective](https://o
 
 Last but not least, we're thankful to these companies for offering their services for free:
 
-[![Vercel](./.github/assets/vercel.svg)](https://vercel.com) [![Sentry](./.github/assets/sentry.svg)](https://sentry.io) [![Crowdin](./.github/assets/crowdin.svg)](https://crowdin.com)
+[![Vercel](./.github/assets/vercel.svg)](https://vercel.com) [![Crowdin](./.github/assets/crowdin.svg)](https://crowdin.com)

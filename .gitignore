@@ -27,3 +27,17 @@ dev-dist
 html
 meta*.json
 .claude
+
+# Terraform keeps state remotely; local plans, caches, and state must never be committed.
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Temporary credentials emitted by google-github-actions/auth.
+gha-creds-*.json

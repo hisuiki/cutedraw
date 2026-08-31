@@ -29,20 +29,12 @@ interface ImportMetaEnv {
 
   FAST_REFRESH: string;
 
-  // MATOMO
-  VITE_APP_MATOMO_URL: string;
-  VITE_APP_CDN_MATOMO_TRACKER_URL: string;
-  VITE_APP_MATOMO_SITE_ID: string;
-
   //Debug flags
 
-  VITE_APP_DISABLE_SENTRY: string;
   // Set this flag to false if you want to open the overlay by default
   VITE_APP_COLLAPSE_OVERLAY: string;
   // Enable eslint in dev server
   VITE_APP_ENABLE_ESLINT: string;
-  VITE_APP_ENABLE_TRACKING: string;
-
   PKG_NAME: string;
   PKG_VERSION: string;
 

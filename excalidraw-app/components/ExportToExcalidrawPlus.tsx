@@ -1,12 +1,10 @@
 import React from "react";
-import { uploadBytes, ref } from "firebase/storage";
+import { uploadBytes, ref } from "@firebase/storage";
 import { nanoid } from "nanoid";
-
-import { trackEvent } from "@excalidraw/excalidraw/analytics";
 import { Card } from "@excalidraw/excalidraw/components/Card";
 import { ExcalidrawLogo } from "@excalidraw/excalidraw/components/ExcalidrawLogo";
 import { IconButton } from "@excalidraw/excalidraw/components/IconButton";
-import { MIME_TYPES, getFrame } from "@excalidraw/common";
+import { MIME_TYPES } from "@excalidraw/common";
 import {
   encryptData,
   generateEncryptionKey,
@@ -119,7 +117,6 @@ export const ExportToExcalidrawPlus: React.FC<{
         showAriaLabel={true}
         onClick={async () => {
           try {
-            trackEvent("export", "eplus", `ui (${getFrame()})`);
             await exportToExcalidrawPlus(elements, appState, files, name);
             onSuccess();
           } catch (error: any) {

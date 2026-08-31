@@ -20,7 +20,6 @@ import {
 } from "../../actions";
 import { actionToggleViewMode } from "../../actions/actionToggleViewMode";
 import { getShortcutFromShortcutName } from "../../actions/shortcuts";
-import { trackEvent } from "../../analytics";
 import { useUIAppState } from "../../context/ui-appState";
 import { useSetAtom } from "../../editor-jotai";
 import { useI18n } from "../../i18n";
@@ -152,7 +151,6 @@ export const CommandPalette = (opts?: { className?: string }) => {
       icon={boltIcon}
       data-testid="command-palette-button"
       onSelect={() => {
-        trackEvent("command_palette", "open", "menu");
         setAppState({ openDialog: { name: "commandPalette" } });
       }}
       shortcut={getShortcutFromShortcutName("commandPalette")}

@@ -1,11 +1,9 @@
 import Trans from "@excalidraw/excalidraw/components/Trans";
 import { t } from "@excalidraw/excalidraw/i18n";
-import * as Sentry from "@sentry/browser";
 import React from "react";
 
 interface TopErrorBoundaryState {
   hasError: boolean;
-  sentryEventId: string;
   localStorage: string;
 }
 
@@ -15,7 +13,6 @@ export class TopErrorBoundary extends React.Component<
 > {
   state: TopErrorBoundaryState = {
     hasError: false,
-    sentryEventId: "",
     localStorage: "",
   };
 
@@ -23,7 +20,7 @@ export class TopErrorBoundary extends React.Component<
     return this.state.hasError ? this.errorSplash() : this.props.children;
   }
 
-  componentDidCatch(error: Error, errorInfo: any) {
+  componentDidCatch() {
     const _localStorage: any = {};
     for (const [key, value] of Object.entries({ ...localStorage })) {
       try {
@@ -33,15 +30,9 @@ export class TopErrorBoundary extends React.Component<
       }
     }
 
-    Sentry.withScope((scope) => {
-      scope.setExtras(errorInfo);
-      const eventId = Sentry.captureException(error);
-
-      this.setState((state) => ({
-        hasError: true,
-        sentryEventId: eventId,
-        localStorage: JSON.stringify(_localStorage),
-      }));
+    this.setState({
+      hasError: true,
+      localStorage: JSON.stringify(_localStorage),
     });
   }
 
@@ -60,7 +51,7 @@ export class TopErrorBoundary extends React.Component<
           /* webpackChunkName: "bug-issue-template" */ "../bug-issue-template"
         )
       ).default;
-      body = encodeURIComponent(templateStrFn(this.state.sentryEventId));
+      body = encodeURIComponent(templateStrFn());
     } catch (error: any) {
       console.error(error);
     }
@@ -114,11 +105,6 @@ export class TopErrorBoundary extends React.Component<
             </div>
           </div>
           <div>
-            <div className="ErrorSplash-paragraph">
-              {t("errorSplash.trackedToSentry", {
-                eventId: this.state.sentryEventId,
-              })}
-            </div>
             <div className="ErrorSplash-paragraph">
               <Trans
                 i18nKey="errorSplash.openIssueMessage"

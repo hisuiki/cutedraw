@@ -7,15 +7,15 @@ import {
 } from "@excalidraw/excalidraw/data/encryption";
 import { restoreElements } from "@excalidraw/excalidraw/data/restore";
 import { getSceneVersion } from "@excalidraw/element";
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "@firebase/app";
 import {
   getFirestore,
   doc,
   getDoc,
   runTransaction,
   Bytes,
-} from "firebase/firestore";
-import { getStorage, ref, uploadBytes } from "firebase/storage";
+} from "@firebase/firestore";
+import { getStorage, ref, uploadBytes } from "@firebase/storage";
 
 import type { RemoteExcalidrawElement } from "@excalidraw/excalidraw/data/reconcile";
 import type {

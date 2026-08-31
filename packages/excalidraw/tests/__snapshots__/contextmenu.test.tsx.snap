@@ -62,9 +62,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.cut",
         "name": "cut",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -94,18 +91,12 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.copy",
         "name": "copy",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keyTest": undefined,
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -113,27 +104,18 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "selectAllElementsInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
       },
       {
         "label": "labels.removeAllElementsFromFrame",
         "name": "removeAllElementsFromFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "history",
-        },
       },
       {
         "label": "labels.wrapSelectionInFrame",
         "name": "wrapSelectionInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -174,9 +156,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "cropEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
       "separator",
@@ -228,9 +207,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -279,9 +255,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -293,9 +266,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -334,9 +304,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.copyStyles",
         "name": "copyStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -374,9 +341,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.pasteStyles",
         "name": "pasteStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -387,9 +351,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "group",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": null,
@@ -397,36 +358,24 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "autoResize",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.unbindText",
         "name": "unbindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.bindText",
         "name": "bindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.createContainerFromText",
         "name": "wrapTextInContainer",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -436,18 +385,12 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "ungroup",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
         "label": "labels.addToLibrary",
         "name": "addToLibrary",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -498,9 +441,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.sendBackward",
         "name": "sendBackward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -545,9 +485,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.bringForward",
         "name": "bringForward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -599,9 +536,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.sendToBack",
         "name": "sendToBack",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -648,9 +582,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.bringToFront",
         "name": "bringToFront",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -689,9 +620,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.flipHorizontal",
         "name": "flipHorizontal",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -729,9 +657,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.flipVertical",
         "name": "flipVertical",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -744,9 +669,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "toggleLinearEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -778,10 +700,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "hyperlink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "action": "click",
-          "category": "hyperlink",
-        },
       },
       {
         "icon": <svg
@@ -814,9 +732,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "copyElementLink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -848,9 +763,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.duplicateSelection",
         "name": "duplicateSelection",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": [Function],
@@ -859,9 +771,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "name": "toggleElementLock",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -886,10 +795,6 @@ exports[`contextMenu element > right-clicking on a group should select whole gro
         "label": "labels.delete",
         "name": "deleteSelectedElements",
         "perform": [Function],
-        "trackEvent": {
-          "action": "delete",
-          "category": "element",
-        },
       },
     ],
     "left": 30,
@@ -4785,9 +4690,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.cut",
         "name": "cut",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -4817,18 +4719,12 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.copy",
         "name": "copy",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keyTest": undefined,
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -4836,27 +4732,18 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "selectAllElementsInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
       },
       {
         "label": "labels.removeAllElementsFromFrame",
         "name": "removeAllElementsFromFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "history",
-        },
       },
       {
         "label": "labels.wrapSelectionInFrame",
         "name": "wrapSelectionInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -4897,9 +4784,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "cropEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
       "separator",
@@ -4951,9 +4835,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -5002,9 +4883,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -5016,9 +4894,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5057,9 +4932,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.copyStyles",
         "name": "copyStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -5097,9 +4969,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.pasteStyles",
         "name": "pasteStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5110,9 +4979,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "group",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": null,
@@ -5120,36 +4986,24 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "autoResize",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.unbindText",
         "name": "unbindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.bindText",
         "name": "bindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.createContainerFromText",
         "name": "wrapTextInContainer",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -5159,18 +5013,12 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "ungroup",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
         "label": "labels.addToLibrary",
         "name": "addToLibrary",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5221,9 +5069,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.sendBackward",
         "name": "sendBackward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -5268,9 +5113,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.bringForward",
         "name": "bringForward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -5322,9 +5164,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.sendToBack",
         "name": "sendToBack",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -5371,9 +5210,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.bringToFront",
         "name": "bringToFront",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5412,9 +5248,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.flipHorizontal",
         "name": "flipHorizontal",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -5452,9 +5285,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.flipVertical",
         "name": "flipVertical",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5467,9 +5297,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "toggleLinearEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5501,10 +5328,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "hyperlink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "action": "click",
-          "category": "hyperlink",
-        },
       },
       {
         "icon": <svg
@@ -5537,9 +5360,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "copyElementLink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5571,9 +5391,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.duplicateSelection",
         "name": "duplicateSelection",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": [Function],
@@ -5582,9 +5399,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "name": "toggleElementLock",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -5609,10 +5423,6 @@ exports[`contextMenu element > shows 'Group selection' in context menu for multi
         "label": "labels.delete",
         "name": "deleteSelectedElements",
         "perform": [Function],
-        "trackEvent": {
-          "action": "delete",
-          "category": "element",
-        },
       },
     ],
     "left": -17,
@@ -6008,9 +5818,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.cut",
         "name": "cut",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -6040,18 +5847,12 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.copy",
         "name": "copy",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keyTest": undefined,
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6059,27 +5860,18 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "selectAllElementsInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
       },
       {
         "label": "labels.removeAllElementsFromFrame",
         "name": "removeAllElementsFromFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "history",
-        },
       },
       {
         "label": "labels.wrapSelectionInFrame",
         "name": "wrapSelectionInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6120,9 +5912,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "cropEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
       "separator",
@@ -6174,9 +5963,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -6225,9 +6011,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -6239,9 +6022,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6280,9 +6060,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.copyStyles",
         "name": "copyStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -6320,9 +6097,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.pasteStyles",
         "name": "pasteStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6333,9 +6107,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "group",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": null,
@@ -6343,36 +6114,24 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "autoResize",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.unbindText",
         "name": "unbindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.bindText",
         "name": "bindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.createContainerFromText",
         "name": "wrapTextInContainer",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -6382,18 +6141,12 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "ungroup",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
         "label": "labels.addToLibrary",
         "name": "addToLibrary",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6444,9 +6197,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.sendBackward",
         "name": "sendBackward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -6491,9 +6241,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.bringForward",
         "name": "bringForward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -6545,9 +6292,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.sendToBack",
         "name": "sendToBack",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -6594,9 +6338,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.bringToFront",
         "name": "bringToFront",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6635,9 +6376,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.flipHorizontal",
         "name": "flipHorizontal",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -6675,9 +6413,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.flipVertical",
         "name": "flipVertical",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6690,9 +6425,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "toggleLinearEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6724,10 +6456,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "hyperlink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "action": "click",
-          "category": "hyperlink",
-        },
       },
       {
         "icon": <svg
@@ -6760,9 +6488,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "copyElementLink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6794,9 +6519,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.duplicateSelection",
         "name": "duplicateSelection",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": [Function],
@@ -6805,9 +6527,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "name": "toggleElementLock",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -6832,10 +6551,6 @@ exports[`contextMenu element > shows 'Ungroup selection' in context menu for gro
         "label": "labels.delete",
         "name": "deleteSelectedElements",
         "perform": [Function],
-        "trackEvent": {
-          "action": "delete",
-          "category": "element",
-        },
       },
     ],
     "left": -17,
@@ -7247,9 +6962,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -7300,9 +7012,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -7351,9 +7060,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -7365,9 +7071,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -7446,9 +7149,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "label": "labels.selectAll",
         "name": "selectAll",
         "perform": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
         "viewMode": false,
       },
       {
@@ -7508,9 +7208,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "unlockAllElements",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
         "viewMode": false,
       },
       "separator",
@@ -7564,10 +7261,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "gridMode",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": true,
       },
       {
@@ -7608,10 +7301,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "objectsSnapMode",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": false,
       },
       {
@@ -7619,10 +7308,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "label": "labels.arrowBinding",
         "name": "arrowBinding",
         "perform": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": false,
       },
       {
@@ -7630,10 +7315,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "label": "labels.midpointSnapping",
         "name": "midpointSnapping",
         "perform": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": false,
       },
       {
@@ -7680,10 +7361,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "zenMode",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": true,
       },
       {
@@ -7723,10 +7400,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "name": "viewMode",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-          "predicate": [Function],
-        },
         "viewMode": true,
       },
       {
@@ -7795,9 +7468,6 @@ exports[`contextMenu element > shows context menu for canvas > [end of test] app
         "label": "stats.fullTitle",
         "name": "stats",
         "perform": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
     ],
@@ -7977,9 +7647,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.cut",
         "name": "cut",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -8009,18 +7676,12 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.copy",
         "name": "copy",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keyTest": undefined,
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8028,27 +7689,18 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "selectAllElementsInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
       },
       {
         "label": "labels.removeAllElementsFromFrame",
         "name": "removeAllElementsFromFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "history",
-        },
       },
       {
         "label": "labels.wrapSelectionInFrame",
         "name": "wrapSelectionInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8089,9 +7741,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "cropEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
       "separator",
@@ -8143,9 +7792,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -8194,9 +7840,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -8208,9 +7851,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8249,9 +7889,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.copyStyles",
         "name": "copyStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -8289,9 +7926,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.pasteStyles",
         "name": "pasteStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8302,9 +7936,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "group",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": null,
@@ -8312,36 +7943,24 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "autoResize",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.unbindText",
         "name": "unbindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.bindText",
         "name": "bindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.createContainerFromText",
         "name": "wrapTextInContainer",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -8351,18 +7970,12 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "ungroup",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
         "label": "labels.addToLibrary",
         "name": "addToLibrary",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8413,9 +8026,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.sendBackward",
         "name": "sendBackward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -8460,9 +8070,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.bringForward",
         "name": "bringForward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -8514,9 +8121,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.sendToBack",
         "name": "sendToBack",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -8563,9 +8167,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.bringToFront",
         "name": "bringToFront",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8604,9 +8205,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.flipHorizontal",
         "name": "flipHorizontal",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -8644,9 +8242,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.flipVertical",
         "name": "flipVertical",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8659,9 +8254,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "toggleLinearEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8693,10 +8285,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "hyperlink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "action": "click",
-          "category": "hyperlink",
-        },
       },
       {
         "icon": <svg
@@ -8729,9 +8317,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyElementLink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8763,9 +8348,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.duplicateSelection",
         "name": "duplicateSelection",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": [Function],
@@ -8774,9 +8356,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "toggleElementLock",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -8801,10 +8380,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.delete",
         "name": "deleteSelectedElements",
         "perform": [Function],
-        "trackEvent": {
-          "action": "delete",
-          "category": "element",
-        },
       },
     ],
     "left": -17,
@@ -8974,9 +8549,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.cut",
         "name": "cut",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -9006,18 +8578,12 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.copy",
         "name": "copy",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keyTest": undefined,
         "label": "labels.paste",
         "name": "paste",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9025,27 +8591,18 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "selectAllElementsInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "canvas",
-        },
       },
       {
         "label": "labels.removeAllElementsFromFrame",
         "name": "removeAllElementsFromFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "history",
-        },
       },
       {
         "label": "labels.wrapSelectionInFrame",
         "name": "wrapSelectionInFrame",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9086,9 +8643,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "cropEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "menu",
-        },
         "viewMode": true,
       },
       "separator",
@@ -9140,9 +8694,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyAsPng",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -9191,9 +8742,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyAsSvg",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "keywords": [
@@ -9205,9 +8753,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9246,9 +8791,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.copyStyles",
         "name": "copyStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -9286,9 +8828,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.pasteStyles",
         "name": "pasteStyles",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9299,9 +8838,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "group",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": null,
@@ -9309,36 +8845,24 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "autoResize",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.unbindText",
         "name": "unbindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.bindText",
         "name": "bindText",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "label": "labels.createContainerFromText",
         "name": "wrapTextInContainer",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -9348,18 +8872,12 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "ungroup",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
         "label": "labels.addToLibrary",
         "name": "addToLibrary",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9410,9 +8928,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.sendBackward",
         "name": "sendBackward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -9457,9 +8972,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.bringForward",
         "name": "bringForward",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -9511,9 +9023,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.sendToBack",
         "name": "sendToBack",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "PanelComponent": [Function],
@@ -9560,9 +9069,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.bringToFront",
         "name": "bringToFront",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9601,9 +9107,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.flipHorizontal",
         "name": "flipHorizontal",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": <svg
@@ -9641,9 +9144,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.flipVertical",
         "name": "flipVertical",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9656,9 +9156,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "toggleLinearEditor",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9690,10 +9187,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "hyperlink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "action": "click",
-          "category": "hyperlink",
-        },
       },
       {
         "icon": <svg
@@ -9726,9 +9219,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "copyElementLink",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9760,9 +9250,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.duplicateSelection",
         "name": "duplicateSelection",
         "perform": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       {
         "icon": [Function],
@@ -9771,9 +9258,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "name": "toggleElementLock",
         "perform": [Function],
         "predicate": [Function],
-        "trackEvent": {
-          "category": "element",
-        },
       },
       "separator",
       {
@@ -9798,10 +9282,6 @@ exports[`contextMenu element > shows context menu for element > [end of test] ap
         "label": "labels.delete",
         "name": "deleteSelectedElements",
         "perform": [Function],
-        "trackEvent": {
-          "action": "delete",
-          "category": "element",
-        },
       },
     ],
     "left": 80,

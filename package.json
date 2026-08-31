@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "excalidraw-monorepo",
+  "name": "cutedraw-monorepo",
   "packageManager": "yarn@1.22.22",
   "workspaces": [
     "excalidraw-app",
@@ -75,6 +75,9 @@
     "test:coverage": "vitest --coverage",
     "test:coverage:watch": "vitest --coverage --watch",
     "test:ui": "yarn test --ui --coverage.enabled=true",
+    "privacy:check": "bash scripts/check-no-telemetry.sh",
+    "privacy:strip": "perl scripts/remove-telemetry-instrumentation.pl",
+    "deploy:gcp": "scripts/build-and-deploy-gcp.sh",
     "fix:code": "yarn test:code --fix",
     "fix:other": "yarn prettier --write",
     "fix": "yarn fix:other && yarn fix:code",
