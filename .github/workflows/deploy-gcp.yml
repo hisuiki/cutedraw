@@ -18,21 +18,36 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
+      - name: Detect Google Cloud authentication configuration
+        id: auth_config
+        env:
+          WIF_PROVIDER: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER || vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          SERVICE_ACCOUNT: ${{ secrets.GCP_DEPLOY_SERVICE_ACCOUNT || vars.GCP_DEPLOY_SERVICE_ACCOUNT }}
+          CREDENTIALS_JSON: ${{ secrets.GCP_CREDENTIALS_JSON }}
+        run: |
+          if [[ -n "$WIF_PROVIDER" && -n "$SERVICE_ACCOUNT" ]]; then
+            echo "method=wif" >> "$GITHUB_OUTPUT"
+          elif [[ -n "$CREDENTIALS_JSON" ]]; then
+            echo "method=credentials_json" >> "$GITHUB_OUTPUT"
+          else
+            echo "method=missing" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Validate Google Cloud authentication configuration
-        if: ${{ !((secrets.GCP_WORKLOAD_IDENTITY_PROVIDER != '' || vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '') && (secrets.GCP_DEPLOY_SERVICE_ACCOUNT != '' || vars.GCP_DEPLOY_SERVICE_ACCOUNT != '') || secrets.GCP_CREDENTIALS_JSON != '') }}
+        if: ${{ steps.auth_config.outputs.method == 'missing' }}
         run: |
           echo "::error::Configure either GCP_WORKLOAD_IDENTITY_PROVIDER and GCP_DEPLOY_SERVICE_ACCOUNT (as repository secrets or variables), or GCP_CREDENTIALS_JSON as a repository secret."
           exit 1
 
       - name: Authenticate to Google Cloud with workload identity
-        if: ${{ (secrets.GCP_WORKLOAD_IDENTITY_PROVIDER != '' || vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '') && (secrets.GCP_DEPLOY_SERVICE_ACCOUNT != '' || vars.GCP_DEPLOY_SERVICE_ACCOUNT != '') }}
+        if: ${{ steps.auth_config.outputs.method == 'wif' }}
         uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         with:
           workload_identity_provider: ${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER || vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ secrets.GCP_DEPLOY_SERVICE_ACCOUNT || vars.GCP_DEPLOY_SERVICE_ACCOUNT }}
 
       - name: Authenticate to Google Cloud with credentials JSON
-        if: ${{ secrets.GCP_CREDENTIALS_JSON != '' && !((secrets.GCP_WORKLOAD_IDENTITY_PROVIDER != '' || vars.GCP_WORKLOAD_IDENTITY_PROVIDER != '') && (secrets.GCP_DEPLOY_SERVICE_ACCOUNT != '' || vars.GCP_DEPLOY_SERVICE_ACCOUNT != '')) }}
+        if: ${{ steps.auth_config.outputs.method == 'credentials_json' }}
         uses: google-github-actions/auth@7c6bc770dae815cd3e89ee6cdf493a5fab2cc093 # v3.0.0
         with:
           credentials_json: ${{ secrets.GCP_CREDENTIALS_JSON }}
