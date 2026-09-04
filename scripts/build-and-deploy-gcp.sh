@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #
 # Builds the production image, pushes it to Artifact Registry, and deploys that exact digest to
-# Cloud Run. Terraform owns service configuration; this script only advances the deployed image.
+# Cloud Run. Terraform owns service configuration; the runtime flags below keep collaboration's
+# in-memory Socket.IO rooms consistent during deployments before the next Terraform apply.
 #
 # Usage:
 #   scripts/build-and-deploy-gcp.sh [--tag TAG] [--dry-run]
@@ -157,6 +158,8 @@ run gcloud run deploy "$WEB_SERVICE" \
   --project="$PROJECT_ID" \
   --region="$REGION" \
   --image="$DEPLOY_IMAGE" \
+  --max-instances=1 \
+  --timeout=3600 \
   --quiet
 
 if [ "$SKIP_CDN_INVALIDATION" = "1" ]; then

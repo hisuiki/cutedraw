@@ -18,10 +18,13 @@ resource "google_cloud_run_v2_service" "web" {
 
   template {
     service_account = google_service_account.web.email
+    timeout         = "3600s"
 
     scaling {
       min_instance_count = var.min_instances
-      max_instance_count = 4
+      # Collaboration rooms are held in memory. Keep all WebSocket clients on
+      # the same instance until a shared Socket.IO adapter is introduced.
+      max_instance_count = 1
     }
 
     containers {

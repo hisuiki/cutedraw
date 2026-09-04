@@ -62,14 +62,17 @@
     "build:version": "yarn --cwd ./excalidraw-app build:version",
     "build": "yarn --cwd ./excalidraw-app build",
     "build:preview": "yarn --cwd ./excalidraw-app build:preview",
+    "build:server": "esbuild server/start.ts --bundle --platform=node --target=node20 --format=cjs --outfile=server/dist/server.cjs",
     "start": "yarn --cwd ./excalidraw-app start",
+    "start:collab": "yarn build:server && cross-env NODE_ENV=development PORT=3002 node server/dist/server.cjs",
     "start:production": "yarn --cwd ./excalidraw-app start:production",
     "start:example": "yarn build:packages && yarn --cwd ./examples/with-script-in-browser start",
-    "test:all": "yarn test:typecheck && yarn test:code && yarn test:other && yarn test:app --watch=false",
+    "test:all": "yarn test:typecheck && yarn test:code && yarn test:other && yarn test:server && yarn test:app --watch=false",
     "test:app": "vitest",
     "test:code": "eslint --max-warnings=0 --ext .js,.ts,.tsx .",
     "test:other": "yarn prettier --list-different",
-    "test:typecheck": "tsc",
+    "test:typecheck": "tsc && tsc -p server/tsconfig.json",
+    "test:server": "esbuild server/server.test.ts --bundle --platform=node --target=node20 --format=cjs --outfile=server/dist/server.test.cjs && node --test server/dist/server.test.cjs",
     "test:update": "yarn test:app --update --watch=false",
     "test": "yarn test:app",
     "test:coverage": "vitest --coverage",
@@ -95,5 +98,8 @@
   },
   "resolutions": {
     "strip-ansi": "6.0.1"
+  },
+  "dependencies": {
+    "socket.io": "4.8.1"
   }
 }

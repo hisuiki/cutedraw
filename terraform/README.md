@@ -4,9 +4,9 @@ This stack hosts Cutedraw on Google Cloud and uses Cloudflare only as the author
 
 | Resource | Purpose |
 | --- | --- |
-| Cloud Run `cutedraw-web` | Serves the built Vite application from nginx |
+| Cloud Run `cutedraw-web` | Serves the Vite application and its live-collaboration WebSocket service |
 | Global external Application Load Balancer | Canonical HTTP/HTTPS ingress for the apex and `www` |
-| Cloud CDN | Caches hashed application assets using nginx origin headers |
+| Cloud CDN | Caches hashed application assets using the app server's origin headers |
 | Google-managed certificate | Covers `cutedraw.app` and `www.cutedraw.app` |
 | Artifact Registry + Workload Identity Federation | Keyless deployments from `powerm1nt/cutedraw` |
 | Cloudflare MCP | DNS-only apex A and `www` CNAME records pointing to GCP |
