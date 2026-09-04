@@ -1,6 +1,14 @@
 import { useI18n } from "@excalidraw/excalidraw/i18n";
 import { WelcomeScreen } from "@excalidraw/excalidraw/index";
+import { ExcalidrawLogo } from "@excalidraw/excalidraw/components/ExcalidrawLogo";
 import React from "react";
+
+const CutedrawLogo = () => (
+  <div className="cutedraw-logo" aria-label="Cutedraw">
+    <ExcalidrawLogo />
+    <span className="cutedraw-logo__wordmark">CUTEDRAW</span>
+  </div>
+);
 
 export const AppWelcomeScreen: React.FC<{
   onCollabDialogOpen: () => any;
@@ -16,7 +24,9 @@ export const AppWelcomeScreen: React.FC<{
       <WelcomeScreen.Hints.ToolbarHint />
       <WelcomeScreen.Hints.HelpHint />
       <WelcomeScreen.Center>
-        <WelcomeScreen.Center.Logo />
+        <WelcomeScreen.Center.Logo>
+          <CutedrawLogo />
+        </WelcomeScreen.Center.Logo>
         <WelcomeScreen.Center.Heading>
           {t("welcomeScreen.app.center_heading")}
           <br />
