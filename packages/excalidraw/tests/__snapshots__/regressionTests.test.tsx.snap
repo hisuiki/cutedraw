@@ -3058,253 +3058,6 @@ exports[`regression tests > change the properties of a shape > [end of test] und
 ]
 `;
 
-exports[`regression tests > click on an element and drag it > [dragged] appState 1`] = `
-{
-  "activeEmbeddable": null,
-  "activeLockedId": null,
-  "activeTool": {
-    "customType": null,
-    "fromSelection": false,
-    "lastActiveTool": null,
-    "locked": false,
-    "type": "selection",
-  },
-  "bindMode": "orbit",
-  "bindingPreference": "enabled",
-  "boxSelectionMode": "contain",
-  "collaborators": Map {},
-  "colorTopPicks": {
-    "bucketFill": null,
-    "elementBackground": null,
-    "elementStroke": null,
-  },
-  "contextMenu": null,
-  "croppingElementId": null,
-  "currentHoveredFontFamily": null,
-  "currentItemArrowType": "round",
-  "currentItemBackgroundColor": "transparent",
-  "currentItemEndArrowhead": "arrow",
-  "currentItemFillStyle": "solid",
-  "currentItemFontFamily": 5,
-  "currentItemFontSize": 20,
-  "currentItemOpacity": 100,
-  "currentItemRoughness": 1,
-  "currentItemRoundness": "sharp",
-  "currentItemStartArrowhead": null,
-  "currentItemStrokeColor": "#1e1e1e",
-  "currentItemStrokeStyle": "solid",
-  "currentItemStrokeVariability": "constant",
-  "currentItemStrokeWidthKey": "medium",
-  "currentItemTextAlign": "left",
-  "cursorButton": "up",
-  "defaultSidebarDockedPreference": false,
-  "editingFrame": null,
-  "editingGroupId": null,
-  "editingTextElement": null,
-  "elementsToHighlight": null,
-  "errorMessage": null,
-  "exportBackground": true,
-  "exportEmbedScene": false,
-  "exportScale": 1,
-  "exportWithDarkMode": false,
-  "fileHandle": null,
-  "frameRendering": {
-    "clip": true,
-    "enabled": true,
-    "name": true,
-    "outline": true,
-  },
-  "frameToHighlight": null,
-  "gridModeEnabled": false,
-  "gridSize": 20,
-  "gridStep": 5,
-  "height": 768,
-  "hoveredArrowTextAnchor": null,
-  "hoveredElementIds": {},
-  "isBindingEnabled": true,
-  "isCropping": false,
-  "isLoading": false,
-  "isMidpointSnappingEnabled": true,
-  "isResizing": false,
-  "isRotating": false,
-  "lastPointerDownWith": "mouse",
-  "lockedMultiSelections": {},
-  "multiElement": null,
-  "name": "Untitled-201933152653",
-  "newElement": null,
-  "objectsSnapModeEnabled": false,
-  "offsetLeft": 0,
-  "offsetTop": 0,
-  "openDialog": null,
-  "openMenu": null,
-  "openPopup": null,
-  "openSidebar": null,
-  "originSnapOffset": null,
-  "penDetected": false,
-  "penMode": false,
-  "preferredSelectionTool": {
-    "initialized": true,
-    "type": "selection",
-  },
-  "previousSelectedElementIds": {
-    "id0": true,
-  },
-  "resizingElement": null,
-  "scrollConstraints": null,
-  "scrollX": 0,
-  "scrollY": 0,
-  "scrolledOutside": false,
-  "searchMatches": null,
-  "selectedElementIds": {
-    "id0": true,
-  },
-  "selectedElementsAreBeingDragged": false,
-  "selectedGroupIds": {},
-  "selectedLinearElement": null,
-  "selectionElement": null,
-  "shouldCacheIgnoreZoom": false,
-  "showHyperlinkPopup": false,
-  "showWelcomeScreen": true,
-  "snapLines": [],
-  "stats": {
-    "open": false,
-    "panels": 3,
-  },
-  "suggestedBinding": null,
-  "theme": "light",
-  "toast": null,
-  "viewBackgroundColor": "#ffffff",
-  "viewModeEnabled": false,
-  "width": 1440,
-  "zenModeEnabled": false,
-  "zoom": {
-    "value": 1,
-  },
-}
-`;
-
-exports[`regression tests > click on an element and drag it > [dragged] element 0 1`] = `
-{
-  "angle": 0,
-  "backgroundColor": "transparent",
-  "boundElements": null,
-  "customData": undefined,
-  "fillStyle": "solid",
-  "frameId": null,
-  "groupIds": [],
-  "height": 10,
-  "id": "id0",
-  "index": "a0",
-  "isDeleted": false,
-  "link": null,
-  "locked": false,
-  "opacity": 100,
-  "roughness": 1,
-  "roundness": null,
-  "seed": 1278240551,
-  "strokeColor": "#1e1e1e",
-  "strokeStyle": "solid",
-  "strokeWidth": 2,
-  "type": "rectangle",
-  "updated": 1,
-  "version": 4,
-  "versionNonce": 1014066025,
-  "width": 10,
-  "x": 20,
-  "y": 20,
-}
-`;
-
-exports[`regression tests > click on an element and drag it > [dragged] number of elements 1`] = `1`;
-
-exports[`regression tests > click on an element and drag it > [dragged] number of renders 1`] = `8`;
-
-exports[`regression tests > click on an element and drag it > [dragged] redo stack 1`] = `[]`;
-
-exports[`regression tests > click on an element and drag it > [dragged] undo stack 1`] = `
-[
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {
-          "selectedElementIds": {
-            "id0": true,
-          },
-        },
-        "inserted": {
-          "selectedElementIds": {},
-        },
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {
-        "id0": {
-          "deleted": {
-            "angle": 0,
-            "backgroundColor": "transparent",
-            "boundElements": null,
-            "customData": undefined,
-            "fillStyle": "solid",
-            "frameId": null,
-            "groupIds": [],
-            "height": 10,
-            "index": "a0",
-            "isDeleted": false,
-            "link": null,
-            "locked": false,
-            "opacity": 100,
-            "roughness": 1,
-            "roundness": null,
-            "strokeColor": "#1e1e1e",
-            "strokeStyle": "solid",
-            "strokeWidth": 2,
-            "type": "rectangle",
-            "version": 3,
-            "width": 10,
-            "x": 10,
-            "y": 10,
-          },
-          "inserted": {
-            "isDeleted": true,
-            "version": 2,
-          },
-        },
-      },
-      "updated": {},
-    },
-    "id": "id2",
-  },
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {},
-        "inserted": {},
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {},
-      "updated": {
-        "id0": {
-          "deleted": {
-            "version": 4,
-            "x": 20,
-            "y": 20,
-          },
-          "inserted": {
-            "version": 3,
-            "x": 10,
-            "y": 10,
-          },
-        },
-      },
-    },
-    "id": "id5",
-  },
-]
-`;
-
 exports[`regression tests > click on an element and drag it > [end of test] appState 1`] = `
 {
   "activeEmbeddable": null,
@@ -3365,12 +3118,12 @@ exports[`regression tests > click on an element and drag it > [end of test] appS
   "gridModeEnabled": false,
   "gridSize": 20,
   "gridStep": 5,
-  "height": 768,
+  "height": 0,
   "hoveredArrowTextAnchor": null,
   "hoveredElementIds": {},
   "isBindingEnabled": true,
   "isCropping": false,
-  "isLoading": false,
+  "isLoading": true,
   "isMidpointSnappingEnabled": true,
   "isResizing": false,
   "isRotating": false,
@@ -3386,25 +3139,24 @@ exports[`regression tests > click on an element and drag it > [end of test] appS
   "openMenu": null,
   "openPopup": null,
   "openSidebar": null,
-  "originSnapOffset": null,
+  "originSnapOffset": {
+    "x": 0,
+    "y": 0,
+  },
   "penDetected": false,
   "penMode": false,
   "preferredSelectionTool": {
-    "initialized": true,
+    "initialized": false,
     "type": "selection",
   },
-  "previousSelectedElementIds": {
-    "id0": true,
-  },
+  "previousSelectedElementIds": {},
   "resizingElement": null,
   "scrollConstraints": null,
   "scrollX": 0,
   "scrollY": 0,
   "scrolledOutside": false,
   "searchMatches": null,
-  "selectedElementIds": {
-    "id0": true,
-  },
+  "selectedElementIds": {},
   "selectedElementsAreBeingDragged": false,
   "selectedGroupIds": {},
   "selectedLinearElement": null,
@@ -3422,7 +3174,7 @@ exports[`regression tests > click on an element and drag it > [end of test] appS
   "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
-  "width": 1440,
+  "width": 0,
   "zenModeEnabled": false,
   "zoom": {
     "value": 1,
@@ -3432,120 +3184,11 @@ exports[`regression tests > click on an element and drag it > [end of test] appS
 
 exports[`regression tests > click on an element and drag it > [end of test] number of elements 1`] = `0`;
 
-exports[`regression tests > click on an element and drag it > [end of test] number of renders 1`] = `10`;
+exports[`regression tests > click on an element and drag it > [end of test] number of renders 1`] = `2`;
 
 exports[`regression tests > click on an element and drag it > [end of test] redo stack 1`] = `[]`;
 
-exports[`regression tests > click on an element and drag it > [end of test] undo stack 1`] = `
-[
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {
-          "selectedElementIds": {
-            "id0": true,
-          },
-        },
-        "inserted": {
-          "selectedElementIds": {},
-        },
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {
-        "id0": {
-          "deleted": {
-            "angle": 0,
-            "backgroundColor": "transparent",
-            "boundElements": null,
-            "customData": undefined,
-            "fillStyle": "solid",
-            "frameId": null,
-            "groupIds": [],
-            "height": 10,
-            "index": "a0",
-            "isDeleted": false,
-            "link": null,
-            "locked": false,
-            "opacity": 100,
-            "roughness": 1,
-            "roundness": null,
-            "strokeColor": "#1e1e1e",
-            "strokeStyle": "solid",
-            "strokeWidth": 2,
-            "type": "rectangle",
-            "version": 3,
-            "width": 10,
-            "x": 10,
-            "y": 10,
-          },
-          "inserted": {
-            "isDeleted": true,
-            "version": 2,
-          },
-        },
-      },
-      "updated": {},
-    },
-    "id": "id2",
-  },
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {},
-        "inserted": {},
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {},
-      "updated": {
-        "id0": {
-          "deleted": {
-            "version": 4,
-            "x": 20,
-            "y": 20,
-          },
-          "inserted": {
-            "version": 3,
-            "x": 10,
-            "y": 10,
-          },
-        },
-      },
-    },
-    "id": "id5",
-  },
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {},
-        "inserted": {},
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {},
-      "updated": {
-        "id0": {
-          "deleted": {
-            "version": 5,
-            "x": 10,
-            "y": 10,
-          },
-          "inserted": {
-            "version": 4,
-            "x": 20,
-            "y": 20,
-          },
-        },
-      },
-    },
-    "id": "id8",
-  },
-]
-`;
+exports[`regression tests > click on an element and drag it > [end of test] undo stack 1`] = `[]`;
 
 exports[`regression tests > click to select a shape > [end of test] appState 1`] = `
 {
@@ -11660,12 +11303,12 @@ exports[`regression tests > shift click on selected element should deselect it o
   "gridModeEnabled": false,
   "gridSize": 20,
   "gridStep": 5,
-  "height": 768,
+  "height": 0,
   "hoveredArrowTextAnchor": null,
   "hoveredElementIds": {},
   "isBindingEnabled": true,
   "isCropping": false,
-  "isLoading": false,
+  "isLoading": true,
   "isMidpointSnappingEnabled": true,
   "isResizing": false,
   "isRotating": false,
@@ -11681,16 +11324,17 @@ exports[`regression tests > shift click on selected element should deselect it o
   "openMenu": null,
   "openPopup": null,
   "openSidebar": null,
-  "originSnapOffset": null,
+  "originSnapOffset": {
+    "x": 0,
+    "y": 0,
+  },
   "penDetected": false,
   "penMode": false,
   "preferredSelectionTool": {
-    "initialized": true,
+    "initialized": false,
     "type": "selection",
   },
-  "previousSelectedElementIds": {
-    "id0": true,
-  },
+  "previousSelectedElementIds": {},
   "resizingElement": null,
   "scrollConstraints": null,
   "scrollX": 0,
@@ -11715,7 +11359,7 @@ exports[`regression tests > shift click on selected element should deselect it o
   "toast": null,
   "viewBackgroundColor": "#ffffff",
   "viewModeEnabled": false,
-  "width": 1440,
+  "width": 0,
   "zenModeEnabled": false,
   "zoom": {
     "value": 1,
@@ -11725,86 +11369,11 @@ exports[`regression tests > shift click on selected element should deselect it o
 
 exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] number of elements 1`] = `0`;
 
-exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] number of renders 1`] = `7`;
+exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] number of renders 1`] = `2`;
 
 exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] redo stack 1`] = `[]`;
 
-exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] undo stack 1`] = `
-[
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {
-          "selectedElementIds": {
-            "id0": true,
-          },
-        },
-        "inserted": {
-          "selectedElementIds": {},
-        },
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {
-        "id0": {
-          "deleted": {
-            "angle": 0,
-            "backgroundColor": "transparent",
-            "boundElements": null,
-            "customData": undefined,
-            "fillStyle": "solid",
-            "frameId": null,
-            "groupIds": [],
-            "height": 10,
-            "index": "a0",
-            "isDeleted": false,
-            "link": null,
-            "locked": false,
-            "opacity": 100,
-            "roughness": 1,
-            "roundness": null,
-            "strokeColor": "#1e1e1e",
-            "strokeStyle": "solid",
-            "strokeWidth": 2,
-            "type": "rectangle",
-            "version": 3,
-            "width": 10,
-            "x": 0,
-            "y": 0,
-          },
-          "inserted": {
-            "isDeleted": true,
-            "version": 2,
-          },
-        },
-      },
-      "updated": {},
-    },
-    "id": "id2",
-  },
-  {
-    "appState": AppStateDelta {
-      "delta": Delta {
-        "deleted": {
-          "selectedElementIds": {},
-        },
-        "inserted": {
-          "selectedElementIds": {
-            "id0": true,
-          },
-        },
-      },
-    },
-    "elements": {
-      "added": {},
-      "removed": {},
-      "updated": {},
-    },
-    "id": "id5",
-  },
-]
-`;
+exports[`regression tests > shift click on selected element should deselect it on pointer up > [end of test] undo stack 1`] = `[]`;
 
 exports[`regression tests > shift-click to multiselect, then drag > [end of test] appState 1`] = `
 {
