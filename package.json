@@ -97,6 +97,7 @@
   },
   "resolutions": {
     "@babel/runtime": "7.26.10",
+    "esbuild": "0.28.1",
     "filelist/minimatch": "5.1.8",
     "filelist/minimatch/brace-expansion": "2.1.4",
     "immutable": "5.1.8",
